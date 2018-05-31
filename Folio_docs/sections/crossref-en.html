@@ -1,0 +1,740 @@
+<!-- Copyright 2018 Bram Steenwinckel
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License. -->
+<h2  id="crossreference" class="list">Cross reference for Failure mode and effect analysis combined with anomaly ontology classes, properties and dataproperties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by Failure mode and effect analysis combined with anomaly ontology.
+<div id="classes">
+   <h3 id="classes-headline" class="list">Classes</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#http://IBCNServices.github.io/Folio#AnomalyKnowledge"
+            title="http://IBCNServices.github.io/Folio#AnomalyKnowledge">AnomalyKnowledge</a>
+      </li>
+      <li>
+         <a href="#http://IBCNServices.github.io/Folio#Category" title="http://IBCNServices.github.io/Folio#Category">Category</a>
+      </li>
+      <li>
+         <a href="#http://IBCNServices.github.io/Folio#Cause" title="http://IBCNServices.github.io/Folio#Cause">Cause</a>
+      </li>
+      <li>
+         <a href="#http://IBCNServices.github.io/Folio#ConsequenceDomain"
+            title="http://IBCNServices.github.io/Folio#ConsequenceDomain">ConsequenceDomain</a>
+      </li>
+      <li>
+         <a href="#http://IBCNServices.github.io/Folio#Criticality" title="http://IBCNServices.github.io/Folio#Criticality">Criticality</a>
+      </li>
+      <li>
+         <a href="#http://IBCNServices.github.io/Folio#DetectionMethod"
+            title="http://IBCNServices.github.io/Folio#DetectionMethod">DetectionMethod</a>
+      </li>
+      <li>
+         <a href="#http://IBCNServices.github.io/Folio#Effect" title="http://IBCNServices.github.io/Folio#Effect">Effect</a>
+      </li>
+      <li>
+         <a href="#http://IBCNServices.github.io/Folio#FailureCause" title="http://IBCNServices.github.io/Folio#FailureCause">FailureCause</a>
+      </li>
+      <li>
+         <a href="#http://IBCNServices.github.io/Folio#FailureEffect"
+            title="http://IBCNServices.github.io/Folio#FailureEffect">FailureEffect</a>
+      </li>
+      <li>
+         <a href="#http://IBCNServices.github.io/Folio#FailureMode" title="http://IBCNServices.github.io/Folio#FailureMode">FailureMode</a>
+      </li>
+      <li>
+         <a href="#http://IBCNServices.github.io/Folio#Faulty" title="http://IBCNServices.github.io/Folio#Faulty">Faulty</a>
+      </li>
+      <li>
+         <a href="#http://IBCNServices.github.io/Folio#IntermediateEffect"
+            title="http://IBCNServices.github.io/Folio#IntermediateEffect">IntermediateEffect</a>
+      </li>
+      <li>
+         <a href="#http://IBCNServices.github.io/Folio#LocalEffect" title="http://IBCNServices.github.io/Folio#LocalEffect">LocalEffect</a>
+      </li>
+      <li>
+         <a href="#http://IBCNServices.github.io/Folio#ObservableProperty"
+            title="http://IBCNServices.github.io/Folio#ObservableProperty">
+            <span>observable property</span>
+         </a>
+      </li>
+   </ul>
+   <div class="entity" id="http://IBCNServices.github.io/Folio#AnomalyKnowledge">
+      <h3>AnomalyKnowledge<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://IBCNServices.github.io/Folio#AnomalyKnowledge</p>
+      <div class="comment">
+         <span class="markdown">Anomaly’s description. Should then express, at least, which part of the system is affected, by what. Ideally, this should be completed with additional information, such as which components observe the anomaly, or the worth of its management.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>http://IBCNServices.github.io/Folio.owl</dd>
+      </dl>
+      <dl>
+         <dt>Example</dt>
+         <dd>
+            <pre>Anomaly’s description. Should then express, at least, which part of the system is affected, by what. Ideally, this should be completed with additional information, such as which components observe the anomaly, or the worth of its management.</pre>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#http://IBCNServices.github.io/Folio#Category" title="http://IBCNServices.github.io/Folio#Category">Category</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://IBCNServices.github.io/Folio#Cause" title="http://IBCNServices.github.io/Folio#Cause">Cause</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://IBCNServices.github.io/Folio#ConsequenceDomain"
+               title="http://IBCNServices.github.io/Folio#ConsequenceDomain">ConsequenceDomain</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://IBCNServices.github.io/Folio#Criticality" title="http://IBCNServices.github.io/Folio#Criticality">Criticality</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://IBCNServices.github.io/Folio#Effect" title="http://IBCNServices.github.io/Folio#Effect">Effect</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://IBCNServices.github.io/Folio#Faulty" title="http://IBCNServices.github.io/Folio#Faulty">Faulty</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://IBCNServices.github.io/Folio#Category">
+      <h3>Category<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://IBCNServices.github.io/Folio#Category</p>
+      <div class="comment">
+         <span class="markdown">An anomaly can happen once (transient), periodically (recurrent) or definitively (permanent).</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>http://IBCNServices.github.io/Folio.owl</dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://IBCNServices.github.io/Folio#AnomalyKnowledge"
+               title="http://IBCNServices.github.io/Folio#AnomalyKnowledge">AnomalyKnowledge</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://IBCNServices.github.io/Folio#Cause">
+      <h3>Cause<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://IBCNServices.github.io/Folio#Cause</p>
+      <div class="comment">
+         <span class="markdown">The cause refers to the description suspected to be the source of the anomaly</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>http://IBCNServices.github.io/Folio.owl</dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://IBCNServices.github.io/Folio#AnomalyKnowledge"
+               title="http://IBCNServices.github.io/Folio#AnomalyKnowledge">AnomalyKnowledge</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#http://IBCNServices.github.io/Folio#FailureCause" title="http://IBCNServices.github.io/Folio#FailureCause">FailureCause</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://IBCNServices.github.io/Folio#ConsequenceDomain">
+      <h3>ConsequenceDomain<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://IBCNServices.github.io/Folio#ConsequenceDomain</p>
+      <div class="comment">
+         <span class="markdown">Each domain relates to a specific kind of consequence of the anomaly.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>http://IBCNServices.github.io/Folio.owl</dd>
+      </dl>
+      <dl>
+         <dt>Example</dt>
+         <dd>
+            <pre>Malfunctioning of device or dangerous situation for end user.</pre>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://IBCNServices.github.io/Folio#AnomalyKnowledge"
+               title="http://IBCNServices.github.io/Folio#AnomalyKnowledge">AnomalyKnowledge</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://IBCNServices.github.io/Folio#Criticality">
+      <h3>Criticality<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://IBCNServices.github.io/Folio#Criticality</p>
+      <div class="comment">
+         <span class="markdown">It is a time dependent worth attributed to the anomaly management.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>http://IBCNServices.github.io/Folio.owl</dd>
+      </dl>
+      <dl>
+         <dt>Example</dt>
+         <dd>
+            <pre>non-critic anomaly</pre>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://IBCNServices.github.io/Folio#AnomalyKnowledge"
+               title="http://IBCNServices.github.io/Folio#AnomalyKnowledge">AnomalyKnowledge</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://IBCNServices.github.io/Folio#DetectionMethod">
+      <h3>DetectionMethod<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://IBCNServices.github.io/Folio#DetectionMethod</p>
+      <div class="comment">
+         <span class="markdown">This relies on components’ survey to trigger a warning about abnormalities.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>http://IBCNServices.github.io/Folio.owl</dd>
+      </dl>
+      <dl>
+         <dt>Example</dt>
+         <dd>
+            <pre>value &gt; x.</pre>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://IBCNServices.github.io/Folio#Effect">
+      <h3>Effect<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://IBCNServices.github.io/Folio#Effect</p>
+      <div class="comment">
+         <span class="markdown">The effect describes one aspect of the observed phenomenon.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>http://IBCNServices.github.io/Folio.owl</dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://IBCNServices.github.io/Folio#AnomalyKnowledge"
+               title="http://IBCNServices.github.io/Folio#AnomalyKnowledge">AnomalyKnowledge</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#http://IBCNServices.github.io/Folio#FailureEffect"
+               title="http://IBCNServices.github.io/Folio#FailureEffect">FailureEffect</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://IBCNServices.github.io/Folio#FailureCause">
+      <h3>FailureCause<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://IBCNServices.github.io/Folio#FailureCause</p>
+      <div class="comment">
+         <span class="markdown">Failure causes are defects in design, process, quality, or part application, which are the underlying cause of a failure or which initiate a process which leads to failure. Also, the failure effect at the highest indenture level or total system. A failure mode may have more causes.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>http://IBCNServices.github.io/Folio.owl</dd>
+      </dl>
+      <dl>
+         <dt>Example</dt>
+         <dd>
+            <pre>(abnormal) vibration input from another (possibly failed) system.</pre>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>is equivalent to</dt>
+         <dd>
+            <a href="#http://IBCNServices.github.io/Folio#isEndEffect" title="http://IBCNServices.github.io/Folio#isEndEffect">isEndEffect</a>
+            <sup class="type-op" title="object property">op</sup>
+            <span class="logic">some</span>
+            <a href="#http://IBCNServices.github.io/Folio#FailureMode" title="http://IBCNServices.github.io/Folio#FailureMode">FailureMode</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://IBCNServices.github.io/Folio#Cause" title="http://IBCNServices.github.io/Folio#Cause">Cause</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#http://IBCNServices.github.io/Folio#FailureMode" title="http://IBCNServices.github.io/Folio#FailureMode">FailureMode</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://IBCNServices.github.io/Folio#FailureEffect">
+      <h3>FailureEffect<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://IBCNServices.github.io/Folio#FailureEffect</p>
+      <div class="comment">
+         <span class="markdown">Immediate consequences of a failure on operation, function or functionality, or status of some item.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>http://IBCNServices.github.io/Folio.owl</dd>
+      </dl>
+      <dl>
+         <dt>Example</dt>
+         <dd>
+            <pre>Increased range of input data.</pre>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>is equivalent to</dt>
+         <dd>
+            <a href="#http://IBCNServices.github.io/Folio#hasFailureMode"
+               title="http://IBCNServices.github.io/Folio#hasFailureMode">hasFailureMode</a>
+            <sup class="type-op" title="object property">op</sup>
+            <span class="logic">some</span>
+            <a href="#http://IBCNServices.github.io/Folio#FailureMode" title="http://IBCNServices.github.io/Folio#FailureMode">FailureMode</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://IBCNServices.github.io/Folio#Effect" title="http://IBCNServices.github.io/Folio#Effect">Effect</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#http://IBCNServices.github.io/Folio#FailureMode" title="http://IBCNServices.github.io/Folio#FailureMode">FailureMode</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#http://IBCNServices.github.io/Folio#IntermediateEffect"
+               title="http://IBCNServices.github.io/Folio#IntermediateEffect">IntermediateEffect</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://IBCNServices.github.io/Folio#LocalEffect" title="http://IBCNServices.github.io/Folio#LocalEffect">LocalEffect</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://IBCNServices.github.io/Folio#FailureMode">
+      <h3>FailureMode<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://IBCNServices.github.io/Folio#FailureMode</p>
+      <div class="comment">
+         <span class="markdown">The specific manner or way by which a failure occurs in terms of failure of the item (being a part or (sub) system) function under investigation; it may generally describe the way the failure occurs. It shall at least clearly describe a (end) failure state of the item (or function in case of a Functional FMEA) under consideration. It is the result of the failure mechanism (cause of the failure mode)..</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>http://IBCNServices.github.io/Folio.owl</dd>
+      </dl>
+      <dl>
+         <dt>Example</dt>
+         <dd>
+            <pre> Too high values.</pre>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>is equivalent to</dt>
+         <dd>
+            <a href="#http://IBCNServices.github.io/Folio#happenedAt" title="http://IBCNServices.github.io/Folio#happenedAt">happenedAt</a>
+            <sup class="type-op" title="object property">op</sup>
+            <span class="logic">some</span>
+            <span class="dotted" title="http://www.w3.org/ns/ssn/System">system</span>
+         </dd>
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://IBCNServices.github.io/Folio#hasCause" title="http://IBCNServices.github.io/Folio#hasCause">hasCause</a>
+            <sup class="type-op" title="object property">op</sup>
+            <span class="logic">some</span>
+            <a href="#http://IBCNServices.github.io/Folio#FailureCause" title="http://IBCNServices.github.io/Folio#FailureCause">FailureCause</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#http://IBCNServices.github.io/Folio#hasEffect" title="http://IBCNServices.github.io/Folio#hasEffect">hasEffect</a>
+            <sup class="type-op" title="object property">op</sup>
+            <span class="logic">some</span>
+            <a href="#http://IBCNServices.github.io/Folio#FailureEffect"
+               title="http://IBCNServices.github.io/Folio#FailureEffect">FailureEffect</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#http://IBCNServices.github.io/Folio#FailureCause" title="http://IBCNServices.github.io/Folio#FailureCause">FailureCause</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://IBCNServices.github.io/Folio#FailureEffect"
+               title="http://IBCNServices.github.io/Folio#FailureEffect">FailureEffect</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://IBCNServices.github.io/Folio#Faulty">
+      <h3>Faulty<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://IBCNServices.github.io/Folio#Faulty</p>
+      <div class="comment">
+         <span class="markdown">The loss of a function under stated conditions.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>http://IBCNServices.github.io/Folio.owl</dd>
+      </dl>
+      <dl class="description">
+         <dt>is equivalent to</dt>
+         <dd>
+            <a href="#http://IBCNServices.github.io/Folio#hasDetection" title="http://IBCNServices.github.io/Folio#hasDetection">hasDetection</a>
+            <sup class="type-op" title="object property">op</sup>
+            <span class="logic">some</span>
+            <a href="#http://IBCNServices.github.io/Folio#DetectionMethod"
+               title="http://IBCNServices.github.io/Folio#DetectionMethod">DetectionMethod</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://IBCNServices.github.io/Folio#AnomalyKnowledge"
+               title="http://IBCNServices.github.io/Folio#AnomalyKnowledge">AnomalyKnowledge</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <span class="dotted" title="http://www.w3.org/ns/sosa/Observation">observation</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://IBCNServices.github.io/Folio#IntermediateEffect">
+      <h3>IntermediateEffect<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://IBCNServices.github.io/Folio#IntermediateEffect</p>
+      <div class="comment">
+         <span class="markdown">The failure effect as it applies at the next higher indenture level.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>http://IBCNServices.github.io/Folio.owl</dd>
+      </dl>
+      <dl class="description">
+         <dt>is equivalent to</dt>
+         <dd>
+            <a href="#http://IBCNServices.github.io/Folio#isIntermediateEffect"
+               title="http://IBCNServices.github.io/Folio#isIntermediateEffect">isIntermediateEffect</a>
+            <sup class="type-op" title="object property">op</sup>
+            <span class="logic">some</span>
+            <a href="#http://IBCNServices.github.io/Folio#FailureMode" title="http://IBCNServices.github.io/Folio#FailureMode">FailureMode</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://IBCNServices.github.io/Folio#FailureEffect"
+               title="http://IBCNServices.github.io/Folio#FailureEffect">FailureEffect</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://IBCNServices.github.io/Folio#LocalEffect">
+      <h3>LocalEffect<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://IBCNServices.github.io/Folio#LocalEffect</p>
+      <div class="comment">
+         <span class="markdown">The visible failure effect as it applies to the item under analysis.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>http://IBCNServices.github.io/Folio.owl</dd>
+      </dl>
+      <dl class="description">
+         <dt>is equivalent to</dt>
+         <dd>
+            <a href="#http://IBCNServices.github.io/Folio#isLocalEffect"
+               title="http://IBCNServices.github.io/Folio#isLocalEffect">isLocalEffect</a>
+            <sup class="type-op" title="object property">op</sup>
+            <span class="logic">some</span>
+            <a href="#http://IBCNServices.github.io/Folio#FailureMode" title="http://IBCNServices.github.io/Folio#FailureMode">FailureMode</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://IBCNServices.github.io/Folio#FailureEffect"
+               title="http://IBCNServices.github.io/Folio#FailureEffect">FailureEffect</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://IBCNServices.github.io/Folio#ObservableProperty">
+      <h3>observable property<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://IBCNServices.github.io/Folio#ObservableProperty</p>
+      <dl class="description">
+         <dt>is equivalent to</dt>
+         <dd>
+            <a href="#http://IBCNServices.github.io/Folio#observedBy" title="http://IBCNServices.github.io/Folio#observedBy">observedBy</a>
+            <sup class="type-op" title="object property">op</sup>
+            <span class="logic">some</span>
+            <span class="dotted" title="http://www.w3.org/ns/sosa/Sensor">sensor</span>
+         </dd>
+         <dt>has super-classes</dt>
+         <dd>
+            <span class="dotted" title="http://www.w3.org/ns/sosa/Property">property</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div id="objectproperties">
+   <h3 id="properties" class="list">Object Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#http://IBCNServices.github.io/Folio#happenedAt" title="http://IBCNServices.github.io/Folio#happenedAt">happenedAt</a>
+      </li>
+      <li>
+         <a href="#http://IBCNServices.github.io/Folio#hasCause" title="http://IBCNServices.github.io/Folio#hasCause">hasCause</a>
+      </li>
+      <li>
+         <a href="#http://IBCNServices.github.io/Folio#hasDetection" title="http://IBCNServices.github.io/Folio#hasDetection">hasDetection</a>
+      </li>
+      <li>
+         <a href="#http://IBCNServices.github.io/Folio#hasEffect" title="http://IBCNServices.github.io/Folio#hasEffect">hasEffect</a>
+      </li>
+      <li>
+         <a href="#http://IBCNServices.github.io/Folio#hasFailureMode"
+            title="http://IBCNServices.github.io/Folio#hasFailureMode">hasFailureMode</a>
+      </li>
+      <li>
+         <a href="#http://IBCNServices.github.io/Folio#hasLowerFailureEffect"
+            title="http://IBCNServices.github.io/Folio#hasLowerFailureEffect">hasLowerFailureEffect</a>
+      </li>
+      <li>
+         <a href="#http://IBCNServices.github.io/Folio#hasNextFailureEffect"
+            title="http://IBCNServices.github.io/Folio#hasNextFailureEffect">hasNextFailureEffect</a>
+      </li>
+      <li>
+         <a href="#http://IBCNServices.github.io/Folio#isEndEffect" title="http://IBCNServices.github.io/Folio#isEndEffect">isEndEffect</a>
+      </li>
+      <li>
+         <a href="#http://IBCNServices.github.io/Folio#isIntermediateEffect"
+            title="http://IBCNServices.github.io/Folio#isIntermediateEffect">isIntermediateEffect</a>
+      </li>
+      <li>
+         <a href="#http://IBCNServices.github.io/Folio#isLocalEffect"
+            title="http://IBCNServices.github.io/Folio#isLocalEffect">isLocalEffect</a>
+      </li>
+      <li>
+         <a href="#http://IBCNServices.github.io/Folio#observedBy" title="http://IBCNServices.github.io/Folio#observedBy">observedBy</a>
+      </li>
+   </ul>
+   <div class="entity" id="http://IBCNServices.github.io/Folio#happenedAt">
+      <h3>happenedAt<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://IBCNServices.github.io/Folio#happenedAt</p>
+      <div class="comment">
+         <span class="markdown">Relation between the failure cause and the corresponding device/system.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>http://IBCNServices.github.io/Folio.owl</dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://IBCNServices.github.io/Folio#hasCause">
+      <h3>hasCause<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://IBCNServices.github.io/Folio#hasCause</p>
+      <div class="comment">
+         <span class="markdown">Relation between a failure and it corresponding cause.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>http://IBCNServices.github.io/Folio.owl</dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://IBCNServices.github.io/Folio#hasDetection">
+      <h3>hasDetection<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://IBCNServices.github.io/Folio#hasDetection</p>
+      <div class="comment">
+         <span class="markdown">Relation between the observed element and the detection method</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>http://IBCNServices.github.io/Folio.owl</dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://IBCNServices.github.io/Folio#hasEffect">
+      <h3>hasEffect<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://IBCNServices.github.io/Folio#hasEffect</p>
+      <div class="comment">
+         <span class="markdown">Relation between a failure and it corresponding effect.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>http://IBCNServices.github.io/Folio.owl</dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://IBCNServices.github.io/Folio#hasFailureMode">
+      <h3>hasFailureMode<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://IBCNServices.github.io/Folio#hasFailureMode</p>
+      <div class="comment">
+         <span class="markdown">Relation between the failure effect and the corresponding failure mode.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>http://IBCNServices.github.io/Folio.owl</dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://IBCNServices.github.io/Folio#hasLowerFailureEffect">
+      <h3>hasLowerFailureEffect<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://IBCNServices.github.io/Folio#hasLowerFailureEffect</p>
+      <div class="comment">
+         <span class="markdown">Relation between a failure effect and a previously occurring effect.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>http://IBCNServices.github.io/Folio.owl</dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://IBCNServices.github.io/Folio#hasNextFailureEffect">
+      <h3>hasNextFailureEffect<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://IBCNServices.github.io/Folio#hasNextFailureEffect</p>
+      <div class="comment">
+         <span class="markdown">Relation between a failure effect and a next effect.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>http://IBCNServices.github.io/Folio.owl</dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://IBCNServices.github.io/Folio#isEndEffect">
+      <h3>isEndEffect<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://IBCNServices.github.io/Folio#isEndEffect</p>
+      <div class="comment">
+         <span class="markdown">Relation defining an failure effect as end effect.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>http://IBCNServices.github.io/Folio.owl</dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://IBCNServices.github.io/Folio#isIntermediateEffect">
+      <h3>isIntermediateEffect<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://IBCNServices.github.io/Folio#isIntermediateEffect</p>
+      <div class="comment">
+         <span class="markdown">Relation defining an failure effect as intermediate effect.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>http://IBCNServices.github.io/Folio.owl</dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://IBCNServices.github.io/Folio#isLocalEffect">
+      <h3>isLocalEffect<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://IBCNServices.github.io/Folio#isLocalEffect</p>
+      <div class="comment">
+         <span class="markdown">Relation defining an failure effect as the first mentioned effect.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>http://IBCNServices.github.io/Folio.owl</dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://IBCNServices.github.io/Folio#observedBy">
+      <h3>observedBy<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://IBCNServices.github.io/Folio#observedBy</p>
+      <div class="comment">
+         <span class="markdown">Relation between a device and its observable property.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>http://IBCNServices.github.io/Folio.owl</dd>
+      </dl>
+   </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals
+</div>
+</div>

@@ -1,5 +1,4 @@
 <?xml version="1.0"?>
-
 <!-- Copyright 2018 Bram Steenwinckel
 
 Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,8 +12,6 @@ distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License. -->
-
-
 <rdf:RDF xmlns="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#"
      xml:base="http://IBCNServices.github.io/Folio-Ontology/Folio.owl"
      xmlns:schema="http://schema.org/"
@@ -48,110 +45,110 @@ limitations under the License. -->
 
 
 
-    <!-- http://IBCNServices.github.io/Folio#happenedAt -->
+    <!-- http://IBCNServices.github.io/Folio-Ontology/Folio.owl#happenedAt -->
 
-    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Folio#happenedAt">
-        <rdfs:isDefinedBy>http://IBCNServices.github.io/Folio.owl</rdfs:isDefinedBy>
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#happenedAt">
+        <rdfs:isDefinedBy>http://IBCNServices.github.io/Folio-Ontology/Folio.owl</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">happenedAt</rdfs:label>
         <skos:definition xml:lang="en">Relation between the failure cause and the corresponding device/system.</skos:definition>
     </owl:ObjectProperty>
 
 
 
-    <!-- http://IBCNServices.github.io/Folio#hasCause -->
+    <!-- http://IBCNServices.github.io/Folio-Ontology/Folio.owl#hasCause -->
 
-    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Folio#hasCause">
-        <rdfs:isDefinedBy>http://IBCNServices.github.io/Folio.owl</rdfs:isDefinedBy>
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#hasCause">
+        <rdfs:isDefinedBy>http://IBCNServices.github.io/Folio-Ontology/Folio.owl</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">hasCause</rdfs:label>
         <skos:definition xml:lang="en">Relation between a failure and it corresponding cause.</skos:definition>
     </owl:ObjectProperty>
 
 
 
-    <!-- http://IBCNServices.github.io/Folio#hasDetection -->
+    <!-- http://IBCNServices.github.io/Folio-Ontology/Folio.owl#hasDetection -->
 
-    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Folio#hasDetection">
-        <rdfs:isDefinedBy>http://IBCNServices.github.io/Folio.owl</rdfs:isDefinedBy>
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#hasDetection">
+        <rdfs:isDefinedBy>http://IBCNServices.github.io/Folio-Ontology/Folio.owl</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">hasDetection</rdfs:label>
         <skos:definition xml:lang="en">Relation between the observed element and the detection method</skos:definition>
     </owl:ObjectProperty>
 
 
 
-    <!-- http://IBCNServices.github.io/Folio#hasEffect -->
+    <!-- http://IBCNServices.github.io/Folio-Ontology/Folio.owl#hasEffect -->
 
-    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Folio#hasEffect">
-        <rdfs:isDefinedBy>http://IBCNServices.github.io/Folio.owl</rdfs:isDefinedBy>
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#hasEffect">
+        <rdfs:isDefinedBy>http://IBCNServices.github.io/Folio-Ontology/Folio.owl</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">hasEffect</rdfs:label>
         <skos:definition xml:lang="en">Relation between a failure and it corresponding effect.</skos:definition>
     </owl:ObjectProperty>
 
 
 
-    <!-- http://IBCNServices.github.io/Folio#hasFailureMode -->
+    <!-- http://IBCNServices.github.io/Folio-Ontology/Folio.owl#hasFailureMode -->
 
-    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Folio#hasFailureMode">
-        <rdfs:isDefinedBy>http://IBCNServices.github.io/Folio.owl</rdfs:isDefinedBy>
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#hasFailureMode">
+        <rdfs:isDefinedBy>http://IBCNServices.github.io/Folio-Ontology/Folio.owl</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">hasFailureMode</rdfs:label>
         <skos:definition xml:lang="en">Relation between the failure effect and the corresponding failure mode.</skos:definition>
     </owl:ObjectProperty>
 
 
 
-    <!-- http://IBCNServices.github.io/Folio#hasLowerFailureEffect -->
+    <!-- http://IBCNServices.github.io/Folio-Ontology/Folio.owl#hasLowerFailureEffect -->
 
-    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Folio#hasLowerFailureEffect">
-        <rdfs:isDefinedBy>http://IBCNServices.github.io/Folio.owl</rdfs:isDefinedBy>
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#hasLowerFailureEffect">
+        <rdfs:isDefinedBy>http://IBCNServices.github.io/Folio-Ontology/Folio.owl</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">hasLowerFailureEffect</rdfs:label>
         <skos:definition xml:lang="en">Relation between a failure effect and a previously occurring effect.</skos:definition>
     </owl:ObjectProperty>
 
 
 
-    <!-- http://IBCNServices.github.io/Folio#hasNextFailureEffect -->
+    <!-- http://IBCNServices.github.io/Folio-Ontology/Folio.owl#hasNextFailureEffect -->
 
-    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Folio#hasNextFailureEffect">
-        <rdfs:isDefinedBy>http://IBCNServices.github.io/Folio.owl</rdfs:isDefinedBy>
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#hasNextFailureEffect">
+        <rdfs:isDefinedBy>http://IBCNServices.github.io/Folio-Ontology/Folio.owl</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">hasNextFailureEffect</rdfs:label>
         <skos:definition xml:lang="en">Relation between a failure effect and a next effect.</skos:definition>
     </owl:ObjectProperty>
 
 
 
-    <!-- http://IBCNServices.github.io/Folio#isEndEffect -->
+    <!-- http://IBCNServices.github.io/Folio-Ontology/Folio.owl#isEndEffect -->
 
-    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Folio#isEndEffect">
-        <rdfs:isDefinedBy>http://IBCNServices.github.io/Folio.owl</rdfs:isDefinedBy>
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#isEndEffect">
+        <rdfs:isDefinedBy>http://IBCNServices.github.io/Folio-Ontology/Folio.owl</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">isEndEffect</rdfs:label>
         <skos:definition xml:lang="en">Relation defining an failure effect as end effect.</skos:definition>
     </owl:ObjectProperty>
 
 
 
-    <!-- http://IBCNServices.github.io/Folio#isIntermediateEffect -->
+    <!-- http://IBCNServices.github.io/Folio-Ontology/Folio.owl#isIntermediateEffect -->
 
-    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Folio#isIntermediateEffect">
-        <rdfs:isDefinedBy>http://IBCNServices.github.io/Folio.owl</rdfs:isDefinedBy>
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#isIntermediateEffect">
+        <rdfs:isDefinedBy>http://IBCNServices.github.io/Folio-Ontology/Folio.owl</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">isIntermediateEffect</rdfs:label>
         <skos:definition xml:lang="en">Relation defining an failure effect as intermediate effect.</skos:definition>
     </owl:ObjectProperty>
 
 
 
-    <!-- http://IBCNServices.github.io/Folio#isLocalEffect -->
+    <!-- http://IBCNServices.github.io/Folio-Ontology/Folio.owl#isLocalEffect -->
 
-    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Folio#isLocalEffect">
-        <rdfs:isDefinedBy>http://IBCNServices.github.io/Folio.owl</rdfs:isDefinedBy>
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#isLocalEffect">
+        <rdfs:isDefinedBy>http://IBCNServices.github.io/Folio-Ontology/Folio.owl</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">isLocalEffect</rdfs:label>
         <skos:definition xml:lang="en">Relation defining an failure effect as the first mentioned effect.</skos:definition>
     </owl:ObjectProperty>
 
 
 
-    <!-- http://IBCNServices.github.io/Folio#observedBy -->
+    <!-- http://IBCNServices.github.io/Folio-Ontology/Folio.owl#observedBy -->
 
-    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Folio#observedBy">
-        <rdfs:isDefinedBy>http://IBCNServices.github.io/Folio.owl</rdfs:isDefinedBy>
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#observedBy">
+        <rdfs:isDefinedBy>http://IBCNServices.github.io/Folio-Ontology/Folio.owl</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">observedBy</rdfs:label>
     </owl:ObjectProperty>
 
@@ -168,10 +165,10 @@ limitations under the License. -->
 
 
 
-    <!-- http://IBCNServices.github.io/Folio#AnomalyKnowledge -->
+    <!-- http://IBCNServices.github.io/Folio-Ontology/Folio.owl#AnomalyKnowledge -->
 
-    <owl:Class rdf:about="http://IBCNServices.github.io/Folio#AnomalyKnowledge">
-        <rdfs:isDefinedBy>http://IBCNServices.github.io/Folio.owl</rdfs:isDefinedBy>
+    <owl:Class rdf:about="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#AnomalyKnowledge">
+        <rdfs:isDefinedBy>http://IBCNServices.github.io/Folio-Ontology/Folio.owl</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">AnomalyKnowledge</rdfs:label>
         <skos:definition xml:lang="en">Anomaly’s description. Should then express, at least, which part of the system is affected, by what. Ideally, this should be completed with additional information, such as which components observe the anomaly, or the worth of its management.</skos:definition>
         <skos:example xml:lang="en">Anomaly’s description. Should then express, at least, which part of the system is affected, by what. Ideally, this should be completed with additional information, such as which components observe the anomaly, or the worth of its management.</skos:example>
@@ -179,33 +176,33 @@ limitations under the License. -->
 
 
 
-    <!-- http://IBCNServices.github.io/Folio#Category -->
+    <!-- http://IBCNServices.github.io/Folio-Ontology/Folio.owl#Category -->
 
-    <owl:Class rdf:about="http://IBCNServices.github.io/Folio#Category">
-        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Folio#AnomalyKnowledge"/>
-        <rdfs:isDefinedBy>http://IBCNServices.github.io/Folio.owl</rdfs:isDefinedBy>
+    <owl:Class rdf:about="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#Category">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#AnomalyKnowledge"/>
+        <rdfs:isDefinedBy>http://IBCNServices.github.io/Folio-Ontology/Folio.owl</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Category</rdfs:label>
         <skos:definition xml:lang="en">An anomaly can happen once (transient), periodically (recurrent) or definitively (permanent).</skos:definition>
     </owl:Class>
 
 
 
-    <!-- http://IBCNServices.github.io/Folio#Cause -->
+    <!-- http://IBCNServices.github.io/Folio-Ontology/Folio.owl#Cause -->
 
-    <owl:Class rdf:about="http://IBCNServices.github.io/Folio#Cause">
-        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Folio#AnomalyKnowledge"/>
-        <rdfs:isDefinedBy>http://IBCNServices.github.io/Folio.owl</rdfs:isDefinedBy>
+    <owl:Class rdf:about="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#Cause">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#AnomalyKnowledge"/>
+        <rdfs:isDefinedBy>http://IBCNServices.github.io/Folio-Ontology/Folio.owl</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Cause</rdfs:label>
         <skos:definition xml:lang="en">The cause refers to the description suspected to be the source of the anomaly</skos:definition>
     </owl:Class>
 
 
 
-    <!-- http://IBCNServices.github.io/Folio#ConsequenceDomain -->
+    <!-- http://IBCNServices.github.io/Folio-Ontology/Folio.owl#ConsequenceDomain -->
 
-    <owl:Class rdf:about="http://IBCNServices.github.io/Folio#ConsequenceDomain">
-        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Folio#AnomalyKnowledge"/>
-        <rdfs:isDefinedBy>http://IBCNServices.github.io/Folio.owl</rdfs:isDefinedBy>
+    <owl:Class rdf:about="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#ConsequenceDomain">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#AnomalyKnowledge"/>
+        <rdfs:isDefinedBy>http://IBCNServices.github.io/Folio-Ontology/Folio.owl</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">ConsequenceDomain</rdfs:label>
         <skos:definition xml:lang="en">Each domain relates to a specific kind of consequence of the anomaly.</skos:definition>
         <skos:example xml:lang="en">Malfunctioning of device or dangerous situation for end user.</skos:example>
@@ -213,11 +210,11 @@ limitations under the License. -->
 
 
 
-    <!-- http://IBCNServices.github.io/Folio#Criticality -->
+    <!-- http://IBCNServices.github.io/Folio-Ontology/Folio.owl#Criticality -->
 
-    <owl:Class rdf:about="http://IBCNServices.github.io/Folio#Criticality">
-        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Folio#AnomalyKnowledge"/>
-        <rdfs:isDefinedBy>http://IBCNServices.github.io/Folio.owl</rdfs:isDefinedBy>
+    <owl:Class rdf:about="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#Criticality">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#AnomalyKnowledge"/>
+        <rdfs:isDefinedBy>http://IBCNServices.github.io/Folio-Ontology/Folio.owl</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Criticality</rdfs:label>
         <skos:definition xml:lang="en">It is a time dependent worth attributed to the anomaly management.</skos:definition>
         <skos:example xml:lang="en">non-critic anomaly</skos:example>
@@ -225,10 +222,10 @@ limitations under the License. -->
 
 
 
-    <!-- http://IBCNServices.github.io/Folio#DetectionMethod -->
+    <!-- http://IBCNServices.github.io/Folio-Ontology/Folio.owl#DetectionMethod -->
 
-    <owl:Class rdf:about="http://IBCNServices.github.io/Folio#DetectionMethod">
-        <rdfs:isDefinedBy>http://IBCNServices.github.io/Folio.owl</rdfs:isDefinedBy>
+    <owl:Class rdf:about="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#DetectionMethod">
+        <rdfs:isDefinedBy>http://IBCNServices.github.io/Folio-Ontology/Folio.owl</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">DetectionMethod</rdfs:label>
         <skos:definition xml:lang="en">This relies on components’ survey to trigger a warning about abnormalities.</skos:definition>
         <skos:example xml:lang="en">value &gt; x.</skos:example>
@@ -236,29 +233,29 @@ limitations under the License. -->
 
 
 
-    <!-- http://IBCNServices.github.io/Folio#Effect -->
+    <!-- http://IBCNServices.github.io/Folio-Ontology/Folio.owl#Effect -->
 
-    <owl:Class rdf:about="http://IBCNServices.github.io/Folio#Effect">
-        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Folio#AnomalyKnowledge"/>
-        <rdfs:isDefinedBy>http://IBCNServices.github.io/Folio.owl</rdfs:isDefinedBy>
+    <owl:Class rdf:about="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#Effect">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#AnomalyKnowledge"/>
+        <rdfs:isDefinedBy>http://IBCNServices.github.io/Folio-Ontology/Folio.owl</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Effect</rdfs:label>
         <skos:definition xml:lang="en">The effect describes one aspect of the observed phenomenon.</skos:definition>
     </owl:Class>
 
 
 
-    <!-- http://IBCNServices.github.io/Folio#FailureCause -->
+    <!-- http://IBCNServices.github.io/Folio-Ontology/Folio.owl#FailureCause -->
 
-    <owl:Class rdf:about="http://IBCNServices.github.io/Folio#FailureCause">
+    <owl:Class rdf:about="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#FailureCause">
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Folio#isEndEffect"/>
-                <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Folio#FailureMode"/>
+                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#isEndEffect"/>
+                <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#FailureMode"/>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Folio#Cause"/>
-        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Folio#FailureMode"/>
-        <rdfs:isDefinedBy>http://IBCNServices.github.io/Folio.owl</rdfs:isDefinedBy>
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#Cause"/>
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#FailureMode"/>
+        <rdfs:isDefinedBy>http://IBCNServices.github.io/Folio-Ontology/Folio.owl</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">FailureCause</rdfs:label>
         <skos:definition xml:lang="en">Failure causes are defects in design, process, quality, or part application, which are the underlying cause of a failure or which initiate a process which leads to failure. Also, the failure effect at the highest indenture level or total system. A failure mode may have more causes.</skos:definition>
         <skos:example xml:lang="en">(abnormal) vibration input from another (possibly failed) system.</skos:example>
@@ -266,18 +263,18 @@ limitations under the License. -->
 
 
 
-    <!-- http://IBCNServices.github.io/Folio#FailureEffect -->
+    <!-- http://IBCNServices.github.io/Folio-Ontology/Folio.owl#FailureEffect -->
 
-    <owl:Class rdf:about="http://IBCNServices.github.io/Folio#FailureEffect">
+    <owl:Class rdf:about="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#FailureEffect">
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Folio#hasFailureMode"/>
-                <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Folio#FailureMode"/>
+                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#hasFailureMode"/>
+                <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#FailureMode"/>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Folio#Effect"/>
-        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Folio#FailureMode"/>
-        <rdfs:isDefinedBy>http://IBCNServices.github.io/Folio.owl</rdfs:isDefinedBy>
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#Effect"/>
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#FailureMode"/>
+        <rdfs:isDefinedBy>http://IBCNServices.github.io/Folio-Ontology/Folio.owl</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">FailureEffect</rdfs:label>
         <skos:definition xml:lang="en">Immediate consequences of a failure on operation, function or functionality, or status of some item.</skos:definition>
         <skos:example xml:lang="en">Increased range of input data.</skos:example>
@@ -285,28 +282,28 @@ limitations under the License. -->
 
 
 
-    <!-- http://IBCNServices.github.io/Folio#FailureMode -->
+    <!-- http://IBCNServices.github.io/Folio-Ontology/Folio.owl#FailureMode -->
 
-    <owl:Class rdf:about="http://IBCNServices.github.io/Folio#FailureMode">
+    <owl:Class rdf:about="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#FailureMode">
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Folio#happenedAt"/>
+                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#happenedAt"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/ns/ssn/System"/>
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Folio#hasCause"/>
-                <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Folio#FailureCause"/>
+                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#hasCause"/>
+                <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#FailureCause"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Folio#hasEffect"/>
-                <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Folio#FailureEffect"/>
+                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#hasEffect"/>
+                <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#FailureEffect"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:isDefinedBy>http://IBCNServices.github.io/Folio.owl</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy>http://IBCNServices.github.io/Folio-Ontology/Folio.owl</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">FailureMode</rdfs:label>
         <skos:definition xml:lang="en">The specific manner or way by which a failure occurs in terms of failure of the item (being a part or (sub) system) function under investigation; it may generally describe the way the failure occurs. It shall at least clearly describe a (end) failure state of the item (or function in case of a Functional FMEA) under consideration. It is the result of the failure mechanism (cause of the failure mode)..</skos:definition>
         <skos:example xml:lang="en"> Too high values.</skos:example>
@@ -314,62 +311,62 @@ limitations under the License. -->
 
 
 
-    <!-- http://IBCNServices.github.io/Folio#Faulty -->
+    <!-- http://IBCNServices.github.io/Folio-Ontology/Folio.owl#Faulty -->
 
-    <owl:Class rdf:about="http://IBCNServices.github.io/Folio#Faulty">
+    <owl:Class rdf:about="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#Faulty">
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Folio#hasDetection"/>
-                <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Folio#DetectionMethod"/>
+                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#hasDetection"/>
+                <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#DetectionMethod"/>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Folio#AnomalyKnowledge"/>
-        <rdfs:isDefinedBy>http://IBCNServices.github.io/Folio.owl</rdfs:isDefinedBy>
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#AnomalyKnowledge"/>
+        <rdfs:isDefinedBy>http://IBCNServices.github.io/Folio-Ontology/Folio.owl</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Faulty</rdfs:label>
         <skos:definition xml:lang="en">The loss of a function under stated conditions.</skos:definition>
     </owl:Class>
 
 
 
-    <!-- http://IBCNServices.github.io/Folio#IntermediateEffect -->
+    <!-- http://IBCNServices.github.io/Folio-Ontology/Folio.owl#IntermediateEffect -->
 
-    <owl:Class rdf:about="http://IBCNServices.github.io/Folio#IntermediateEffect">
+    <owl:Class rdf:about="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#IntermediateEffect">
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Folio#isIntermediateEffect"/>
-                <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Folio#FailureMode"/>
+                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#isIntermediateEffect"/>
+                <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#FailureMode"/>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Folio#FailureEffect"/>
-        <rdfs:isDefinedBy>http://IBCNServices.github.io/Folio.owl</rdfs:isDefinedBy>
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#FailureEffect"/>
+        <rdfs:isDefinedBy>http://IBCNServices.github.io/Folio-Ontology/Folio.owl</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">IntermediateEffect</rdfs:label>
         <skos:definition xml:lang="en">The failure effect as it applies at the next higher indenture level.</skos:definition>
     </owl:Class>
 
 
 
-    <!-- http://IBCNServices.github.io/Folio#LocalEffect -->
+    <!-- http://IBCNServices.github.io/Folio-Ontology/Folio.owl#LocalEffect -->
 
-    <owl:Class rdf:about="http://IBCNServices.github.io/Folio#LocalEffect">
+    <owl:Class rdf:about="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#LocalEffect">
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Folio#isLocalEffect"/>
-                <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Folio#FailureMode"/>
+                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#isLocalEffect"/>
+                <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#FailureMode"/>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Folio#FailureEffect"/>
-        <rdfs:isDefinedBy>http://IBCNServices.github.io/Folio.owl</rdfs:isDefinedBy>
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#FailureEffect"/>
+        <rdfs:isDefinedBy>http://IBCNServices.github.io/Folio-Ontology/Folio.owl</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">LocalEffect</rdfs:label>
         <skos:definition xml:lang="en">The visible failure effect as it applies to the item under analysis.</skos:definition>
     </owl:Class>
 
 
 
-    <!-- http://IBCNServices.github.io/Folio#ObservationValue -->
+    <!-- http://IBCNServices.github.io/Folio-Ontology/Folio.owl#ObservationValue -->
 
-    <owl:Class rdf:about="http://IBCNServices.github.io/Folio#ObservationValue">
+    <owl:Class rdf:about="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#ObservationValue">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Result"/>
-        <rdfs:isDefinedBy>http://IBCNServices.github.io/Folio.owl</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy>http://IBCNServices.github.io/Folio-Ontology/Folio.owl</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">ObservationValue</rdfs:label>
         <skos:definition xml:lang="en">Value describing the observation</skos:definition>
     </owl:Class>

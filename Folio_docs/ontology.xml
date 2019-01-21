@@ -1,18 +1,4 @@
 <?xml version="1.0"?>
-<!-- Copyright 2018 Bram Steenwinckel
-
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License. -->
-
 <rdf:RDF xmlns="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#"
      xml:base="http://IBCNServices.github.io/Folio-Ontology/Folio.owl"
      xmlns:schema="http://schema.org/"
@@ -32,99 +18,10 @@ limitations under the License. -->
         <owl:versionInfo xml:lang="en">1.0.0</owl:versionInfo>
         <foaf:name xml:lang="en">Folio</foaf:name>
     </owl:Ontology>
+    
 
 
-
-    <!--
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Annotation properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-
-
-
-
-    <!-- http://purl.org/dc/terms/created -->
-
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
-
-
-
-    <!-- http://purl.org/dc/terms/creator -->
-
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
-
-
-
-    <!-- http://purl.org/dc/terms/description -->
-
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
-
-
-
-    <!-- http://purl.org/dc/terms/license -->
-
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
-
-
-
-    <!-- http://purl.org/dc/terms/rights -->
-
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/rights"/>
-
-
-
-    <!-- http://purl.org/dc/terms/title -->
-
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
-
-
-
-    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
-
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
-
-
-
-    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
-
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
-
-
-
-    <!-- http://www.w3.org/2004/02/skos/core#definition -->
-
-
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition"/>
-
-
-
-    <!-- http://www.w3.org/2004/02/skos/core#example -->
-
-
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#example"/>
-
-
-
-    <!-- http://xmlns.com/foaf/0.1/name -->
-
-
-    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/name"/>
-
-
-
-    <!--
+    <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Object Properties
@@ -133,7 +30,7 @@ limitations under the License. -->
      -->
 
 
-
+    
 
 
     <!-- http://IBCNServices.github.io/Folio-Ontology/Folio.owl#happenedAt -->
@@ -144,7 +41,18 @@ limitations under the License. -->
         <rdfs:label xml:lang="en">happenedAt</rdfs:label>
         <skos:definition xml:lang="en">Relation between the failure cause and the corresponding device/system.</skos:definition>
     </owl:ObjectProperty>
+    
 
+
+    <!-- http://IBCNServices.github.io/Folio-Ontology/Folio.owl#hasCategory -->
+
+
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#hasCategory">
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://IBCNServices.github.io/Folio-Ontology/Folio.owl</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">hasCategory</rdfs:label>
+        <skos:definition xml:lang="en">Relation between the observed element and its category</skos:definition>
+    </owl:ObjectProperty>
+    
 
 
     <!-- http://IBCNServices.github.io/Folio-Ontology/Folio.owl#hasCause -->
@@ -155,7 +63,18 @@ limitations under the License. -->
         <rdfs:label xml:lang="en">hasCause</rdfs:label>
         <skos:definition xml:lang="en">Relation between a failure and it corresponding cause.</skos:definition>
     </owl:ObjectProperty>
+    
 
+
+    <!-- http://IBCNServices.github.io/Folio-Ontology/Folio.owl#hasCriticality -->
+
+
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#hasCriticality">
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://IBCNServices.github.io/Folio-Ontology/Folio.owl</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">hasCriticality</rdfs:label>
+        <skos:definition xml:lang="en">Relation between the observed element and the criticality</skos:definition>
+    </owl:ObjectProperty>
+    
 
 
     <!-- http://IBCNServices.github.io/Folio-Ontology/Folio.owl#hasDetection -->
@@ -166,7 +85,18 @@ limitations under the License. -->
         <rdfs:label xml:lang="en">hasDetection</rdfs:label>
         <skos:definition xml:lang="en">Relation between the observed element and the detection method</skos:definition>
     </owl:ObjectProperty>
+    
 
+
+    <!-- http://IBCNServices.github.io/Folio-Ontology/Folio.owl#hasDomain -->
+
+
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#hasDomain">
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://IBCNServices.github.io/Folio-Ontology/Folio.owl</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">hasDomain</rdfs:label>
+        <skos:definition xml:lang="en">Relation between the observed element and its domain</skos:definition>
+    </owl:ObjectProperty>
+    
 
 
     <!-- http://IBCNServices.github.io/Folio-Ontology/Folio.owl#hasEffect -->
@@ -177,7 +107,7 @@ limitations under the License. -->
         <rdfs:label xml:lang="en">hasEffect</rdfs:label>
         <skos:definition xml:lang="en">Relation between a failure and it corresponding effect.</skos:definition>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- http://IBCNServices.github.io/Folio-Ontology/Folio.owl#hasFailureMode -->
@@ -188,7 +118,7 @@ limitations under the License. -->
         <rdfs:label xml:lang="en">hasFailureMode</rdfs:label>
         <skos:definition xml:lang="en">Relation between the failure effect and the corresponding failure mode.</skos:definition>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- http://IBCNServices.github.io/Folio-Ontology/Folio.owl#hasLowerFailureEffect -->
@@ -199,7 +129,7 @@ limitations under the License. -->
         <rdfs:label xml:lang="en">hasLowerFailureEffect</rdfs:label>
         <skos:definition xml:lang="en">Relation between a failure effect and a previously occurring effect.</skos:definition>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- http://IBCNServices.github.io/Folio-Ontology/Folio.owl#hasNextFailureEffect -->
@@ -210,7 +140,7 @@ limitations under the License. -->
         <rdfs:label xml:lang="en">hasNextFailureEffect</rdfs:label>
         <skos:definition xml:lang="en">Relation between a failure effect and a next effect.</skos:definition>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- http://IBCNServices.github.io/Folio-Ontology/Folio.owl#isEndEffect -->
@@ -221,7 +151,7 @@ limitations under the License. -->
         <rdfs:label xml:lang="en">isEndEffect</rdfs:label>
         <skos:definition xml:lang="en">Relation defining an failure effect as end effect.</skos:definition>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- http://IBCNServices.github.io/Folio-Ontology/Folio.owl#isIntermediateEffect -->
@@ -232,7 +162,7 @@ limitations under the License. -->
         <rdfs:label xml:lang="en">isIntermediateEffect</rdfs:label>
         <skos:definition xml:lang="en">Relation defining an failure effect as intermediate effect.</skos:definition>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- http://IBCNServices.github.io/Folio-Ontology/Folio.owl#isLocalEffect -->
@@ -243,7 +173,7 @@ limitations under the License. -->
         <rdfs:label xml:lang="en">isLocalEffect</rdfs:label>
         <skos:definition xml:lang="en">Relation defining an failure effect as the first mentioned effect.</skos:definition>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- http://IBCNServices.github.io/Folio-Ontology/Folio.owl#observedBy -->
@@ -253,420 +183,10 @@ limitations under the License. -->
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://IBCNServices.github.io/Folio-Ontology/Folio.owl</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">observedBy</rdfs:label>
     </owl:ObjectProperty>
+    
 
 
-
-    <!-- http://www.w3.org/ns/sosa/actsOnProperty -->
-
-
-    <rdf:Description rdf:about="http://www.w3.org/ns/sosa/actsOnProperty">
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/"/>
-    </rdf:Description>
-
-
-
-    <!-- http://www.w3.org/ns/sosa/hasFeatureOfInterest -->
-
-
-    <rdf:Description rdf:about="http://www.w3.org/ns/sosa/hasFeatureOfInterest">
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/"/>
-    </rdf:Description>
-
-
-
-    <!-- http://www.w3.org/ns/sosa/hasResult -->
-
-
-    <rdf:Description rdf:about="http://www.w3.org/ns/sosa/hasResult">
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/"/>
-    </rdf:Description>
-
-
-
-    <!-- http://www.w3.org/ns/sosa/hasSample -->
-
-
-    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/hasSample">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/"/>
-    </owl:ObjectProperty>
-
-
-
-    <!-- http://www.w3.org/ns/sosa/hosts -->
-
-
-    <rdf:Description rdf:about="http://www.w3.org/ns/sosa/hosts">
-        <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.w3.org/ns/ssn/inDeployment"/>
-            <rdf:Description rdf:about="http://www.w3.org/ns/ssn/deployedSystem"/>
-        </owl:propertyChainAxiom>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/"/>
-    </rdf:Description>
-
-
-
-    <!-- http://www.w3.org/ns/sosa/isActedOnBy -->
-
-
-    <rdf:Description rdf:about="http://www.w3.org/ns/sosa/isActedOnBy">
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/"/>
-    </rdf:Description>
-
-
-
-    <!-- http://www.w3.org/ns/sosa/isHostedBy -->
-
-
-    <rdf:Description rdf:about="http://www.w3.org/ns/sosa/isHostedBy">
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/"/>
-    </rdf:Description>
-
-
-
-    <!-- http://www.w3.org/ns/sosa/isObservedBy -->
-
-
-    <rdf:Description rdf:about="http://www.w3.org/ns/sosa/isObservedBy">
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/"/>
-    </rdf:Description>
-
-
-
-    <!-- http://www.w3.org/ns/sosa/isResultOf -->
-
-
-    <rdf:Description rdf:about="http://www.w3.org/ns/sosa/isResultOf">
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/"/>
-    </rdf:Description>
-
-
-
-    <!-- http://www.w3.org/ns/sosa/isSampleOf -->
-
-
-    <rdf:Description rdf:about="http://www.w3.org/ns/sosa/isSampleOf">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/"/>
-    </rdf:Description>
-
-
-
-    <!-- http://www.w3.org/ns/sosa/madeActuation -->
-
-
-    <rdf:Description rdf:about="http://www.w3.org/ns/sosa/madeActuation">
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/"/>
-    </rdf:Description>
-
-
-
-    <!-- http://www.w3.org/ns/sosa/madeByActuator -->
-
-
-    <rdf:Description rdf:about="http://www.w3.org/ns/sosa/madeByActuator">
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/"/>
-    </rdf:Description>
-
-
-
-    <!-- http://www.w3.org/ns/sosa/madeBySampler -->
-
-
-    <rdf:Description rdf:about="http://www.w3.org/ns/sosa/madeBySampler">
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/"/>
-    </rdf:Description>
-
-
-
-    <!-- http://www.w3.org/ns/sosa/madeBySensor -->
-
-
-    <rdf:Description rdf:about="http://www.w3.org/ns/sosa/madeBySensor">
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/"/>
-    </rdf:Description>
-
-
-
-    <!-- http://www.w3.org/ns/sosa/madeObservation -->
-
-
-    <rdf:Description rdf:about="http://www.w3.org/ns/sosa/madeObservation">
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/"/>
-    </rdf:Description>
-
-
-
-    <!-- http://www.w3.org/ns/sosa/madeSampling -->
-
-
-    <rdf:Description rdf:about="http://www.w3.org/ns/sosa/madeSampling">
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/"/>
-    </rdf:Description>
-
-
-
-    <!-- http://www.w3.org/ns/sosa/observedProperty -->
-
-
-    <rdf:Description rdf:about="http://www.w3.org/ns/sosa/observedProperty">
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/"/>
-    </rdf:Description>
-
-
-
-    <!-- http://www.w3.org/ns/sosa/observes -->
-
-
-    <rdf:Description rdf:about="http://www.w3.org/ns/sosa/observes">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/ssn/forProperty"/>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/"/>
-    </rdf:Description>
-
-
-
-    <!-- http://www.w3.org/ns/sosa/phenomenonTime -->
-
-
-    <rdf:Description rdf:about="http://www.w3.org/ns/sosa/phenomenonTime">
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/"/>
-    </rdf:Description>
-
-
-
-    <!-- http://www.w3.org/ns/sosa/usedProcedure -->
-
-
-    <rdf:Description rdf:about="http://www.w3.org/ns/sosa/usedProcedure">
-        <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.w3.org/ns/sosa/madeByActuator"/>
-            <rdf:Description rdf:about="http://www.w3.org/ns/ssn/implements"/>
-        </owl:propertyChainAxiom>
-        <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.w3.org/ns/sosa/madeBySampler"/>
-            <rdf:Description rdf:about="http://www.w3.org/ns/ssn/implements"/>
-        </owl:propertyChainAxiom>
-        <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.w3.org/ns/sosa/madeBySensor"/>
-            <rdf:Description rdf:about="http://www.w3.org/ns/ssn/implements"/>
-        </owl:propertyChainAxiom>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/"/>
-    </rdf:Description>
-
-
-
-    <!-- http://www.w3.org/ns/ssn/deployedOnPlatform -->
-
-
-    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/ssn/deployedOnPlatform">
-        <owl:inverseOf rdf:resource="http://www.w3.org/ns/ssn/inDeployment"/>
-        <rdfs:comment xml:lang="en">Relation between a Deployment and the Platform on which the Systems are deployed.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/ssn/"/>
-        <rdfs:label xml:lang="en">deployed on platform</rdfs:label>
-        <skos:definition xml:lang="en">Relation between a Deployment and the Platform on which the Systems are deployed.</skos:definition>
-    </owl:ObjectProperty>
-
-
-
-    <!-- http://www.w3.org/ns/ssn/deployedSystem -->
-
-
-    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/ssn/deployedSystem">
-        <owl:inverseOf rdf:resource="http://www.w3.org/ns/ssn/hasDeployment"/>
-        <rdfs:comment xml:lang="en">Relation between a Deployment and a deployed System.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/ssn/"/>
-        <rdfs:label xml:lang="en">deployed system</rdfs:label>
-        <skos:definition xml:lang="en">Relation between a Deployment and a deployed System.</skos:definition>
-    </owl:ObjectProperty>
-
-
-
-    <!-- http://www.w3.org/ns/ssn/detects -->
-
-
-    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/ssn/detects">
-        <rdfs:comment xml:lang="en">A relation from a Sensor to the Stimulus that the Sensor can detect. The Stimulus itself will be serving as a proxy for some ObservableProperty.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/ssn/"/>
-        <rdfs:label xml:lang="en">detects</rdfs:label>
-        <skos:definition xml:lang="en">A relation from a Sensor to the Stimulus that the Sensor detects. The Stimulus itself will be serving as a proxy for some ObservableProperty.</skos:definition>
-    </owl:ObjectProperty>
-
-
-
-    <!-- http://www.w3.org/ns/ssn/forProperty -->
-
-
-    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/ssn/forProperty">
-        <rdfs:comment xml:lang="en">A relation between some aspect of an entity and a Property.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/ssn/"/>
-        <rdfs:label xml:lang="en">for property</rdfs:label>
-        <skos:definition xml:lang="en">A relation between some aspect of an entity and a Property.</skos:definition>
-        <skos:example xml:lang="en">For example, from a Sensor to the properties it can observe; from an Actuator to the properties it can act on; from a Deployment to the properties it was installed to observe or act on; from a SystemCapability to the Property the capability is described for.</skos:example>
-    </owl:ObjectProperty>
-
-
-
-    <!-- http://www.w3.org/ns/ssn/hasDeployment -->
-
-
-    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/ssn/hasDeployment">
-        <rdfs:comment xml:lang="en">Relation between a System and a Deployment, recording that the System is deployed in that Deployment.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/ssn/"/>
-        <rdfs:label xml:lang="en">has deployment</rdfs:label>
-        <skos:definition xml:lang="en">Relation between a System and a Deployment, recording that the System is deployed in that Deployment.</skos:definition>
-    </owl:ObjectProperty>
-
-
-
-    <!-- http://www.w3.org/ns/ssn/hasInput -->
-
-
-    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/ssn/hasInput">
-        <rdfs:comment xml:lang="en">Relation between a Procedure and an Input to it.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/ssn/"/>
-        <rdfs:label xml:lang="en">has input</rdfs:label>
-        <skos:definition xml:lang="en">Relation between a Procedure and an Input to it.</skos:definition>
-    </owl:ObjectProperty>
-
-
-
-    <!-- http://www.w3.org/ns/ssn/hasOutput -->
-
-
-    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/ssn/hasOutput">
-        <rdfs:comment xml:lang="en">Relation between a Procedure and an Output of it.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/ssn/"/>
-        <rdfs:label xml:lang="en">has output</rdfs:label>
-        <skos:definition xml:lang="en">Relation between a Procedure and an Output of it.</skos:definition>
-    </owl:ObjectProperty>
-
-
-
-    <!-- http://www.w3.org/ns/ssn/hasProperty -->
-
-
-    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/ssn/hasProperty">
-        <owl:inverseOf rdf:resource="http://www.w3.org/ns/ssn/isPropertyOf"/>
-        <rdfs:comment xml:lang="en">Relation between an entity and a Property of that entity.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/ssn/"/>
-        <rdfs:label xml:lang="en">has property</rdfs:label>
-        <skos:definition xml:lang="en">Relation between an entity and a Property of that entity.</skos:definition>
-    </owl:ObjectProperty>
-
-
-
-    <!-- http://www.w3.org/ns/ssn/hasSubSystem -->
-
-
-    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/ssn/hasSubSystem">
-        <rdfs:comment xml:lang="en">Relation between a System and its component parts.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/ssn/"/>
-        <rdfs:label xml:lang="en">has subsystem</rdfs:label>
-        <skos:definition xml:lang="en">Relation between a System and its component parts.</skos:definition>
-    </owl:ObjectProperty>
-
-
-
-    <!-- http://www.w3.org/ns/ssn/implementedBy -->
-
-
-    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/ssn/implementedBy">
-        <owl:inverseOf rdf:resource="http://www.w3.org/ns/ssn/implements"/>
-        <rdfs:comment xml:lang="en">Relation between a Procedure (an algorithm, procedure or method) and an entity that implements that Procedure in some executable way.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/ssn/"/>
-        <rdfs:label xml:lang="en">implemented by</rdfs:label>
-        <skos:definition xml:lang="en">Relation between a Procedure (an algorithm, procedure or method) and an entity that implements that Procedure in some executable way.</skos:definition>
-        <skos:example xml:lang="en">For example, the relationship between a scientific measuring Procedure and a sensor that senses via that Procedure.</skos:example>
-    </owl:ObjectProperty>
-
-
-
-    <!-- http://www.w3.org/ns/ssn/implements -->
-
-
-    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/ssn/implements">
-        <rdfs:comment xml:lang="en">Relation between an entity that implements a Procedure in some executable way and the Procedure (an algorithm, procedure or method).</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/ssn/"/>
-        <rdfs:label xml:lang="en">implements</rdfs:label>
-        <skos:definition xml:lang="en">Relation between an entity that implements a Procedure in some executable way and the Procedure (an algorithm, procedure or method).</skos:definition>
-        <skos:example xml:lang="en">For example, the relationship between a sensor and the scientific measuring Procedure via which it senses.</skos:example>
-    </owl:ObjectProperty>
-
-
-
-    <!-- http://www.w3.org/ns/ssn/inDeployment -->
-
-
-    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/ssn/inDeployment">
-        <rdfs:comment xml:lang="en">Relation between a Platform and a Deployment, meaning that the deployedSystems of the Deployment are hosted on the Platform.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/ssn/"/>
-        <rdfs:label xml:lang="en">in deployment</rdfs:label>
-        <skos:definition xml:lang="en">Relation between a Platform and a Deployment, meaning that the deployedSystems of the Deployment are hosted on the Platform.</skos:definition>
-        <skos:example xml:lang="en">For example, a relation between a buoy and a deployment of several Sensors.</skos:example>
-    </owl:ObjectProperty>
-
-
-
-    <!-- http://www.w3.org/ns/ssn/isPropertyOf -->
-
-
-    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/ssn/isPropertyOf">
-        <rdfs:comment xml:lang="en">Relation between a Property and the entity it belongs to.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/ssn/"/>
-        <rdfs:label xml:lang="en">is property of</rdfs:label>
-        <skos:definition xml:lang="en">Relation between a Property and the entity it belongs to.</skos:definition>
-    </owl:ObjectProperty>
-
-
-
-    <!-- http://www.w3.org/ns/ssn/isProxyFor -->
-
-
-    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/ssn/isProxyFor">
-        <rdfs:comment xml:lang="en">A relation from a Stimulus to the Property that the Stimulus is serving as a proxy for.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/ssn/"/>
-        <rdfs:label xml:lang="en">is proxy for</rdfs:label>
-        <skos:definition xml:lang="en">A relation from a Stimulus to the Property that the Stimulus is serving as a proxy for.</skos:definition>
-        <skos:example xml:lang="en">For example, the expansion of quicksilver is a stimulus that serves as a proxy for some temperature property. An increase or decrease in the velocity of spinning cups on a wind sensor is serving as a proxy for the wind speed.</skos:example>
-    </owl:ObjectProperty>
-
-
-
-    <!-- http://www.w3.org/ns/ssn/wasOriginatedBy -->
-
-
-    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/ssn/wasOriginatedBy">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:comment xml:lang="en">Relation between an Observation and the Stimulus that originated it.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/ssn/"/>
-        <rdfs:label xml:lang="en">was originated by</rdfs:label>
-        <skos:definition xml:lang="en">Relation between an Observation and the Stimulus that originated it.</skos:definition>
-    </owl:ObjectProperty>
-
-
-
-    <!--
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Data properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-
-
-
-
-    <!-- http://www.w3.org/ns/sosa/resultTime -->
-
-
-    <rdf:Description rdf:about="http://www.w3.org/ns/sosa/resultTime">
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/"/>
-    </rdf:Description>
-
-
-
-    <!--
+    <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Classes
@@ -675,69 +195,150 @@ limitations under the License. -->
      -->
 
 
+    
 
 
+    <!-- http://IBCNServices.github.io/Folio-Ontology/Folio.owl#Anomaly -->
 
-    <!-- http://IBCNServices.github.io/Folio-Ontology/Folio.owl#AnomalyKnowledge -->
 
-
-    <owl:Class rdf:about="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#AnomalyKnowledge">
+    <owl:Class rdf:about="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#Anomaly">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/usedProcedure"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/ns/sosa/Procedure"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/ssn/wasOriginatedBy"/>
+                <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#fromObservation"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/ssn/wasOriginatedBy"/>
+                <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#observedProperty"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/ssn/wasOriginatedBy"/>
+                <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#toObservation"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/ssn/wasOriginatedBy"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/ns/ssn/Stimulus"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasResult"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.w3.org/ns/sosa/resultTime"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://IBCNServices.github.io/Folio-Ontology/Folio.owl</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">AnomalyKnowledge</rdfs:label>
-        <skos:definition xml:lang="en">Anomaly’s description. Should then express, at least, which part of the system is affected, by what. Ideally, this should be completed with additional information, such as which components observe the anomaly, or the worth of its management.</skos:definition>
-        <skos:example xml:lang="en">Anomaly’s description. Should then express, at least, which part of the system is affected, by what. Ideally, this should be completed with additional information, such as which components observe the anomaly, or the worth of its management.</skos:example>
+        <rdfs:label xml:lang="en">Anomaly</rdfs:label>
+        <skos:definition xml:lang="en">Description of possible unwanted behaviour</skos:definition>
     </owl:Class>
-
+    
 
 
     <!-- http://IBCNServices.github.io/Folio-Ontology/Folio.owl#Category -->
 
 
     <owl:Class rdf:about="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#Category">
-        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#AnomalyKnowledge"/>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://IBCNServices.github.io/Folio-Ontology/Folio.owl</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Category</rdfs:label>
-        <skos:definition xml:lang="en">An anomaly can happen once (transient), periodically (recurrent) or definitively (permanent).</skos:definition>
+        <skos:definition xml:lang="en">An ConfirmedAnomaly can happen once (transient), periodically (recurrent) or definitively (permanent).</skos:definition>
     </owl:Class>
-
+    
 
 
     <!-- http://IBCNServices.github.io/Folio-Ontology/Folio.owl#Cause -->
 
 
     <owl:Class rdf:about="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#Cause">
-        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#AnomalyKnowledge"/>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://IBCNServices.github.io/Folio-Ontology/Folio.owl</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Cause</rdfs:label>
-        <skos:definition xml:lang="en">The cause refers to the description suspected to be the source of the anomaly</skos:definition>
+        <skos:definition xml:lang="en">The cause refers to the description suspected to be the source of the ConfirmedAnomaly</skos:definition>
     </owl:Class>
+    
 
+
+    <!-- http://IBCNServices.github.io/Folio-Ontology/Folio.owl#ConfirmedAnomaly -->
+
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#ConfirmedAnomaly">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#hasCategory"/>
+                <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#Category"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#hasCause"/>
+                <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#Cause"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#hasCriticality"/>
+                <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#Criticality"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#hasDetection"/>
+                <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#DetectionMethod"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#hasDomain"/>
+                <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#ConsequenceDomain"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#hasEffect"/>
+                <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#Effect"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#Anomaly"/>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://IBCNServices.github.io/Folio-Ontology/Folio.owl</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">ConfirmedAnomaly</rdfs:label>
+        <skos:definition xml:lang="en">ConfirmedAnomaly’s description. Should then express, at least, which part of the system is affected, by what. Ideally, this should be completed with additional information, such as which components observe the ConfirmedAnomaly, or the worth of its management.</skos:definition>
+        <skos:example xml:lang="en">ConfirmedAnomaly’s description. Should then express, at least, which part of the system is affected, by what. Ideally, this should be completed with additional information, such as which components observe the ConfirmedAnomaly, or the worth of its management.</skos:example>
+    </owl:Class>
+    
 
 
     <!-- http://IBCNServices.github.io/Folio-Ontology/Folio.owl#ConsequenceDomain -->
 
 
     <owl:Class rdf:about="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#ConsequenceDomain">
-        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#AnomalyKnowledge"/>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://IBCNServices.github.io/Folio-Ontology/Folio.owl</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">ConsequenceDomain</rdfs:label>
-        <skos:definition xml:lang="en">Each domain relates to a specific kind of consequence of the anomaly.</skos:definition>
+        <skos:definition xml:lang="en">Each domain relates to a specific kind of consequence of the ConfirmedAnomaly.</skos:definition>
         <skos:example xml:lang="en">Malfunctioning of device or dangerous situation for end user.</skos:example>
     </owl:Class>
-
+    
 
 
     <!-- http://IBCNServices.github.io/Folio-Ontology/Folio.owl#Criticality -->
 
 
     <owl:Class rdf:about="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#Criticality">
-        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#AnomalyKnowledge"/>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://IBCNServices.github.io/Folio-Ontology/Folio.owl</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Criticality</rdfs:label>
-        <skos:definition xml:lang="en">It is a time dependent worth attributed to the anomaly management.</skos:definition>
-        <skos:example xml:lang="en">non-critic anomaly</skos:example>
+        <skos:definition xml:lang="en">It is a time dependent worth attributed to the ConfirmedAnomaly management.</skos:definition>
+        <skos:example xml:lang="en">non-critic ConfirmedAnomaly</skos:example>
     </owl:Class>
-
+    
 
 
     <!-- http://IBCNServices.github.io/Folio-Ontology/Folio.owl#DetectionMethod -->
@@ -749,19 +350,18 @@ limitations under the License. -->
         <skos:definition xml:lang="en">This relies on components’ survey to trigger a warning about abnormalities.</skos:definition>
         <skos:example xml:lang="en">value &gt; x.</skos:example>
     </owl:Class>
-
+    
 
 
     <!-- http://IBCNServices.github.io/Folio-Ontology/Folio.owl#Effect -->
 
 
     <owl:Class rdf:about="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#Effect">
-        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#AnomalyKnowledge"/>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://IBCNServices.github.io/Folio-Ontology/Folio.owl</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Effect</rdfs:label>
         <skos:definition xml:lang="en">The effect describes one aspect of the observed phenomenon.</skos:definition>
     </owl:Class>
-
+    
 
 
     <!-- http://IBCNServices.github.io/Folio-Ontology/Folio.owl#FailureCause -->
@@ -781,7 +381,7 @@ limitations under the License. -->
         <skos:definition xml:lang="en">Failure causes are defects in design, process, quality, or part application, which are the underlying cause of a failure or which initiate a process which leads to failure. Also, the failure effect at the highest indenture level or total system. A failure mode may have more causes.</skos:definition>
         <skos:example xml:lang="en">(abnormal) vibration input from another (possibly failed) system.</skos:example>
     </owl:Class>
-
+    
 
 
     <!-- http://IBCNServices.github.io/Folio-Ontology/Folio.owl#FailureEffect -->
@@ -801,7 +401,7 @@ limitations under the License. -->
         <skos:definition xml:lang="en">Immediate consequences of a failure on operation, function or functionality, or status of some item.</skos:definition>
         <skos:example xml:lang="en">Increased range of input data.</skos:example>
     </owl:Class>
-
+    
 
 
     <!-- http://IBCNServices.github.io/Folio-Ontology/Folio.owl#FailureMode -->
@@ -814,42 +414,24 @@ limitations under the License. -->
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/ns/ssn/System"/>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf>
+        <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#hasCause"/>
                 <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#FailureCause"/>
             </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#hasEffect"/>
                 <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#FailureEffect"/>
             </owl:Restriction>
-        </rdfs:subClassOf>
+        </owl:equivalentClass>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://IBCNServices.github.io/Folio-Ontology/Folio.owl</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">FailureMode</rdfs:label>
         <skos:definition xml:lang="en">The specific manner or way by which a failure occurs in terms of failure of the item (being a part or (sub) system) function under investigation; it may generally describe the way the failure occurs. It shall at least clearly describe a (end) failure state of the item (or function in case of a Functional FMEA) under consideration. It is the result of the failure mechanism (cause of the failure mode)..</skos:definition>
         <skos:example xml:lang="en"> Too high values.</skos:example>
     </owl:Class>
-
-
-
-    <!-- http://IBCNServices.github.io/Folio-Ontology/Folio.owl#Faulty -->
-
-
-    <owl:Class rdf:about="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#Faulty">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#hasDetection"/>
-                <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#DetectionMethod"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#AnomalyKnowledge"/>
-        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://IBCNServices.github.io/Folio-Ontology/Folio.owl</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">Faulty</rdfs:label>
-        <skos:definition xml:lang="en">The loss of a function under stated conditions.</skos:definition>
-    </owl:Class>
-
+    
 
 
     <!-- http://IBCNServices.github.io/Folio-Ontology/Folio.owl#IntermediateEffect -->
@@ -867,7 +449,7 @@ limitations under the License. -->
         <rdfs:label xml:lang="en">IntermediateEffect</rdfs:label>
         <skos:definition xml:lang="en">The failure effect as it applies at the next higher indenture level.</skos:definition>
     </owl:Class>
-
+    
 
 
     <!-- http://IBCNServices.github.io/Folio-Ontology/Folio.owl#LocalEffect -->
@@ -881,756 +463,56 @@ limitations under the License. -->
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#FailureEffect"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://IBCNServices.github.io/Folio-Ontology/Folio.owl</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">LocalEffect</rdfs:label>
         <skos:definition xml:lang="en">The visible failure effect as it applies to the item under analysis.</skos:definition>
     </owl:Class>
+    
 
 
+    <!-- http://IBCNServices.github.io/Folio-Ontology/Folio.owl#fromObservation -->
 
-    <!-- http://IBCNServices.github.io/Folio-Ontology/Folio.owl#ObservationValue -->
 
-
-    <owl:Class rdf:about="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#ObservationValue">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Result"/>
+    <owl:Class rdf:about="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#fromObservation">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://IBCNServices.github.io/Folio-Ontology/Folio.owl</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">ObservationValue</rdfs:label>
-        <skos:definition xml:lang="en">Value describing the observation</skos:definition>
+        <rdfs:label xml:lang="en">fromObservation</rdfs:label>
+        <skos:definition xml:lang="en">First observation describing the underfined behaviour</skos:definition>
     </owl:Class>
+    
 
 
-
-    <!-- http://purl.org/vocommons/voaf#Vocabulary -->
-
-
-    <owl:Class rdf:about="http://purl.org/vocommons/voaf#Vocabulary"/>
+    <!-- http://IBCNServices.github.io/Folio-Ontology/Folio.owl#observedProperty -->
 
 
-
-    <!-- http://www.w3.org/ns/sosa/ActuatableProperty -->
-
-
-    <rdf:Description rdf:about="http://www.w3.org/ns/sosa/ActuatableProperty">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/ssn/Property"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/isActedOnBy"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/Actuation"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/"/>
-    </rdf:Description>
-
-
-
-    <!-- http://www.w3.org/ns/sosa/Actuation -->
-
-
-    <owl:Class rdf:about="http://www.w3.org/ns/sosa/Actuation">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/actsOnProperty"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/ActuatableProperty"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasResult"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/Result"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/madeByActuator"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/Actuator"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/usedProcedure"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/Procedure"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/actsOnProperty"/>
-                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasResult"/>
-                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
-                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/madeByActuator"/>
-                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/resultTime"/>
-                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/"/>
+    <owl:Class rdf:about="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#observedProperty">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://IBCNServices.github.io/Folio-Ontology/Folio.owl</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">observedProperty</rdfs:label>
     </owl:Class>
+    
 
 
-
-    <!-- http://www.w3.org/ns/sosa/Actuator -->
-
-
-    <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Actuator">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/ssn/System"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/madeActuation"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/Actuation"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/ssn/forProperty"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/ActuatableProperty"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/ssn/implements"/>
-                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/"/>
-    </rdf:Description>
+    <!-- http://IBCNServices.github.io/Folio-Ontology/Folio.owl#toObservation -->
 
 
-
-    <!-- http://www.w3.org/ns/sosa/FeatureOfInterest -->
-
-
-    <rdf:Description rdf:about="http://www.w3.org/ns/sosa/FeatureOfInterest">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasSample"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/Sample"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/ssn/hasProperty"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/ssn/Property"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/ssn/hasProperty"/>
-                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/"/>
-    </rdf:Description>
-
-
-
-    <!-- http://www.w3.org/ns/sosa/ObservableProperty -->
-
-
-    <rdf:Description rdf:about="http://www.w3.org/ns/sosa/ObservableProperty">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/ssn/Property"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/isObservedBy"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty>
-                    <rdf:Description>
-                        <owl:inverseOf rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
-                    </rdf:Description>
-                </owl:onProperty>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty>
-                    <rdf:Description>
-                        <owl:inverseOf rdf:resource="http://www.w3.org/ns/ssn/isProxyFor"/>
-                    </rdf:Description>
-                </owl:onProperty>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/ssn/Stimulus"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/"/>
-    </rdf:Description>
-
-
-
-    <!-- http://www.w3.org/ns/sosa/Observation -->
-
-
-    <owl:Class rdf:about="http://www.w3.org/ns/sosa/Observation">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasResult"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/Result"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/madeBySensor"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/usedProcedure"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/Procedure"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/ssn/wasOriginatedBy"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/ssn/Stimulus"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasResult"/>
-                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
-                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/madeBySensor"/>
-                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
-                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/phenomenonTime"/>
-                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/ssn/wasOriginatedBy"/>
-                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/resultTime"/>
-                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/"/>
+    <owl:Class rdf:about="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#toObservation">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://IBCNServices.github.io/Folio-Ontology/Folio.owl</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">toObservation</rdfs:label>
     </owl:Class>
+    
 
 
+    <!-- http://www.w3.org/ns/sosa/resultTime -->
 
-    <!-- http://www.w3.org/ns/sosa/Platform -->
 
-
-    <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Platform">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hosts"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/ssn/System"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/ssn/inDeployment"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/ssn/Deployment"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/"/>
-    </rdf:Description>
-
-
-
-    <!-- http://www.w3.org/ns/sosa/Procedure -->
-
-
-    <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Procedure">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/ssn/hasInput"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/ssn/Input"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/ssn/hasOutput"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/ssn/Output"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/ssn/implementedBy"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/ssn/System"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/"/>
-    </rdf:Description>
-
-
-
-    <!-- http://www.w3.org/ns/sosa/Result -->
-
-
-    <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Result">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/isResultOf"/>
-                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/"/>
-    </rdf:Description>
-
-
-
-    <!-- http://www.w3.org/ns/sosa/Sample -->
-
-
-    <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Sample">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Result"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/isResultOf"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/Sampling"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/isSampleOf"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/isResultOf"/>
-                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/isSampleOf"/>
-                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/"/>
-    </rdf:Description>
-
-
-
-    <!-- http://www.w3.org/ns/sosa/Sampler -->
-
-
-    <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Sampler">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/ssn/System"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/madeSampling"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/Sampling"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/ssn/implements"/>
-                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/"/>
-    </rdf:Description>
-
-
-
-    <!-- http://www.w3.org/ns/sosa/Sampling -->
-
-
-    <owl:Class rdf:about="http://www.w3.org/ns/sosa/Sampling">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasResult"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/Sample"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/madeBySampler"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/Sampler"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/usedProcedure"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/Procedure"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasResult"/>
-                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
-                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/madeBySampler"/>
-                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/resultTime"/>
-                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/"/>
-    </owl:Class>
-
-
-
-    <!-- http://www.w3.org/ns/sosa/Sensor -->
-
-
-    <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Sensor">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/ssn/System"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/madeObservation"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observes"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/ssn/detects"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/ssn/Stimulus"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/ssn/implements"/>
-                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/"/>
-    </rdf:Description>
-
-
-
-    <!-- http://www.w3.org/ns/ssn/Deployment -->
-
-
-    <owl:Class rdf:about="http://www.w3.org/ns/ssn/Deployment">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/ssn/deployedOnPlatform"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/Platform"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/ssn/deployedSystem"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/ssn/System"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/ssn/forProperty"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/ssn/Property"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">Describes the Deployment of one or more Systems for a particular purpose. Deployment may be done on a Platform.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/ssn/"/>
-        <rdfs:label xml:lang="en">Deployment</rdfs:label>
-        <skos:definition xml:lang="en">Describes the Deployment of one or more Systems for a particular purpose. Deployment may be done on a Platform.</skos:definition>
-        <skos:example xml:lang="en">For example, a temperature Sensor deployed on a wall, or a whole network of Sensors deployed for an Observation campaign.</skos:example>
-    </owl:Class>
-
-
-
-    <!-- http://www.w3.org/ns/ssn/Input -->
-
-
-    <owl:Class rdf:about="http://www.w3.org/ns/ssn/Input">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty>
-                    <rdf:Description>
-                        <owl:inverseOf rdf:resource="http://www.w3.org/ns/ssn/hasInput"/>
-                    </rdf:Description>
-                </owl:onProperty>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/Procedure"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty>
-                    <rdf:Description>
-                        <owl:inverseOf rdf:resource="http://www.w3.org/ns/ssn/hasInput"/>
-                    </rdf:Description>
-                </owl:onProperty>
-                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">Any information that is provided to a Procedure for its use.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/ssn/"/>
-        <rdfs:label xml:lang="en">Input</rdfs:label>
-        <skos:definition xml:lang="en">Any information that is provided to a Procedure for its use.</skos:definition>
-    </owl:Class>
-
-
-
-    <!-- http://www.w3.org/ns/ssn/Output -->
-
-
-    <owl:Class rdf:about="http://www.w3.org/ns/ssn/Output">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty>
-                    <rdf:Description>
-                        <owl:inverseOf rdf:resource="http://www.w3.org/ns/ssn/hasOutput"/>
-                    </rdf:Description>
-                </owl:onProperty>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/Procedure"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty>
-                    <rdf:Description>
-                        <owl:inverseOf rdf:resource="http://www.w3.org/ns/ssn/hasOutput"/>
-                    </rdf:Description>
-                </owl:onProperty>
-                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">Any information that is reported from a Procedure.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/ssn/"/>
-        <rdfs:label xml:lang="en">Output</rdfs:label>
-        <skos:definition xml:lang="en">Any information that is reported from a Procedure.</skos:definition>
-    </owl:Class>
-
-
-
-    <!-- http://www.w3.org/ns/ssn/Property -->
-
-
-    <owl:Class rdf:about="http://www.w3.org/ns/ssn/Property">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/ssn/isPropertyOf"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">A quality of an entity. An aspect of an entity that is intrinsic to and cannot exist without the entity.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/ssn/"/>
-        <rdfs:label xml:lang="en">Property</rdfs:label>
-        <skos:definition xml:lang="en">A quality of an entity. An aspect of an entity that is intrinsic to and cannot exist without the entity.</skos:definition>
-    </owl:Class>
-
-
-
-    <!-- http://www.w3.org/ns/ssn/Stimulus -->
-
-
-    <owl:Class rdf:about="http://www.w3.org/ns/ssn/Stimulus">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/ssn/isProxyFor"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty>
-                    <rdf:Description>
-                        <owl:inverseOf rdf:resource="http://www.w3.org/ns/ssn/detects"/>
-                    </rdf:Description>
-                </owl:onProperty>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty>
-                    <rdf:Description>
-                        <owl:inverseOf rdf:resource="http://www.w3.org/ns/ssn/wasOriginatedBy"/>
-                    </rdf:Description>
-                </owl:onProperty>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">An event in the real world that &apos;triggers&apos; the Sensor. The properties associated to the Stimulus may be different to the eventual observed ObservableProperty. It is the event, not the object, that triggers the Sensor.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/ssn/"/>
-        <rdfs:label xml:lang="en">Stimulus</rdfs:label>
-        <skos:definition xml:lang="en">An event in the real world that &apos;triggers&apos; the Sensor. The properties associated to the Stimulus may be different to the eventual observed ObservableProperty. It is the event, not the object, that triggers the Sensor.</skos:definition>
-    </owl:Class>
-
-
-
-    <!-- http://www.w3.org/ns/ssn/System -->
-
-
-    <owl:Class rdf:about="http://www.w3.org/ns/ssn/System">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/isHostedBy"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/Platform"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/ssn/hasDeployment"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/ssn/Deployment"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/ssn/hasSubSystem"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/ssn/System"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/ssn/implements"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/Procedure"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty>
-                    <rdf:Description>
-                        <owl:inverseOf rdf:resource="http://www.w3.org/ns/ssn/hasSubSystem"/>
-                    </rdf:Description>
-                </owl:onProperty>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/ssn/System"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">System is a unit of abstraction for pieces of infrastructure that implements Procedures. A System may have components, its subsystems, which are other systems.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/ssn/"/>
-        <rdfs:label xml:lang="en">System</rdfs:label>
-        <skos:definition xml:lang="en">System is a unit of abstraction for pieces of infrastructure that implement Procedures. A System may have components, its subsystems, which are other systems.</skos:definition>
-    </owl:Class>
-
-
-
-    <!-- http://xmlns.com/foaf/0.1/Agent -->
-
-
-    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Agent"/>
-
-
-
-    <!--
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Individuals
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-
-
-
-
-    <!-- http://www.w3.org/ns/ssn/ -->
-
-
-    <owl:NamedIndividual rdf:about="http://www.w3.org/ns/ssn/">
-        <rdf:type rdf:resource="http://purl.org/vocommons/voaf#Vocabulary"/>
-    </owl:NamedIndividual>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
-        <foaf:name xml:lang="en">W3C/OGC Spatial Data on the Web Working Group</foaf:name>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
-        <foaf:name xml:lang="en">W3C/OGC Spatial Data on the Web Working Group</foaf:name>
-    </rdf:Description>
-
-
-
-    <!--
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Annotations
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-
-    <rdf:Description rdf:about="http://www.w3.org/ns/sosa/hasSimpleResult">
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/"/>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://www.w3.org/ns/sosa/isFeatureOfInterestOf">
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/"/>
-    </rdf:Description>
+    <owl:Class rdf:about="http://www.w3.org/ns/sosa/resultTime"/>
 </rdf:RDF>
 
 
 
 <!-- Generated by the OWL API (version 5.1.0) https://github.com/owlcs/owlapi/ -->
+
+

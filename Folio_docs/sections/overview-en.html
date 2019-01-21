@@ -1,108 +1,127 @@
-<!-- Copyright 2018 Bram Steenwinckel
-
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License. -->
 <h2 id="overv" class="list">Failure mode and effect analysis combined with anomaly ontology: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <span class="markdown">
 This ontology has the following classes and properties.</span>
 <h4>Classes</h4>
 <ul class="hlist">
    <li>
-      <a href="#http://IBCNServices.github.io/Folio#AnomalyKnowledge"
-         title="http://IBCNServices.github.io/Folio#AnomalyKnowledge">AnomalyKnowledge</a>
+      <a href="#Anomaly"
+         title="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#Anomaly">Anomaly</a>
    </li>
    <li>
-      <a href="#http://IBCNServices.github.io/Folio#Category" title="http://IBCNServices.github.io/Folio#Category">Category</a>
+      <a href="#Category"
+         title="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#Category">Category</a>
    </li>
    <li>
-      <a href="#http://IBCNServices.github.io/Folio#Cause" title="http://IBCNServices.github.io/Folio#Cause">Cause</a>
+      <a href="#Cause"
+         title="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#Cause">Cause</a>
    </li>
    <li>
-      <a href="#http://IBCNServices.github.io/Folio#ConsequenceDomain"
-         title="http://IBCNServices.github.io/Folio#ConsequenceDomain">ConsequenceDomain</a>
+      <a href="#ConfirmedAnomaly"
+         title="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#ConfirmedAnomaly">ConfirmedAnomaly</a>
    </li>
    <li>
-      <a href="#http://IBCNServices.github.io/Folio#Criticality" title="http://IBCNServices.github.io/Folio#Criticality">Criticality</a>
+      <a href="#ConsequenceDomain"
+         title="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#ConsequenceDomain">ConsequenceDomain</a>
    </li>
    <li>
-      <a href="#http://IBCNServices.github.io/Folio#DetectionMethod"
-         title="http://IBCNServices.github.io/Folio#DetectionMethod">DetectionMethod</a>
+      <a href="#Criticality"
+         title="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#Criticality">Criticality</a>
    </li>
    <li>
-      <a href="#http://IBCNServices.github.io/Folio#Effect" title="http://IBCNServices.github.io/Folio#Effect">Effect</a>
+      <a href="#DetectionMethod"
+         title="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#DetectionMethod">DetectionMethod</a>
    </li>
    <li>
-      <a href="#http://IBCNServices.github.io/Folio#FailureCause" title="http://IBCNServices.github.io/Folio#FailureCause">FailureCause</a>
+      <a href="#Effect"
+         title="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#Effect">Effect</a>
    </li>
    <li>
-      <a href="#http://IBCNServices.github.io/Folio#FailureEffect"
-         title="http://IBCNServices.github.io/Folio#FailureEffect">FailureEffect</a>
+      <a href="#FailureCause"
+         title="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#FailureCause">FailureCause</a>
    </li>
    <li>
-      <a href="#http://IBCNServices.github.io/Folio#FailureMode" title="http://IBCNServices.github.io/Folio#FailureMode">FailureMode</a>
+      <a href="#FailureEffect"
+         title="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#FailureEffect">FailureEffect</a>
    </li>
    <li>
-      <a href="#http://IBCNServices.github.io/Folio#Faulty" title="http://IBCNServices.github.io/Folio#Faulty">Faulty</a>
+      <a href="#FailureMode"
+         title="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#FailureMode">FailureMode</a>
    </li>
    <li>
-      <a href="#http://IBCNServices.github.io/Folio#IntermediateEffect"
-         title="http://IBCNServices.github.io/Folio#IntermediateEffect">IntermediateEffect</a>
+      <a href="#fromObservation"
+         title="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#fromObservation">fromObservation</a>
    </li>
    <li>
-      <a href="#http://IBCNServices.github.io/Folio#LocalEffect" title="http://IBCNServices.github.io/Folio#LocalEffect">LocalEffect</a>
+      <a href="#IntermediateEffect"
+         title="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#IntermediateEffect">IntermediateEffect</a>
    </li>
    <li>
-      <a href="#http://IBCNServices.github.io/Folio#ObservableProperty"
-         title="http://IBCNServices.github.io/Folio#ObservableProperty">
-         <span>observable property</span>
-      </a>
+      <a href="#LocalEffect"
+         title="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#LocalEffect">LocalEffect</a>
+   </li>
+   <li>
+      <a href="#observedProperty"
+         title="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#observedProperty">observedProperty</a>
+   </li>
+   <li>
+      <a href="#toObservation"
+         title="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#toObservation">toObservation</a>
    </li>
 </ul><h4>Object Properties</h4><ul class="hlist">
    <li>
-      <a href="#http://IBCNServices.github.io/Folio#happenedAt" title="http://IBCNServices.github.io/Folio#happenedAt">happenedAt</a>
+      <a href="#happenedAt"
+         title="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#happenedAt">happenedAt</a>
    </li>
    <li>
-      <a href="#http://IBCNServices.github.io/Folio#hasCause" title="http://IBCNServices.github.io/Folio#hasCause">hasCause</a>
+      <a href="#hasCategory"
+         title="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#hasCategory">hasCategory</a>
    </li>
    <li>
-      <a href="#http://IBCNServices.github.io/Folio#hasDetection" title="http://IBCNServices.github.io/Folio#hasDetection">hasDetection</a>
+      <a href="#hasCause"
+         title="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#hasCause">hasCause</a>
    </li>
    <li>
-      <a href="#http://IBCNServices.github.io/Folio#hasEffect" title="http://IBCNServices.github.io/Folio#hasEffect">hasEffect</a>
+      <a href="#hasCriticality"
+         title="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#hasCriticality">hasCriticality</a>
    </li>
    <li>
-      <a href="#http://IBCNServices.github.io/Folio#hasFailureMode"
-         title="http://IBCNServices.github.io/Folio#hasFailureMode">hasFailureMode</a>
+      <a href="#hasDetection"
+         title="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#hasDetection">hasDetection</a>
    </li>
    <li>
-      <a href="#http://IBCNServices.github.io/Folio#hasLowerFailureEffect"
-         title="http://IBCNServices.github.io/Folio#hasLowerFailureEffect">hasLowerFailureEffect</a>
+      <a href="#hasDomain"
+         title="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#hasDomain">hasDomain</a>
    </li>
    <li>
-      <a href="#http://IBCNServices.github.io/Folio#hasNextFailureEffect"
-         title="http://IBCNServices.github.io/Folio#hasNextFailureEffect">hasNextFailureEffect</a>
+      <a href="#hasEffect"
+         title="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#hasEffect">hasEffect</a>
    </li>
    <li>
-      <a href="#http://IBCNServices.github.io/Folio#isEndEffect" title="http://IBCNServices.github.io/Folio#isEndEffect">isEndEffect</a>
+      <a href="#hasFailureMode"
+         title="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#hasFailureMode">hasFailureMode</a>
    </li>
    <li>
-      <a href="#http://IBCNServices.github.io/Folio#isIntermediateEffect"
-         title="http://IBCNServices.github.io/Folio#isIntermediateEffect">isIntermediateEffect</a>
+      <a href="#hasLowerFailureEffect"
+         title="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#hasLowerFailureEffect">hasLowerFailureEffect</a>
    </li>
    <li>
-      <a href="#http://IBCNServices.github.io/Folio#isLocalEffect"
-         title="http://IBCNServices.github.io/Folio#isLocalEffect">isLocalEffect</a>
+      <a href="#hasNextFailureEffect"
+         title="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#hasNextFailureEffect">hasNextFailureEffect</a>
    </li>
    <li>
-      <a href="#http://IBCNServices.github.io/Folio#observedBy" title="http://IBCNServices.github.io/Folio#observedBy">observedBy</a>
+      <a href="#isEndEffect"
+         title="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#isEndEffect">isEndEffect</a>
    </li>
-</ul><iframe align="center" width="100%" height ="500px" src="webvowl/index.html#ontology"></iframe>
+   <li>
+      <a href="#isIntermediateEffect"
+         title="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#isIntermediateEffect">isIntermediateEffect</a>
+   </li>
+   <li>
+      <a href="#isLocalEffect"
+         title="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#isLocalEffect">isLocalEffect</a>
+   </li>
+   <li>
+      <a href="#observedBy"
+         title="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#observedBy">observedBy</a>
+   </li>
+</ul><iframe align="center" width="100%" height ="500px" src="webvowl/index.html#ontology"></iframe> 

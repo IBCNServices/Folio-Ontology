@@ -1,25 +1,11 @@
-/* Copyright 2018 Bram Steenwinckel
-
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License. */
-
-/* define a class "noprint" for sections which don't get printed */
+/* define a class "noprint" for sections which don't get printed */  
 .noprint { display: none; }
 
 /* our syntax menu for switching */
 div.syntaxmenu {
   border: 1px dotted black;
   padding:0.5em;
-  margin: 1em;
+  margin: 1em; 
 }
 
 .container {
@@ -75,7 +61,7 @@ div.fssyntax pre, div.rdfxml pre, div.owlxml pre, div.turtle pre, div.manchester
     height: 26em;
     z-index: -1;
     opacity: 0.8;
-
+    
     /** From http://stackoverflow.com/questions/1080792/how-to-draw-vertical-text-with-css-cross-browser */
 
     -webkit-transform: rotate(-90deg);
@@ -96,7 +82,7 @@ div.fssyntax pre, div.rdfxml pre, div.owlxml pre, div.turtle pre, div.manchester
 }
 
 /* The actual status box */
- .status div {
+ .status div {   
     display: block;
     background: rgb(0, 90, 156);
     color: white;
@@ -105,10 +91,10 @@ div.fssyntax pre, div.rdfxml pre, div.owlxml pre, div.turtle pre, div.manchester
     padding-left: 0em;
     padding-right: 5em;
     padding-bottom: 0.3em;
-    /* Enable for debugging
+    /* Enable for debugging 
     border: red thin solid;
      */
-}
+} 
 
 /* And text inside, don't confuse fonts as it breaks em above */
 .status div span {

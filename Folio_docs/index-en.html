@@ -1,16 +1,3 @@
-<!-- Copyright 2018 Bram Steenwinckel
-
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License. -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,11 +6,11 @@ limitations under the License. -->
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"http://schema.org","@type":"TechArticle","url":"http://IBCNServices.github.io/Folio-Ontology/Folio.owl","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://IBCNServices.github.io/Folio-Ontology/Folio.owl","name":"Failure mode and effect analysis combined with anomaly ontology", "headline":"Document describing the ontology http://IBCNServices.github.io/Folio-Ontology/Folio.owl", "datePublished":"Thu May 31 09:16:20 CEST 2018", "version":"1.0.0", "license":"https://www.apache.org/licenses/LICENSE-2.0", "author":[{"@type":"Person","name":"Bram Steenwinckel"}]}</script>
+<script type="application/ld+json">{"@context":"http://schema.org","@type":"TechArticle","url":"http://IBCNServices.github.io/Folio-Ontology/Folio.owl","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://IBCNServices.github.io/Folio-Ontology/Folio.owl","name":"Failure mode and effect analysis combined with anomaly ontology", "headline":"Document describing the ontology http://IBCNServices.github.io/Folio-Ontology/Folio.owl", "datePublished":"Mon Jan 21 13:07:33 CET 2019", "version":"1.0.0", "author":[{"@type":"Person","name":"Bram Steenwinckel"}]}</script>
 
-<script src="resources/jquery.js"></script>
-<script src="resources/marked.min.js"></script>
-    <script>
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
 function loadHash() {
   jQuery(".markdown").each(function(el){jQuery(this).after(marked(jQuery(this).text())).remove()});
 	var hash = location.hash;
@@ -54,17 +41,18 @@ function loadTOC(){
 		t = t.replace(' back to ToC','');
 	  });
 	  t+='</ul>';
-	  $("#toc").html(t);
+	  $("#toc").html(t); 
 }
     $(function(){
-      $("#abstract").load("sections/abstract-en.html");
-      $("#introduction").load("sections/introduction-en.html");
-      $("#overview").load("sections/overview-en.html");
-      $("#description").load("sections/description-en.html");
-      $("#crossref").load("sections/crossref-en.html", null, loadHash);
+      $("#abstract").load("sections/abstract-en.html"); 
+      $("#introduction").load("sections/introduction-en.html"); 
+      $("#overview").load("sections/overview-en.html"); 
+      $("#description").load("sections/description-en.html"); 
+      $("#references").load("sections/references-en.html"); 
+      $("#crossref").load("sections/crossref-en.html", null, loadHash); 
     });
-    </script>
-  </head>
+    </script> 
+  </head> 
 
 <body>
 <div class="container">
@@ -82,7 +70,7 @@ function loadTOC(){
 <dt>Imported Ontologies:</dt>
 <dd><a href="http://www.w3.org/ns/ssn/">&lt;http://www.w3.org/ns/ssn/&gt;</a></dd><dd><a href="http://www.w3.org/ns/sosa/">&lt;http://www.w3.org/ns/sosa/&gt;</a></dd>
 
-<dt>Download serialization:</dt><dd><span><a href="ontology.json" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.xml" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License: </dt><dd><a href="https://www.apache.org/licenses/LICENSE-2.0" target="_blank"><img src="https://img.shields.io/badge/License-Apache_2.0%20license-blue.svg" alt="https://www.apache.org/licenses/LICENSE-2.0" /></a>
+<dt>Download serialization:</dt><dd><span><a href="ontology.json" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.xml" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License: </dt><dd><a href="http://insertlicenseURIhere.org" target="_blank"><img src="https://img.shields.io/badge/License-license%20name%20goes%20here-blue.svg" alt="http://insertlicenseURIhere.org" /></a>
 </dd><dt>Visualization:</dt><dd><a href="webvowl/index.html#ontology" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
 </dl>
 
@@ -97,6 +85,7 @@ function loadTOC(){
      <div id="overview"></div>
      <div id="description"></div>
      <div id="crossref"></div>
+     <div id="references"></div>
 <div id="acknowledgements">
 <h2 id="ack" class="list">Acknowledgements <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <p>

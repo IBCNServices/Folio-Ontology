@@ -1,377 +1,273 @@
-<?xml version="1.0"?>
-<!-- Copyright 2018 Bram Steenwinckel
+Prefix(:=<http://IBCNServices.github.io/Folio-Ontology/Folio.owl#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://IBCNServices.github.io/Folio-Ontology/Folio.owl>
+Import(<http://www.w3.org/ns/ssn/>)
+Annotation(<http://purl.org/dc/terms/creator> "Bram Steenwinckel"@en)
+Annotation(<http://purl.org/dc/terms/title> "Failure mode and effect analysis combined with anomaly ontology"@en)
+Annotation(owl:versionInfo "1.0.0"@en)
+Annotation(<http://xmlns.com/foaf/0.1/name> "Folio"@en)
+
+Declaration(Class(:Anomaly))
+Declaration(Class(:Category))
+Declaration(Class(:Cause))
+Declaration(Class(:ConfirmedAnomaly))
+Declaration(Class(:ConsequenceDomain))
+Declaration(Class(:Criticality))
+Declaration(Class(:DetectionMethod))
+Declaration(Class(:Effect))
+Declaration(Class(:FailureCause))
+Declaration(Class(:FailureEffect))
+Declaration(Class(:FailureMode))
+Declaration(Class(:IntermediateEffect))
+Declaration(Class(:LocalEffect))
+Declaration(Class(:fromObservation))
+Declaration(Class(:observedProperty))
+Declaration(Class(:toObservation))
+Declaration(Class(<http://www.w3.org/ns/sosa/resultTime>))
+Declaration(ObjectProperty(:happenedAt))
+Declaration(ObjectProperty(:hasCategory))
+Declaration(ObjectProperty(:hasCause))
+Declaration(ObjectProperty(:hasCriticality))
+Declaration(ObjectProperty(:hasDetection))
+Declaration(ObjectProperty(:hasDomain))
+Declaration(ObjectProperty(:hasEffect))
+Declaration(ObjectProperty(:hasFailureMode))
+Declaration(ObjectProperty(:hasLowerFailureEffect))
+Declaration(ObjectProperty(:hasNextFailureEffect))
+Declaration(ObjectProperty(:isEndEffect))
+Declaration(ObjectProperty(:isIntermediateEffect))
+Declaration(ObjectProperty(:isLocalEffect))
+Declaration(ObjectProperty(:observedBy))
 
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
+############################
+#   Object Properties
+############################
+
+# Object Property: :happenedAt (happenedAt)
 
-    http://www.apache.org/licenses/LICENSE-2.0
+AnnotationAssertion(rdfs:isDefinedBy :happenedAt "http://IBCNServices.github.io/Folio-Ontology/Folio.owl")
+AnnotationAssertion(rdfs:label :happenedAt "happenedAt"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :happenedAt "Relation between the failure cause and the corresponding device/system."@en)
 
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License. -->
-<rdf:RDF xmlns="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#"
-     xml:base="http://IBCNServices.github.io/Folio-Ontology/Folio.owl"
-     xmlns:schema="http://schema.org/"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:terms="http://purl.org/dc/terms/"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:xml="http://www.w3.org/XML/1998/namespace"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:vann="http://purl.org/vocab/vann/"
-     xmlns:foaf="http://xmlns.com/foaf/0.1/">
-    <owl:Ontology rdf:about="http://IBCNServices.github.io/Folio-Ontology/Folio.owl">
-        <owl:imports rdf:resource="http://www.w3.org/ns/ssn/"/>
-        <terms:title xml:lang="en">Failure mode and effect analysis combined with anomaly ontology</terms:title>
-        <foaf:name xml:lang="en">Folio</foaf:name>
-        <terms:creator xml:lang="en">Bram Steenwinckel</terms:creator>
-        <owl:versionInfo xml:lang="en">1.0.0</owl:versionInfo>
-    </owl:Ontology>
+# Object Property: :hasCategory (hasCategory)
 
+AnnotationAssertion(rdfs:isDefinedBy :hasCategory "http://IBCNServices.github.io/Folio-Ontology/Folio.owl")
+AnnotationAssertion(rdfs:label :hasCategory "hasCategory"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :hasCategory "Relation between the observed element and its category"@en)
 
+# Object Property: :hasCause (hasCause)
 
-    <!--
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Object Properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
+AnnotationAssertion(rdfs:isDefinedBy :hasCause "http://IBCNServices.github.io/Folio-Ontology/Folio.owl")
+AnnotationAssertion(rdfs:label :hasCause "hasCause"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :hasCause "Relation between a failure and it corresponding cause."@en)
 
+# Object Property: :hasCriticality (hasCriticality)
 
+AnnotationAssertion(rdfs:isDefinedBy :hasCriticality "http://IBCNServices.github.io/Folio-Ontology/Folio.owl")
+AnnotationAssertion(rdfs:label :hasCriticality "hasCriticality"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :hasCriticality "Relation between the observed element and the criticality"@en)
+
+# Object Property: :hasDetection (hasDetection)
+
+AnnotationAssertion(rdfs:isDefinedBy :hasDetection "http://IBCNServices.github.io/Folio-Ontology/Folio.owl")
+AnnotationAssertion(rdfs:label :hasDetection "hasDetection"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :hasDetection "Relation between the observed element and the detection method"@en)
 
+# Object Property: :hasDomain (hasDomain)
+
+AnnotationAssertion(rdfs:isDefinedBy :hasDomain "http://IBCNServices.github.io/Folio-Ontology/Folio.owl")
+AnnotationAssertion(rdfs:label :hasDomain "hasDomain"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :hasDomain "Relation between the observed element and its domain"@en)
+
+# Object Property: :hasEffect (hasEffect)
 
-    <!-- http://IBCNServices.github.io/Folio-Ontology/Folio.owl#happenedAt -->
+AnnotationAssertion(rdfs:isDefinedBy :hasEffect "http://IBCNServices.github.io/Folio-Ontology/Folio.owl")
+AnnotationAssertion(rdfs:label :hasEffect "hasEffect"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :hasEffect "Relation between a failure and it corresponding effect."@en)
 
-    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#happenedAt">
-        <rdfs:isDefinedBy>http://IBCNServices.github.io/Folio-Ontology/Folio.owl</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">happenedAt</rdfs:label>
-        <skos:definition xml:lang="en">Relation between the failure cause and the corresponding device/system.</skos:definition>
-    </owl:ObjectProperty>
+# Object Property: :hasFailureMode (hasFailureMode)
 
+AnnotationAssertion(rdfs:isDefinedBy :hasFailureMode "http://IBCNServices.github.io/Folio-Ontology/Folio.owl")
+AnnotationAssertion(rdfs:label :hasFailureMode "hasFailureMode"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :hasFailureMode "Relation between the failure effect and the corresponding failure mode."@en)
+
+# Object Property: :hasLowerFailureEffect (hasLowerFailureEffect)
 
+AnnotationAssertion(rdfs:isDefinedBy :hasLowerFailureEffect "http://IBCNServices.github.io/Folio-Ontology/Folio.owl")
+AnnotationAssertion(rdfs:label :hasLowerFailureEffect "hasLowerFailureEffect"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :hasLowerFailureEffect "Relation between a failure effect and a previously occurring effect."@en)
 
-    <!-- http://IBCNServices.github.io/Folio-Ontology/Folio.owl#hasCause -->
+# Object Property: :hasNextFailureEffect (hasNextFailureEffect)
 
-    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#hasCause">
-        <rdfs:isDefinedBy>http://IBCNServices.github.io/Folio-Ontology/Folio.owl</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">hasCause</rdfs:label>
-        <skos:definition xml:lang="en">Relation between a failure and it corresponding cause.</skos:definition>
-    </owl:ObjectProperty>
+AnnotationAssertion(rdfs:isDefinedBy :hasNextFailureEffect "http://IBCNServices.github.io/Folio-Ontology/Folio.owl")
+AnnotationAssertion(rdfs:label :hasNextFailureEffect "hasNextFailureEffect"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :hasNextFailureEffect "Relation between a failure effect and a next effect."@en)
 
+# Object Property: :isEndEffect (isEndEffect)
 
+AnnotationAssertion(rdfs:isDefinedBy :isEndEffect "http://IBCNServices.github.io/Folio-Ontology/Folio.owl")
+AnnotationAssertion(rdfs:label :isEndEffect "isEndEffect"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :isEndEffect "Relation defining an failure effect as end effect."@en)
 
-    <!-- http://IBCNServices.github.io/Folio-Ontology/Folio.owl#hasDetection -->
+# Object Property: :isIntermediateEffect (isIntermediateEffect)
 
-    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#hasDetection">
-        <rdfs:isDefinedBy>http://IBCNServices.github.io/Folio-Ontology/Folio.owl</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">hasDetection</rdfs:label>
-        <skos:definition xml:lang="en">Relation between the observed element and the detection method</skos:definition>
-    </owl:ObjectProperty>
+AnnotationAssertion(rdfs:isDefinedBy :isIntermediateEffect "http://IBCNServices.github.io/Folio-Ontology/Folio.owl")
+AnnotationAssertion(rdfs:label :isIntermediateEffect "isIntermediateEffect"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :isIntermediateEffect "Relation defining an failure effect as intermediate effect."@en)
 
+# Object Property: :isLocalEffect (isLocalEffect)
 
+AnnotationAssertion(rdfs:isDefinedBy :isLocalEffect "http://IBCNServices.github.io/Folio-Ontology/Folio.owl")
+AnnotationAssertion(rdfs:label :isLocalEffect "isLocalEffect"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :isLocalEffect "Relation defining an failure effect as the first mentioned effect."@en)
 
-    <!-- http://IBCNServices.github.io/Folio-Ontology/Folio.owl#hasEffect -->
+# Object Property: :observedBy (observedBy)
 
-    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#hasEffect">
-        <rdfs:isDefinedBy>http://IBCNServices.github.io/Folio-Ontology/Folio.owl</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">hasEffect</rdfs:label>
-        <skos:definition xml:lang="en">Relation between a failure and it corresponding effect.</skos:definition>
-    </owl:ObjectProperty>
+AnnotationAssertion(rdfs:isDefinedBy :observedBy "http://IBCNServices.github.io/Folio-Ontology/Folio.owl")
+AnnotationAssertion(rdfs:label :observedBy "observedBy"@en)
 
 
 
-    <!-- http://IBCNServices.github.io/Folio-Ontology/Folio.owl#hasFailureMode -->
+############################
+#   Classes
+############################
 
-    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#hasFailureMode">
-        <rdfs:isDefinedBy>http://IBCNServices.github.io/Folio-Ontology/Folio.owl</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">hasFailureMode</rdfs:label>
-        <skos:definition xml:lang="en">Relation between the failure effect and the corresponding failure mode.</skos:definition>
-    </owl:ObjectProperty>
+# Class: :Anomaly (Anomaly)
 
+AnnotationAssertion(rdfs:isDefinedBy :Anomaly "http://IBCNServices.github.io/Folio-Ontology/Folio.owl")
+AnnotationAssertion(rdfs:label :Anomaly "Anomaly"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :Anomaly "Description of possible unwanted behaviour"@en)
+EquivalentClasses(:Anomaly ObjectSomeValuesFrom(<http://www.w3.org/ns/sosa/usedProcedure> <http://www.w3.org/ns/sosa/Procedure>))
+EquivalentClasses(:Anomaly ObjectSomeValuesFrom(<http://www.w3.org/ns/ssn/wasOriginatedBy> :fromObservation))
+EquivalentClasses(:Anomaly ObjectSomeValuesFrom(<http://www.w3.org/ns/ssn/wasOriginatedBy> :observedProperty))
+EquivalentClasses(:Anomaly ObjectSomeValuesFrom(<http://www.w3.org/ns/ssn/wasOriginatedBy> :toObservation))
+EquivalentClasses(:Anomaly ObjectSomeValuesFrom(<http://www.w3.org/ns/ssn/wasOriginatedBy> <http://www.w3.org/ns/ssn/Stimulus>))
+EquivalentClasses(:Anomaly ObjectExactCardinality(1 <http://www.w3.org/ns/sosa/hasResult> <http://www.w3.org/ns/sosa/resultTime>))
 
+# Class: :Category (Category)
 
-    <!-- http://IBCNServices.github.io/Folio-Ontology/Folio.owl#hasLowerFailureEffect -->
+AnnotationAssertion(rdfs:isDefinedBy :Category "http://IBCNServices.github.io/Folio-Ontology/Folio.owl")
+AnnotationAssertion(rdfs:label :Category "Category"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :Category "An ConfirmedAnomaly can happen once (transient), periodically (recurrent) or definitively (permanent)."@en)
 
-    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#hasLowerFailureEffect">
-        <rdfs:isDefinedBy>http://IBCNServices.github.io/Folio-Ontology/Folio.owl</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">hasLowerFailureEffect</rdfs:label>
-        <skos:definition xml:lang="en">Relation between a failure effect and a previously occurring effect.</skos:definition>
-    </owl:ObjectProperty>
+# Class: :Cause (Cause)
 
+AnnotationAssertion(rdfs:isDefinedBy :Cause "http://IBCNServices.github.io/Folio-Ontology/Folio.owl")
+AnnotationAssertion(rdfs:label :Cause "Cause"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :Cause "The cause refers to the description suspected to be the source of the ConfirmedAnomaly"@en)
 
+# Class: :ConfirmedAnomaly (ConfirmedAnomaly)
 
-    <!-- http://IBCNServices.github.io/Folio-Ontology/Folio.owl#hasNextFailureEffect -->
+AnnotationAssertion(rdfs:isDefinedBy :ConfirmedAnomaly "http://IBCNServices.github.io/Folio-Ontology/Folio.owl")
+AnnotationAssertion(rdfs:label :ConfirmedAnomaly "ConfirmedAnomaly"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :ConfirmedAnomaly "ConfirmedAnomaly’s description. Should then express, at least, which part of the system is affected, by what. Ideally, this should be completed with additional information, such as which components observe the ConfirmedAnomaly, or the worth of its management."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :ConfirmedAnomaly "ConfirmedAnomaly’s description. Should then express, at least, which part of the system is affected, by what. Ideally, this should be completed with additional information, such as which components observe the ConfirmedAnomaly, or the worth of its management."@en)
+EquivalentClasses(:ConfirmedAnomaly ObjectSomeValuesFrom(:hasCategory :Category))
+EquivalentClasses(:ConfirmedAnomaly ObjectSomeValuesFrom(:hasCause :Cause))
+EquivalentClasses(:ConfirmedAnomaly ObjectSomeValuesFrom(:hasCriticality :Criticality))
+EquivalentClasses(:ConfirmedAnomaly ObjectSomeValuesFrom(:hasDetection :DetectionMethod))
+EquivalentClasses(:ConfirmedAnomaly ObjectSomeValuesFrom(:hasDomain :ConsequenceDomain))
+EquivalentClasses(:ConfirmedAnomaly ObjectSomeValuesFrom(:hasEffect :Effect))
+SubClassOf(:ConfirmedAnomaly :Anomaly)
 
-    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#hasNextFailureEffect">
-        <rdfs:isDefinedBy>http://IBCNServices.github.io/Folio-Ontology/Folio.owl</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">hasNextFailureEffect</rdfs:label>
-        <skos:definition xml:lang="en">Relation between a failure effect and a next effect.</skos:definition>
-    </owl:ObjectProperty>
+# Class: :ConsequenceDomain (ConsequenceDomain)
 
+AnnotationAssertion(rdfs:isDefinedBy :ConsequenceDomain "http://IBCNServices.github.io/Folio-Ontology/Folio.owl")
+AnnotationAssertion(rdfs:label :ConsequenceDomain "ConsequenceDomain"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :ConsequenceDomain "Each domain relates to a specific kind of consequence of the ConfirmedAnomaly."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :ConsequenceDomain "Malfunctioning of device or dangerous situation for end user."@en)
 
+# Class: :Criticality (Criticality)
 
-    <!-- http://IBCNServices.github.io/Folio-Ontology/Folio.owl#isEndEffect -->
+AnnotationAssertion(rdfs:isDefinedBy :Criticality "http://IBCNServices.github.io/Folio-Ontology/Folio.owl")
+AnnotationAssertion(rdfs:label :Criticality "Criticality"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :Criticality "It is a time dependent worth attributed to the ConfirmedAnomaly management."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :Criticality "non-critic ConfirmedAnomaly"@en)
 
-    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#isEndEffect">
-        <rdfs:isDefinedBy>http://IBCNServices.github.io/Folio-Ontology/Folio.owl</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">isEndEffect</rdfs:label>
-        <skos:definition xml:lang="en">Relation defining an failure effect as end effect.</skos:definition>
-    </owl:ObjectProperty>
+# Class: :DetectionMethod (DetectionMethod)
 
+AnnotationAssertion(rdfs:isDefinedBy :DetectionMethod "http://IBCNServices.github.io/Folio-Ontology/Folio.owl")
+AnnotationAssertion(rdfs:label :DetectionMethod "DetectionMethod"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :DetectionMethod "This relies on components’ survey to trigger a warning about abnormalities."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :DetectionMethod "value > x."@en)
 
+# Class: :Effect (Effect)
 
-    <!-- http://IBCNServices.github.io/Folio-Ontology/Folio.owl#isIntermediateEffect -->
+AnnotationAssertion(rdfs:isDefinedBy :Effect "http://IBCNServices.github.io/Folio-Ontology/Folio.owl")
+AnnotationAssertion(rdfs:label :Effect "Effect"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :Effect "The effect describes one aspect of the observed phenomenon."@en)
 
-    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#isIntermediateEffect">
-        <rdfs:isDefinedBy>http://IBCNServices.github.io/Folio-Ontology/Folio.owl</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">isIntermediateEffect</rdfs:label>
-        <skos:definition xml:lang="en">Relation defining an failure effect as intermediate effect.</skos:definition>
-    </owl:ObjectProperty>
+# Class: :FailureCause (FailureCause)
 
+AnnotationAssertion(rdfs:isDefinedBy :FailureCause "http://IBCNServices.github.io/Folio-Ontology/Folio.owl")
+AnnotationAssertion(rdfs:label :FailureCause "FailureCause"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :FailureCause "Failure causes are defects in design, process, quality, or part application, which are the underlying cause of a failure or which initiate a process which leads to failure. Also, the failure effect at the highest indenture level or total system. A failure mode may have more causes."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :FailureCause "(abnormal) vibration input from another (possibly failed) system."@en)
+EquivalentClasses(:FailureCause ObjectSomeValuesFrom(:isEndEffect :FailureMode))
+SubClassOf(:FailureCause :Cause)
+SubClassOf(:FailureCause :FailureMode)
 
+# Class: :FailureEffect (FailureEffect)
 
-    <!-- http://IBCNServices.github.io/Folio-Ontology/Folio.owl#isLocalEffect -->
+AnnotationAssertion(rdfs:isDefinedBy :FailureEffect "http://IBCNServices.github.io/Folio-Ontology/Folio.owl")
+AnnotationAssertion(rdfs:label :FailureEffect "FailureEffect"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :FailureEffect "Immediate consequences of a failure on operation, function or functionality, or status of some item."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :FailureEffect "Increased range of input data."@en)
+EquivalentClasses(:FailureEffect ObjectSomeValuesFrom(:hasFailureMode :FailureMode))
+SubClassOf(:FailureEffect :Effect)
+SubClassOf(:FailureEffect :FailureMode)
 
-    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#isLocalEffect">
-        <rdfs:isDefinedBy>http://IBCNServices.github.io/Folio-Ontology/Folio.owl</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">isLocalEffect</rdfs:label>
-        <skos:definition xml:lang="en">Relation defining an failure effect as the first mentioned effect.</skos:definition>
-    </owl:ObjectProperty>
+# Class: :FailureMode (FailureMode)
 
+AnnotationAssertion(rdfs:isDefinedBy :FailureMode "http://IBCNServices.github.io/Folio-Ontology/Folio.owl")
+AnnotationAssertion(rdfs:label :FailureMode "FailureMode"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :FailureMode "The specific manner or way by which a failure occurs in terms of failure of the item (being a part or (sub) system) function under investigation; it may generally describe the way the failure occurs. It shall at least clearly describe a (end) failure state of the item (or function in case of a Functional FMEA) under consideration. It is the result of the failure mechanism (cause of the failure mode).."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :FailureMode " Too high values."@en)
+EquivalentClasses(:FailureMode ObjectSomeValuesFrom(:happenedAt <http://www.w3.org/ns/ssn/System>))
+EquivalentClasses(:FailureMode ObjectSomeValuesFrom(:hasCause :FailureCause))
+EquivalentClasses(:FailureMode ObjectSomeValuesFrom(:hasEffect :FailureEffect))
 
+# Class: :IntermediateEffect (IntermediateEffect)
 
-    <!-- http://IBCNServices.github.io/Folio-Ontology/Folio.owl#observedBy -->
+AnnotationAssertion(rdfs:isDefinedBy :IntermediateEffect "http://IBCNServices.github.io/Folio-Ontology/Folio.owl")
+AnnotationAssertion(rdfs:label :IntermediateEffect "IntermediateEffect"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :IntermediateEffect "The failure effect as it applies at the next higher indenture level."@en)
+EquivalentClasses(:IntermediateEffect ObjectSomeValuesFrom(:isIntermediateEffect :FailureMode))
+SubClassOf(:IntermediateEffect :FailureEffect)
 
-    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#observedBy">
-        <rdfs:isDefinedBy>http://IBCNServices.github.io/Folio-Ontology/Folio.owl</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">observedBy</rdfs:label>
-    </owl:ObjectProperty>
+# Class: :LocalEffect (LocalEffect)
 
+AnnotationAssertion(rdfs:isDefinedBy :LocalEffect "http://IBCNServices.github.io/Folio-Ontology/Folio.owl")
+AnnotationAssertion(rdfs:label :LocalEffect "LocalEffect"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :LocalEffect "The visible failure effect as it applies to the item under analysis."@en)
+EquivalentClasses(:LocalEffect ObjectSomeValuesFrom(:isLocalEffect :FailureMode))
+SubClassOf(:LocalEffect :FailureEffect)
+SubClassOf(:LocalEffect <http://www.w3.org/ns/sosa/Observation>)
 
+# Class: :fromObservation (fromObservation)
 
-    <!--
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Classes
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
+AnnotationAssertion(rdfs:isDefinedBy :fromObservation "http://IBCNServices.github.io/Folio-Ontology/Folio.owl")
+AnnotationAssertion(rdfs:label :fromObservation "fromObservation"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :fromObservation "First observation describing the underfined behaviour"@en)
+SubClassOf(:fromObservation <http://www.w3.org/ns/sosa/Observation>)
 
+# Class: :observedProperty (observedProperty)
 
+AnnotationAssertion(rdfs:isDefinedBy :observedProperty "http://IBCNServices.github.io/Folio-Ontology/Folio.owl")
+AnnotationAssertion(rdfs:label :observedProperty "observedProperty"@en)
+SubClassOf(:observedProperty <http://www.w3.org/ns/sosa/ObservableProperty>)
 
+# Class: :toObservation (toObservation)
 
-    <!-- http://IBCNServices.github.io/Folio-Ontology/Folio.owl#AnomalyKnowledge -->
+AnnotationAssertion(rdfs:isDefinedBy :toObservation "http://IBCNServices.github.io/Folio-Ontology/Folio.owl")
+AnnotationAssertion(rdfs:label :toObservation "toObservation"@en)
+SubClassOf(:toObservation <http://www.w3.org/ns/sosa/Observation>)
 
-    <owl:Class rdf:about="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#AnomalyKnowledge">
-        <rdfs:isDefinedBy>http://IBCNServices.github.io/Folio-Ontology/Folio.owl</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">AnomalyKnowledge</rdfs:label>
-        <skos:definition xml:lang="en">Anomaly’s description. Should then express, at least, which part of the system is affected, by what. Ideally, this should be completed with additional information, such as which components observe the anomaly, or the worth of its management.</skos:definition>
-        <skos:example xml:lang="en">Anomaly’s description. Should then express, at least, which part of the system is affected, by what. Ideally, this should be completed with additional information, such as which components observe the anomaly, or the worth of its management.</skos:example>
-    </owl:Class>
 
-
-
-    <!-- http://IBCNServices.github.io/Folio-Ontology/Folio.owl#Category -->
-
-    <owl:Class rdf:about="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#Category">
-        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#AnomalyKnowledge"/>
-        <rdfs:isDefinedBy>http://IBCNServices.github.io/Folio-Ontology/Folio.owl</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">Category</rdfs:label>
-        <skos:definition xml:lang="en">An anomaly can happen once (transient), periodically (recurrent) or definitively (permanent).</skos:definition>
-    </owl:Class>
-
-
-
-    <!-- http://IBCNServices.github.io/Folio-Ontology/Folio.owl#Cause -->
-
-    <owl:Class rdf:about="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#Cause">
-        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#AnomalyKnowledge"/>
-        <rdfs:isDefinedBy>http://IBCNServices.github.io/Folio-Ontology/Folio.owl</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">Cause</rdfs:label>
-        <skos:definition xml:lang="en">The cause refers to the description suspected to be the source of the anomaly</skos:definition>
-    </owl:Class>
-
-
-
-    <!-- http://IBCNServices.github.io/Folio-Ontology/Folio.owl#ConsequenceDomain -->
-
-    <owl:Class rdf:about="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#ConsequenceDomain">
-        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#AnomalyKnowledge"/>
-        <rdfs:isDefinedBy>http://IBCNServices.github.io/Folio-Ontology/Folio.owl</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">ConsequenceDomain</rdfs:label>
-        <skos:definition xml:lang="en">Each domain relates to a specific kind of consequence of the anomaly.</skos:definition>
-        <skos:example xml:lang="en">Malfunctioning of device or dangerous situation for end user.</skos:example>
-    </owl:Class>
-
-
-
-    <!-- http://IBCNServices.github.io/Folio-Ontology/Folio.owl#Criticality -->
-
-    <owl:Class rdf:about="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#Criticality">
-        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#AnomalyKnowledge"/>
-        <rdfs:isDefinedBy>http://IBCNServices.github.io/Folio-Ontology/Folio.owl</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">Criticality</rdfs:label>
-        <skos:definition xml:lang="en">It is a time dependent worth attributed to the anomaly management.</skos:definition>
-        <skos:example xml:lang="en">non-critic anomaly</skos:example>
-    </owl:Class>
-
-
-
-    <!-- http://IBCNServices.github.io/Folio-Ontology/Folio.owl#DetectionMethod -->
-
-    <owl:Class rdf:about="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#DetectionMethod">
-        <rdfs:isDefinedBy>http://IBCNServices.github.io/Folio-Ontology/Folio.owl</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">DetectionMethod</rdfs:label>
-        <skos:definition xml:lang="en">This relies on components’ survey to trigger a warning about abnormalities.</skos:definition>
-        <skos:example xml:lang="en">value &gt; x.</skos:example>
-    </owl:Class>
-
-
-
-    <!-- http://IBCNServices.github.io/Folio-Ontology/Folio.owl#Effect -->
-
-    <owl:Class rdf:about="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#Effect">
-        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#AnomalyKnowledge"/>
-        <rdfs:isDefinedBy>http://IBCNServices.github.io/Folio-Ontology/Folio.owl</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">Effect</rdfs:label>
-        <skos:definition xml:lang="en">The effect describes one aspect of the observed phenomenon.</skos:definition>
-    </owl:Class>
-
-
-
-    <!-- http://IBCNServices.github.io/Folio-Ontology/Folio.owl#FailureCause -->
-
-    <owl:Class rdf:about="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#FailureCause">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#isEndEffect"/>
-                <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#FailureMode"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#Cause"/>
-        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#FailureMode"/>
-        <rdfs:isDefinedBy>http://IBCNServices.github.io/Folio-Ontology/Folio.owl</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">FailureCause</rdfs:label>
-        <skos:definition xml:lang="en">Failure causes are defects in design, process, quality, or part application, which are the underlying cause of a failure or which initiate a process which leads to failure. Also, the failure effect at the highest indenture level or total system. A failure mode may have more causes.</skos:definition>
-        <skos:example xml:lang="en">(abnormal) vibration input from another (possibly failed) system.</skos:example>
-    </owl:Class>
-
-
-
-    <!-- http://IBCNServices.github.io/Folio-Ontology/Folio.owl#FailureEffect -->
-
-    <owl:Class rdf:about="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#FailureEffect">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#hasFailureMode"/>
-                <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#FailureMode"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#Effect"/>
-        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#FailureMode"/>
-        <rdfs:isDefinedBy>http://IBCNServices.github.io/Folio-Ontology/Folio.owl</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">FailureEffect</rdfs:label>
-        <skos:definition xml:lang="en">Immediate consequences of a failure on operation, function or functionality, or status of some item.</skos:definition>
-        <skos:example xml:lang="en">Increased range of input data.</skos:example>
-    </owl:Class>
-
-
-
-    <!-- http://IBCNServices.github.io/Folio-Ontology/Folio.owl#FailureMode -->
-
-    <owl:Class rdf:about="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#FailureMode">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#happenedAt"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/ns/ssn/System"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#hasCause"/>
-                <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#FailureCause"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#hasEffect"/>
-                <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#FailureEffect"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:isDefinedBy>http://IBCNServices.github.io/Folio-Ontology/Folio.owl</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">FailureMode</rdfs:label>
-        <skos:definition xml:lang="en">The specific manner or way by which a failure occurs in terms of failure of the item (being a part or (sub) system) function under investigation; it may generally describe the way the failure occurs. It shall at least clearly describe a (end) failure state of the item (or function in case of a Functional FMEA) under consideration. It is the result of the failure mechanism (cause of the failure mode)..</skos:definition>
-        <skos:example xml:lang="en"> Too high values.</skos:example>
-    </owl:Class>
-
-
-
-    <!-- http://IBCNServices.github.io/Folio-Ontology/Folio.owl#Faulty -->
-
-    <owl:Class rdf:about="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#Faulty">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#hasDetection"/>
-                <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#DetectionMethod"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#AnomalyKnowledge"/>
-        <rdfs:isDefinedBy>http://IBCNServices.github.io/Folio-Ontology/Folio.owl</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">Faulty</rdfs:label>
-        <skos:definition xml:lang="en">The loss of a function under stated conditions.</skos:definition>
-    </owl:Class>
-
-
-
-    <!-- http://IBCNServices.github.io/Folio-Ontology/Folio.owl#IntermediateEffect -->
-
-    <owl:Class rdf:about="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#IntermediateEffect">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#isIntermediateEffect"/>
-                <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#FailureMode"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#FailureEffect"/>
-        <rdfs:isDefinedBy>http://IBCNServices.github.io/Folio-Ontology/Folio.owl</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">IntermediateEffect</rdfs:label>
-        <skos:definition xml:lang="en">The failure effect as it applies at the next higher indenture level.</skos:definition>
-    </owl:Class>
-
-
-
-    <!-- http://IBCNServices.github.io/Folio-Ontology/Folio.owl#LocalEffect -->
-
-    <owl:Class rdf:about="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#LocalEffect">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#isLocalEffect"/>
-                <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#FailureMode"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#FailureEffect"/>
-        <rdfs:isDefinedBy>http://IBCNServices.github.io/Folio-Ontology/Folio.owl</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">LocalEffect</rdfs:label>
-        <skos:definition xml:lang="en">The visible failure effect as it applies to the item under analysis.</skos:definition>
-    </owl:Class>
-
-
-
-    <!-- http://IBCNServices.github.io/Folio-Ontology/Folio.owl#ObservationValue -->
-
-    <owl:Class rdf:about="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#ObservationValue">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Result"/>
-        <rdfs:isDefinedBy>http://IBCNServices.github.io/Folio-Ontology/Folio.owl</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">ObservationValue</rdfs:label>
-        <skos:definition xml:lang="en">Value describing the observation</skos:definition>
-    </owl:Class>
-</rdf:RDF>
-
-
-
-<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+)

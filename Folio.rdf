@@ -185,43 +185,6 @@
     <!-- http://IBCNServices.github.io/Folio-Ontology/Folio.owl#Anomaly -->
 
     <owl:Class rdf:about="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#Anomaly">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/usedProcedure"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/ns/sosa/Procedure"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/ssn/wasOriginatedBy"/>
-                <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#fromObservation"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/ssn/wasOriginatedBy"/>
-                <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#observedProperty"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/ssn/wasOriginatedBy"/>
-                <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#toObservation"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/ssn/wasOriginatedBy"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/ns/ssn/Stimulus"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasResult"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="http://www.w3.org/ns/sosa/resultTime"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
         <rdfs:isDefinedBy>http://IBCNServices.github.io/Folio-Ontology/Folio.owl</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Anomaly</rdfs:label>
         <skos:definition xml:lang="en">Description of possible unwanted behaviour</skos:definition>

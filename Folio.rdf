@@ -132,6 +132,18 @@
     
 
 
+    <!-- http://IBCNServices.github.io/Folio-Ontology/Folio.owl#hasStatus -->
+
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#hasStatus"/>
+    
+
+
+    <!-- http://IBCNServices.github.io/Folio-Ontology/Folio.owl#hasSubAnomaly -->
+
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#hasSubAnomaly"/>
+    
+
+
     <!-- http://IBCNServices.github.io/Folio-Ontology/Folio.owl#isEndEffect -->
 
     <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#isEndEffect">
@@ -174,6 +186,31 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://IBCNServices.github.io/Folio-Ontology/Folio.owl#hasEpochTime -->
+
+    <owl:DatatypeProperty rdf:about="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#hasEpochTime">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://IBCNServices.github.io/Folio-Ontology/Folio.owl#hasLabeller -->
+
+    <owl:DatatypeProperty rdf:about="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#hasLabeller"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
     // Classes
     //
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -185,6 +222,86 @@
     <!-- http://IBCNServices.github.io/Folio-Ontology/Folio.owl#Anomaly -->
 
     <owl:Class rdf:about="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#Anomaly">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/usedProcedure"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/ns/sosa/Procedure"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/ssn/wasOriginatedBy"/>
+                <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#fromObservation"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/ssn/wasOriginatedBy"/>
+                <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#observedProperty"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/ssn/wasOriginatedBy"/>
+                <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#toObservation"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/ssn/wasOriginatedBy"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/ns/ssn/Stimulus"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasResult"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.w3.org/ns/sosa/resultTime"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#hasCategory"/>
+                        <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#Category"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#hasCause"/>
+                        <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#Cause"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#hasCriticality"/>
+                        <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#Criticality"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#hasDetection"/>
+                        <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#DetectionMethod"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#hasDomain"/>
+                        <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#ConsequenceDomain"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#hasEffect"/>
+                        <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#Effect"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#hasSubAnomaly"/>
+                <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#Anomaly"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#hasStatus"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#Status"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:isDefinedBy>http://IBCNServices.github.io/Folio-Ontology/Folio.owl</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Anomaly</rdfs:label>
         <skos:definition xml:lang="en">Description of possible unwanted behaviour</skos:definition>
@@ -212,43 +329,21 @@
     
 
 
+    <!-- http://IBCNServices.github.io/Folio-Ontology/Folio.owl#Confirmed -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#Confirmed">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#Status"/>
+    </owl:Class>
+    
+
+
     <!-- http://IBCNServices.github.io/Folio-Ontology/Folio.owl#ConfirmedAnomaly -->
 
     <owl:Class rdf:about="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#ConfirmedAnomaly">
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#hasCategory"/>
-                <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#Category"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#hasCause"/>
-                <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#Cause"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#hasCriticality"/>
-                <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#Criticality"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#hasDetection"/>
-                <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#DetectionMethod"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#hasDomain"/>
-                <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#ConsequenceDomain"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#hasEffect"/>
-                <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#Effect"/>
+                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#hasStatus"/>
+                <owl:allValuesFrom rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#Confirmed"/>
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#Anomaly"/>
@@ -401,6 +496,41 @@
         <rdfs:isDefinedBy>http://IBCNServices.github.io/Folio-Ontology/Folio.owl</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">LocalEffect</rdfs:label>
         <skos:definition xml:lang="en">The visible failure effect as it applies to the item under analysis.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Folio-Ontology/Folio.owl#NotReviewed -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#NotReviewed">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#Status"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Folio-Ontology/Folio.owl#Rejected -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#Rejected">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#Status"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Folio-Ontology/Folio.owl#Status -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#Status">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#hasLabeller"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/resultTime"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 

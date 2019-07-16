@@ -16,6 +16,7 @@ Annotation(<http://xmlns.com/foaf/0.1/name> "Folio"@en)
 Declaration(Class(:Anomaly))
 Declaration(Class(:Category))
 Declaration(Class(:Cause))
+Declaration(Class(:Confirmed))
 Declaration(Class(:ConfirmedAnomaly))
 Declaration(Class(:ConsequenceDomain))
 Declaration(Class(:Criticality))
@@ -26,6 +27,9 @@ Declaration(Class(:FailureEffect))
 Declaration(Class(:FailureMode))
 Declaration(Class(:IntermediateEffect))
 Declaration(Class(:LocalEffect))
+Declaration(Class(:NotReviewed))
+Declaration(Class(:Rejected))
+Declaration(Class(:Status))
 Declaration(Class(:fromObservation))
 Declaration(Class(:observedProperty))
 Declaration(Class(:toObservation))
@@ -40,10 +44,14 @@ Declaration(ObjectProperty(:hasEffect))
 Declaration(ObjectProperty(:hasFailureMode))
 Declaration(ObjectProperty(:hasLowerFailureEffect))
 Declaration(ObjectProperty(:hasNextFailureEffect))
+Declaration(ObjectProperty(:hasStatus))
+Declaration(ObjectProperty(:hasSubAnomaly))
 Declaration(ObjectProperty(:isEndEffect))
 Declaration(ObjectProperty(:isIntermediateEffect))
 Declaration(ObjectProperty(:isLocalEffect))
 Declaration(ObjectProperty(:observedBy))
+Declaration(DataProperty(:hasEpochTime))
+Declaration(DataProperty(:hasLabeller))
 
 ############################
 #   Object Properties
@@ -133,6 +141,15 @@ AnnotationAssertion(rdfs:isDefinedBy :observedBy "http://IBCNServices.github.io/
 AnnotationAssertion(rdfs:label :observedBy "observedBy"@en)
 
 
+############################
+#   Data Properties
+############################
+
+# Data Property: :hasEpochTime (:hasEpochTime)
+
+DataPropertyRange(:hasEpochTime xsd:integer)
+
+
 
 ############################
 #   Classes
@@ -149,6 +166,9 @@ EquivalentClasses(:Anomaly ObjectSomeValuesFrom(<http://www.w3.org/ns/ssn/wasOri
 EquivalentClasses(:Anomaly ObjectSomeValuesFrom(<http://www.w3.org/ns/ssn/wasOriginatedBy> :toObservation))
 EquivalentClasses(:Anomaly ObjectSomeValuesFrom(<http://www.w3.org/ns/ssn/wasOriginatedBy> <http://www.w3.org/ns/ssn/Stimulus>))
 EquivalentClasses(:Anomaly ObjectExactCardinality(1 <http://www.w3.org/ns/sosa/hasResult> <http://www.w3.org/ns/sosa/resultTime>))
+SubClassOf(:Anomaly ObjectIntersectionOf(ObjectSomeValuesFrom(:hasCategory :Category) ObjectSomeValuesFrom(:hasCause :Cause) ObjectSomeValuesFrom(:hasCriticality :Criticality) ObjectSomeValuesFrom(:hasDetection :DetectionMethod) ObjectSomeValuesFrom(:hasDomain :ConsequenceDomain) ObjectSomeValuesFrom(:hasEffect :Effect)))
+SubClassOf(:Anomaly ObjectSomeValuesFrom(:hasSubAnomaly :Anomaly))
+SubClassOf(:Anomaly ObjectMaxCardinality(1 :hasStatus :Status))
 
 # Class: :Category (Category)
 
@@ -162,18 +182,17 @@ AnnotationAssertion(rdfs:isDefinedBy :Cause "http://IBCNServices.github.io/Folio
 AnnotationAssertion(rdfs:label :Cause "Cause"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :Cause "The cause refers to the description suspected to be the source of the ConfirmedAnomaly"@en)
 
+# Class: :Confirmed (:Confirmed)
+
+SubClassOf(:Confirmed :Status)
+
 # Class: :ConfirmedAnomaly (ConfirmedAnomaly)
 
 AnnotationAssertion(rdfs:isDefinedBy :ConfirmedAnomaly "http://IBCNServices.github.io/Folio-Ontology/Folio.owl")
 AnnotationAssertion(rdfs:label :ConfirmedAnomaly "ConfirmedAnomaly"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :ConfirmedAnomaly "ConfirmedAnomaly’s description. Should then express, at least, which part of the system is affected, by what. Ideally, this should be completed with additional information, such as which components observe the ConfirmedAnomaly, or the worth of its management."@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :ConfirmedAnomaly "ConfirmedAnomaly’s description. Should then express, at least, which part of the system is affected, by what. Ideally, this should be completed with additional information, such as which components observe the ConfirmedAnomaly, or the worth of its management."@en)
-EquivalentClasses(:ConfirmedAnomaly ObjectSomeValuesFrom(:hasCategory :Category))
-EquivalentClasses(:ConfirmedAnomaly ObjectSomeValuesFrom(:hasCause :Cause))
-EquivalentClasses(:ConfirmedAnomaly ObjectSomeValuesFrom(:hasCriticality :Criticality))
-EquivalentClasses(:ConfirmedAnomaly ObjectSomeValuesFrom(:hasDetection :DetectionMethod))
-EquivalentClasses(:ConfirmedAnomaly ObjectSomeValuesFrom(:hasDomain :ConsequenceDomain))
-EquivalentClasses(:ConfirmedAnomaly ObjectSomeValuesFrom(:hasEffect :Effect))
+EquivalentClasses(:ConfirmedAnomaly ObjectAllValuesFrom(:hasStatus :Confirmed))
 SubClassOf(:ConfirmedAnomaly :Anomaly)
 
 # Class: :ConsequenceDomain (ConsequenceDomain)
@@ -249,6 +268,19 @@ AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :LocalEffec
 EquivalentClasses(:LocalEffect ObjectSomeValuesFrom(:isLocalEffect :FailureMode))
 SubClassOf(:LocalEffect :FailureEffect)
 SubClassOf(:LocalEffect <http://www.w3.org/ns/sosa/Observation>)
+
+# Class: :NotReviewed (:NotReviewed)
+
+SubClassOf(:NotReviewed :Status)
+
+# Class: :Rejected (:Rejected)
+
+SubClassOf(:Rejected :Status)
+
+# Class: :Status (:Status)
+
+SubClassOf(:Status DataSomeValuesFrom(:hasLabeller rdfs:Literal))
+SubClassOf(:Status DataSomeValuesFrom(<http://www.w3.org/ns/sosa/resultTime> xsd:dateTime))
 
 # Class: :fromObservation (fromObservation)
 

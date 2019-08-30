@@ -27,9 +27,12 @@ Declaration(Class(:FailureEffect))
 Declaration(Class(:FailureMode))
 Declaration(Class(:IntermediateEffect))
 Declaration(Class(:LocalEffect))
+Declaration(Class(:MergedAnomaly))
 Declaration(Class(:NotReviewed))
 Declaration(Class(:Rejected))
+Declaration(Class(:RelabeledAnomaly))
 Declaration(Class(:Status))
+Declaration(Class(:UnknownPatternAnomaly))
 Declaration(Class(:fromObservation))
 Declaration(Class(:observedProperty))
 Declaration(Class(:toObservation))
@@ -269,6 +272,10 @@ EquivalentClasses(:LocalEffect ObjectSomeValuesFrom(:isLocalEffect :FailureMode)
 SubClassOf(:LocalEffect :FailureEffect)
 SubClassOf(:LocalEffect <http://www.w3.org/ns/sosa/Observation>)
 
+# Class: :MergedAnomaly (:MergedAnomaly)
+
+SubClassOf(:MergedAnomaly :Anomaly)
+
 # Class: :NotReviewed (:NotReviewed)
 
 SubClassOf(:NotReviewed :Status)
@@ -277,10 +284,18 @@ SubClassOf(:NotReviewed :Status)
 
 SubClassOf(:Rejected :Status)
 
+# Class: :RelabeledAnomaly (:RelabeledAnomaly)
+
+SubClassOf(:RelabeledAnomaly :Anomaly)
+
 # Class: :Status (:Status)
 
 SubClassOf(:Status DataSomeValuesFrom(:hasLabeller rdfs:Literal))
 SubClassOf(:Status DataSomeValuesFrom(<http://www.w3.org/ns/sosa/resultTime> xsd:dateTime))
+
+# Class: :UnknownPatternAnomaly (:UnknownPatternAnomaly)
+
+SubClassOf(:UnknownPatternAnomaly :Anomaly)
 
 # Class: :fromObservation (fromObservation)
 

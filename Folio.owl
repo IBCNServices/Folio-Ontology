@@ -1,320 +1,860 @@
-Prefix(:=<http://IBCNServices.github.io/Folio-Ontology/Folio.owl#>)
-Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
-Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
-Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
-Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
-Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://IBCNServices.github.io/Folio-Ontology/Folio.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://IBCNServices.github.io/Folio-Ontology/Folio.owl">
+    <Prefix name="" IRI="http://IBCNServices.github.io/Folio-Ontology/Folio.owl#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>http://www.w3.org/ns/ssn/</Import>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/title"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Failure mode and effect analysis combined with anomaly ontology</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://xmlns.com/foaf/0.1/name"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Folio</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/creator"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Bram Steenwinckel</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">1.0.0</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="#FailureEffect"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Confirmed"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#happenedAt"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MergedAnomaly"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#observedProperty"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#IntermediateEffect"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#observedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isIntermediateEffect"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Rejected"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasCategory"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NotReviewed"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasDetection"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasLabeller"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ConfirmedAnomaly"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#UnknownPatternAnomaly"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LocalEffect"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FailureMode"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FailureCause"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DetectionMethod"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Category"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Anomaly"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Cause"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasFailureMode"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasLowerFailureEffect"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasStatus"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasNextFailureEffect"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#fromObservation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasCause"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Effect"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/ns/sosa/resultTime"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasCriticality"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#toObservation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ConsequenceDomain"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasEpochTime"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasSubAnomaly"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasEffect"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Status"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Criticality"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isLocalEffect"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isEndEffect"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasDomain"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RelabeledAnomaly"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#Anomaly"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/sosa/usedProcedure"/>
+            <Class IRI="http://www.w3.org/ns/sosa/Procedure"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Anomaly"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/ssn/wasOriginatedBy"/>
+            <Class IRI="#fromObservation"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Anomaly"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/ssn/wasOriginatedBy"/>
+            <Class IRI="#observedProperty"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Anomaly"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/ssn/wasOriginatedBy"/>
+            <Class IRI="#toObservation"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Anomaly"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/ssn/wasOriginatedBy"/>
+            <Class IRI="http://www.w3.org/ns/ssn/Stimulus"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Anomaly"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/ns/sosa/hasResult"/>
+            <Class IRI="http://www.w3.org/ns/sosa/resultTime"/>
+        </ObjectExactCardinality>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#ConfirmedAnomaly"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasStatus"/>
+            <Class IRI="#Confirmed"/>
+        </ObjectAllValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#FailureCause"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#isEndEffect"/>
+            <Class IRI="#FailureMode"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#FailureEffect"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasFailureMode"/>
+            <Class IRI="#FailureMode"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#FailureMode"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#happenedAt"/>
+            <Class IRI="http://www.w3.org/ns/ssn/System"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#FailureMode"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasCause"/>
+            <Class IRI="#FailureCause"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#FailureMode"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasEffect"/>
+            <Class IRI="#FailureEffect"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#IntermediateEffect"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#isIntermediateEffect"/>
+            <Class IRI="#FailureMode"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#LocalEffect"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#isLocalEffect"/>
+            <Class IRI="#FailureMode"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#Anomaly"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasCategory"/>
+                <Class IRI="#Category"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasCause"/>
+                <Class IRI="#Cause"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasCriticality"/>
+                <Class IRI="#Criticality"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasDetection"/>
+                <Class IRI="#DetectionMethod"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasDomain"/>
+                <Class IRI="#ConsequenceDomain"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasEffect"/>
+                <Class IRI="#Effect"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Anomaly"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasSubAnomaly"/>
+            <Class IRI="#Anomaly"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Anomaly"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="#hasStatus"/>
+            <Class IRI="#Status"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Confirmed"/>
+        <Class IRI="#Status"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ConfirmedAnomaly"/>
+        <Class IRI="#Anomaly"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FailureCause"/>
+        <Class IRI="#Cause"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FailureCause"/>
+        <Class IRI="#FailureMode"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FailureEffect"/>
+        <Class IRI="#Effect"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FailureEffect"/>
+        <Class IRI="#FailureMode"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#IntermediateEffect"/>
+        <Class IRI="#FailureEffect"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LocalEffect"/>
+        <Class IRI="#FailureEffect"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LocalEffect"/>
+        <Class IRI="http://www.w3.org/ns/sosa/Observation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MergedAnomaly"/>
+        <Class IRI="#Anomaly"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NotReviewed"/>
+        <Class IRI="#Status"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Rejected"/>
+        <Class IRI="#Status"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RelabeledAnomaly"/>
+        <Class IRI="#Anomaly"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Status"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasLabeller"/>
+            <Datatype abbreviatedIRI="rdfs:Literal"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Status"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="http://www.w3.org/ns/sosa/resultTime"/>
+            <Datatype abbreviatedIRI="xsd:dateTime"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UnknownPatternAnomaly"/>
+        <Class IRI="#Anomaly"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#fromObservation"/>
+        <Class IRI="http://www.w3.org/ns/sosa/Observation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#observedProperty"/>
+        <Class IRI="http://www.w3.org/ns/sosa/ObservableProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#toObservation"/>
+        <Class IRI="http://www.w3.org/ns/sosa/Observation"/>
+    </SubClassOf>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasEpochTime"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Anomaly</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://IBCNServices.github.io/Folio-Ontology/Folio.owl</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Anomaly</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Anomaly</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
+        <IRI>#Anomaly</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Description of possible unwanted behaviour</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Category</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://IBCNServices.github.io/Folio-Ontology/Folio.owl</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Category</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Category</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
+        <IRI>#Category</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">An ConfirmedAnomaly can happen once (transient), periodically (recurrent) or definitively (permanent).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Cause</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://IBCNServices.github.io/Folio-Ontology/Folio.owl</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Cause</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Cause</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
+        <IRI>#Cause</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The cause refers to the description suspected to be the source of the ConfirmedAnomaly</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#ConfirmedAnomaly</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://IBCNServices.github.io/Folio-Ontology/Folio.owl</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ConfirmedAnomaly</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ConfirmedAnomaly</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
+        <IRI>#ConfirmedAnomaly</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ConfirmedAnomaly’s description. Should then express, at least, which part of the system is affected, by what. Ideally, this should be completed with additional information, such as which components observe the ConfirmedAnomaly, or the worth of its management.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#example"/>
+        <IRI>#ConfirmedAnomaly</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ConfirmedAnomaly’s description. Should then express, at least, which part of the system is affected, by what. Ideally, this should be completed with additional information, such as which components observe the ConfirmedAnomaly, or the worth of its management.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#ConsequenceDomain</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://IBCNServices.github.io/Folio-Ontology/Folio.owl</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ConsequenceDomain</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ConsequenceDomain</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
+        <IRI>#ConsequenceDomain</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Each domain relates to a specific kind of consequence of the ConfirmedAnomaly.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#example"/>
+        <IRI>#ConsequenceDomain</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Malfunctioning of device or dangerous situation for end user.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Criticality</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://IBCNServices.github.io/Folio-Ontology/Folio.owl</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Criticality</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Criticality</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
+        <IRI>#Criticality</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">It is a time dependent worth attributed to the ConfirmedAnomaly management.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#example"/>
+        <IRI>#Criticality</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">non-critic ConfirmedAnomaly</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#DetectionMethod</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://IBCNServices.github.io/Folio-Ontology/Folio.owl</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#DetectionMethod</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">DetectionMethod</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
+        <IRI>#DetectionMethod</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This relies on components’ survey to trigger a warning about abnormalities.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#example"/>
+        <IRI>#DetectionMethod</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">value &gt; x.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Effect</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://IBCNServices.github.io/Folio-Ontology/Folio.owl</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Effect</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Effect</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
+        <IRI>#Effect</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The effect describes one aspect of the observed phenomenon.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#FailureCause</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://IBCNServices.github.io/Folio-Ontology/Folio.owl</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#FailureCause</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FailureCause</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
+        <IRI>#FailureCause</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Failure causes are defects in design, process, quality, or part application, which are the underlying cause of a failure or which initiate a process which leads to failure. Also, the failure effect at the highest indenture level or total system. A failure mode may have more causes.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#example"/>
+        <IRI>#FailureCause</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">(abnormal) vibration input from another (possibly failed) system.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#FailureEffect</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://IBCNServices.github.io/Folio-Ontology/Folio.owl</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#FailureEffect</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FailureEffect</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
+        <IRI>#FailureEffect</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Immediate consequences of a failure on operation, function or functionality, or status of some item.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#example"/>
+        <IRI>#FailureEffect</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Increased range of input data.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#FailureMode</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://IBCNServices.github.io/Folio-Ontology/Folio.owl</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#FailureMode</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FailureMode</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
+        <IRI>#FailureMode</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The specific manner or way by which a failure occurs in terms of failure of the item (being a part or (sub) system) function under investigation; it may generally describe the way the failure occurs. It shall at least clearly describe a (end) failure state of the item (or function in case of a Functional FMEA) under consideration. It is the result of the failure mechanism (cause of the failure mode)..</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#example"/>
+        <IRI>#FailureMode</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"> Too high values.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#IntermediateEffect</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://IBCNServices.github.io/Folio-Ontology/Folio.owl</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#IntermediateEffect</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">IntermediateEffect</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
+        <IRI>#IntermediateEffect</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The failure effect as it applies at the next higher indenture level.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#LocalEffect</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://IBCNServices.github.io/Folio-Ontology/Folio.owl</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#LocalEffect</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">LocalEffect</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
+        <IRI>#LocalEffect</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The visible failure effect as it applies to the item under analysis.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#fromObservation</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://IBCNServices.github.io/Folio-Ontology/Folio.owl</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#fromObservation</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">fromObservation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
+        <IRI>#fromObservation</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">First observation describing the underfined behaviour</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#happenedAt</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://IBCNServices.github.io/Folio-Ontology/Folio.owl</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#happenedAt</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">happenedAt</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
+        <IRI>#happenedAt</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Relation between the failure cause and the corresponding device/system.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#hasCategory</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://IBCNServices.github.io/Folio-Ontology/Folio.owl</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasCategory</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">hasCategory</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
+        <IRI>#hasCategory</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Relation between the observed element and its category</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#hasCause</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://IBCNServices.github.io/Folio-Ontology/Folio.owl</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasCause</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">hasCause</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
+        <IRI>#hasCause</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Relation between a failure and it corresponding cause.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#hasCriticality</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://IBCNServices.github.io/Folio-Ontology/Folio.owl</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasCriticality</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">hasCriticality</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
+        <IRI>#hasCriticality</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Relation between the observed element and the criticality</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#hasDetection</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://IBCNServices.github.io/Folio-Ontology/Folio.owl</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasDetection</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">hasDetection</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
+        <IRI>#hasDetection</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Relation between the observed element and the detection method</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#hasDomain</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://IBCNServices.github.io/Folio-Ontology/Folio.owl</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasDomain</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">hasDomain</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
+        <IRI>#hasDomain</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Relation between the observed element and its domain</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#hasEffect</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://IBCNServices.github.io/Folio-Ontology/Folio.owl</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasEffect</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">hasEffect</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
+        <IRI>#hasEffect</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Relation between a failure and it corresponding effect.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#hasFailureMode</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://IBCNServices.github.io/Folio-Ontology/Folio.owl</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasFailureMode</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">hasFailureMode</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
+        <IRI>#hasFailureMode</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Relation between the failure effect and the corresponding failure mode.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#hasLowerFailureEffect</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://IBCNServices.github.io/Folio-Ontology/Folio.owl</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasLowerFailureEffect</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">hasLowerFailureEffect</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
+        <IRI>#hasLowerFailureEffect</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Relation between a failure effect and a previously occurring effect.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#hasNextFailureEffect</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://IBCNServices.github.io/Folio-Ontology/Folio.owl</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasNextFailureEffect</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">hasNextFailureEffect</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
+        <IRI>#hasNextFailureEffect</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Relation between a failure effect and a next effect.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#isEndEffect</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://IBCNServices.github.io/Folio-Ontology/Folio.owl</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isEndEffect</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">isEndEffect</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
+        <IRI>#isEndEffect</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Relation defining an failure effect as end effect.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#isIntermediateEffect</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://IBCNServices.github.io/Folio-Ontology/Folio.owl</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isIntermediateEffect</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">isIntermediateEffect</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
+        <IRI>#isIntermediateEffect</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Relation defining an failure effect as intermediate effect.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#isLocalEffect</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://IBCNServices.github.io/Folio-Ontology/Folio.owl</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isLocalEffect</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">isLocalEffect</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
+        <IRI>#isLocalEffect</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Relation defining an failure effect as the first mentioned effect.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#observedBy</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://IBCNServices.github.io/Folio-Ontology/Folio.owl</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#observedBy</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">observedBy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#observedProperty</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://IBCNServices.github.io/Folio-Ontology/Folio.owl</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#observedProperty</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">observedProperty</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#toObservation</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://IBCNServices.github.io/Folio-Ontology/Folio.owl</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#toObservation</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">toObservation</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
 
-
-Ontology(<http://IBCNServices.github.io/Folio-Ontology/Folio.owl>
-Import(<http://www.w3.org/ns/ssn/>)
-Annotation(<http://purl.org/dc/terms/creator> "Bram Steenwinckel"@en)
-Annotation(<http://purl.org/dc/terms/title> "Failure mode and effect analysis combined with anomaly ontology"@en)
-Annotation(owl:versionInfo "1.0.0"@en)
-Annotation(<http://xmlns.com/foaf/0.1/name> "Folio"@en)
-
-Declaration(Class(:Anomaly))
-Declaration(Class(:Category))
-Declaration(Class(:Cause))
-Declaration(Class(:Confirmed))
-Declaration(Class(:ConfirmedAnomaly))
-Declaration(Class(:ConsequenceDomain))
-Declaration(Class(:Criticality))
-Declaration(Class(:DetectionMethod))
-Declaration(Class(:Effect))
-Declaration(Class(:FailureCause))
-Declaration(Class(:FailureEffect))
-Declaration(Class(:FailureMode))
-Declaration(Class(:IntermediateEffect))
-Declaration(Class(:LocalEffect))
-Declaration(Class(:MergedAnomaly))
-Declaration(Class(:NotReviewed))
-Declaration(Class(:Rejected))
-Declaration(Class(:RelabeledAnomaly))
-Declaration(Class(:Status))
-Declaration(Class(:UnknownPatternAnomaly))
-Declaration(Class(:fromObservation))
-Declaration(Class(:observedProperty))
-Declaration(Class(:toObservation))
-Declaration(Class(<http://www.w3.org/ns/sosa/resultTime>))
-Declaration(ObjectProperty(:happenedAt))
-Declaration(ObjectProperty(:hasCategory))
-Declaration(ObjectProperty(:hasCause))
-Declaration(ObjectProperty(:hasCriticality))
-Declaration(ObjectProperty(:hasDetection))
-Declaration(ObjectProperty(:hasDomain))
-Declaration(ObjectProperty(:hasEffect))
-Declaration(ObjectProperty(:hasFailureMode))
-Declaration(ObjectProperty(:hasLowerFailureEffect))
-Declaration(ObjectProperty(:hasNextFailureEffect))
-Declaration(ObjectProperty(:hasStatus))
-Declaration(ObjectProperty(:hasSubAnomaly))
-Declaration(ObjectProperty(:isEndEffect))
-Declaration(ObjectProperty(:isIntermediateEffect))
-Declaration(ObjectProperty(:isLocalEffect))
-Declaration(ObjectProperty(:observedBy))
-Declaration(DataProperty(:hasEpochTime))
-Declaration(DataProperty(:hasLabeller))
-
-############################
-#   Object Properties
-############################
-
-# Object Property: :happenedAt (happenedAt)
-
-AnnotationAssertion(rdfs:isDefinedBy :happenedAt "http://IBCNServices.github.io/Folio-Ontology/Folio.owl")
-AnnotationAssertion(rdfs:label :happenedAt "happenedAt"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :happenedAt "Relation between the failure cause and the corresponding device/system."@en)
-
-# Object Property: :hasCategory (hasCategory)
-
-AnnotationAssertion(rdfs:isDefinedBy :hasCategory "http://IBCNServices.github.io/Folio-Ontology/Folio.owl")
-AnnotationAssertion(rdfs:label :hasCategory "hasCategory"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :hasCategory "Relation between the observed element and its category"@en)
-
-# Object Property: :hasCause (hasCause)
-
-AnnotationAssertion(rdfs:isDefinedBy :hasCause "http://IBCNServices.github.io/Folio-Ontology/Folio.owl")
-AnnotationAssertion(rdfs:label :hasCause "hasCause"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :hasCause "Relation between a failure and it corresponding cause."@en)
-
-# Object Property: :hasCriticality (hasCriticality)
-
-AnnotationAssertion(rdfs:isDefinedBy :hasCriticality "http://IBCNServices.github.io/Folio-Ontology/Folio.owl")
-AnnotationAssertion(rdfs:label :hasCriticality "hasCriticality"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :hasCriticality "Relation between the observed element and the criticality"@en)
-
-# Object Property: :hasDetection (hasDetection)
-
-AnnotationAssertion(rdfs:isDefinedBy :hasDetection "http://IBCNServices.github.io/Folio-Ontology/Folio.owl")
-AnnotationAssertion(rdfs:label :hasDetection "hasDetection"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :hasDetection "Relation between the observed element and the detection method"@en)
-
-# Object Property: :hasDomain (hasDomain)
-
-AnnotationAssertion(rdfs:isDefinedBy :hasDomain "http://IBCNServices.github.io/Folio-Ontology/Folio.owl")
-AnnotationAssertion(rdfs:label :hasDomain "hasDomain"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :hasDomain "Relation between the observed element and its domain"@en)
-
-# Object Property: :hasEffect (hasEffect)
-
-AnnotationAssertion(rdfs:isDefinedBy :hasEffect "http://IBCNServices.github.io/Folio-Ontology/Folio.owl")
-AnnotationAssertion(rdfs:label :hasEffect "hasEffect"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :hasEffect "Relation between a failure and it corresponding effect."@en)
-
-# Object Property: :hasFailureMode (hasFailureMode)
-
-AnnotationAssertion(rdfs:isDefinedBy :hasFailureMode "http://IBCNServices.github.io/Folio-Ontology/Folio.owl")
-AnnotationAssertion(rdfs:label :hasFailureMode "hasFailureMode"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :hasFailureMode "Relation between the failure effect and the corresponding failure mode."@en)
-
-# Object Property: :hasLowerFailureEffect (hasLowerFailureEffect)
-
-AnnotationAssertion(rdfs:isDefinedBy :hasLowerFailureEffect "http://IBCNServices.github.io/Folio-Ontology/Folio.owl")
-AnnotationAssertion(rdfs:label :hasLowerFailureEffect "hasLowerFailureEffect"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :hasLowerFailureEffect "Relation between a failure effect and a previously occurring effect."@en)
-
-# Object Property: :hasNextFailureEffect (hasNextFailureEffect)
-
-AnnotationAssertion(rdfs:isDefinedBy :hasNextFailureEffect "http://IBCNServices.github.io/Folio-Ontology/Folio.owl")
-AnnotationAssertion(rdfs:label :hasNextFailureEffect "hasNextFailureEffect"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :hasNextFailureEffect "Relation between a failure effect and a next effect."@en)
-
-# Object Property: :isEndEffect (isEndEffect)
-
-AnnotationAssertion(rdfs:isDefinedBy :isEndEffect "http://IBCNServices.github.io/Folio-Ontology/Folio.owl")
-AnnotationAssertion(rdfs:label :isEndEffect "isEndEffect"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :isEndEffect "Relation defining an failure effect as end effect."@en)
-
-# Object Property: :isIntermediateEffect (isIntermediateEffect)
-
-AnnotationAssertion(rdfs:isDefinedBy :isIntermediateEffect "http://IBCNServices.github.io/Folio-Ontology/Folio.owl")
-AnnotationAssertion(rdfs:label :isIntermediateEffect "isIntermediateEffect"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :isIntermediateEffect "Relation defining an failure effect as intermediate effect."@en)
-
-# Object Property: :isLocalEffect (isLocalEffect)
-
-AnnotationAssertion(rdfs:isDefinedBy :isLocalEffect "http://IBCNServices.github.io/Folio-Ontology/Folio.owl")
-AnnotationAssertion(rdfs:label :isLocalEffect "isLocalEffect"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :isLocalEffect "Relation defining an failure effect as the first mentioned effect."@en)
-
-# Object Property: :observedBy (observedBy)
-
-AnnotationAssertion(rdfs:isDefinedBy :observedBy "http://IBCNServices.github.io/Folio-Ontology/Folio.owl")
-AnnotationAssertion(rdfs:label :observedBy "observedBy"@en)
-
-
-############################
-#   Data Properties
-############################
-
-# Data Property: :hasEpochTime (:hasEpochTime)
-
-DataPropertyRange(:hasEpochTime xsd:integer)
-
-
-
-############################
-#   Classes
-############################
-
-# Class: :Anomaly (Anomaly)
-
-AnnotationAssertion(rdfs:isDefinedBy :Anomaly "http://IBCNServices.github.io/Folio-Ontology/Folio.owl")
-AnnotationAssertion(rdfs:label :Anomaly "Anomaly"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :Anomaly "Description of possible unwanted behaviour"@en)
-EquivalentClasses(:Anomaly ObjectSomeValuesFrom(<http://www.w3.org/ns/sosa/usedProcedure> <http://www.w3.org/ns/sosa/Procedure>))
-EquivalentClasses(:Anomaly ObjectSomeValuesFrom(<http://www.w3.org/ns/ssn/wasOriginatedBy> :fromObservation))
-EquivalentClasses(:Anomaly ObjectSomeValuesFrom(<http://www.w3.org/ns/ssn/wasOriginatedBy> :observedProperty))
-EquivalentClasses(:Anomaly ObjectSomeValuesFrom(<http://www.w3.org/ns/ssn/wasOriginatedBy> :toObservation))
-EquivalentClasses(:Anomaly ObjectSomeValuesFrom(<http://www.w3.org/ns/ssn/wasOriginatedBy> <http://www.w3.org/ns/ssn/Stimulus>))
-EquivalentClasses(:Anomaly ObjectExactCardinality(1 <http://www.w3.org/ns/sosa/hasResult> <http://www.w3.org/ns/sosa/resultTime>))
-SubClassOf(:Anomaly ObjectIntersectionOf(ObjectSomeValuesFrom(:hasCategory :Category) ObjectSomeValuesFrom(:hasCause :Cause) ObjectSomeValuesFrom(:hasCriticality :Criticality) ObjectSomeValuesFrom(:hasDetection :DetectionMethod) ObjectSomeValuesFrom(:hasDomain :ConsequenceDomain) ObjectSomeValuesFrom(:hasEffect :Effect)))
-SubClassOf(:Anomaly ObjectSomeValuesFrom(:hasSubAnomaly :Anomaly))
-SubClassOf(:Anomaly ObjectMaxCardinality(1 :hasStatus :Status))
-
-# Class: :Category (Category)
-
-AnnotationAssertion(rdfs:isDefinedBy :Category "http://IBCNServices.github.io/Folio-Ontology/Folio.owl")
-AnnotationAssertion(rdfs:label :Category "Category"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :Category "An ConfirmedAnomaly can happen once (transient), periodically (recurrent) or definitively (permanent)."@en)
-
-# Class: :Cause (Cause)
-
-AnnotationAssertion(rdfs:isDefinedBy :Cause "http://IBCNServices.github.io/Folio-Ontology/Folio.owl")
-AnnotationAssertion(rdfs:label :Cause "Cause"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :Cause "The cause refers to the description suspected to be the source of the ConfirmedAnomaly"@en)
-
-# Class: :Confirmed (:Confirmed)
-
-SubClassOf(:Confirmed :Status)
-
-# Class: :ConfirmedAnomaly (ConfirmedAnomaly)
-
-AnnotationAssertion(rdfs:isDefinedBy :ConfirmedAnomaly "http://IBCNServices.github.io/Folio-Ontology/Folio.owl")
-AnnotationAssertion(rdfs:label :ConfirmedAnomaly "ConfirmedAnomaly"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :ConfirmedAnomaly "ConfirmedAnomaly’s description. Should then express, at least, which part of the system is affected, by what. Ideally, this should be completed with additional information, such as which components observe the ConfirmedAnomaly, or the worth of its management."@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :ConfirmedAnomaly "ConfirmedAnomaly’s description. Should then express, at least, which part of the system is affected, by what. Ideally, this should be completed with additional information, such as which components observe the ConfirmedAnomaly, or the worth of its management."@en)
-EquivalentClasses(:ConfirmedAnomaly ObjectAllValuesFrom(:hasStatus :Confirmed))
-SubClassOf(:ConfirmedAnomaly :Anomaly)
-
-# Class: :ConsequenceDomain (ConsequenceDomain)
-
-AnnotationAssertion(rdfs:isDefinedBy :ConsequenceDomain "http://IBCNServices.github.io/Folio-Ontology/Folio.owl")
-AnnotationAssertion(rdfs:label :ConsequenceDomain "ConsequenceDomain"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :ConsequenceDomain "Each domain relates to a specific kind of consequence of the ConfirmedAnomaly."@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :ConsequenceDomain "Malfunctioning of device or dangerous situation for end user."@en)
-
-# Class: :Criticality (Criticality)
-
-AnnotationAssertion(rdfs:isDefinedBy :Criticality "http://IBCNServices.github.io/Folio-Ontology/Folio.owl")
-AnnotationAssertion(rdfs:label :Criticality "Criticality"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :Criticality "It is a time dependent worth attributed to the ConfirmedAnomaly management."@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :Criticality "non-critic ConfirmedAnomaly"@en)
-
-# Class: :DetectionMethod (DetectionMethod)
-
-AnnotationAssertion(rdfs:isDefinedBy :DetectionMethod "http://IBCNServices.github.io/Folio-Ontology/Folio.owl")
-AnnotationAssertion(rdfs:label :DetectionMethod "DetectionMethod"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :DetectionMethod "This relies on components’ survey to trigger a warning about abnormalities."@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :DetectionMethod "value > x."@en)
-
-# Class: :Effect (Effect)
-
-AnnotationAssertion(rdfs:isDefinedBy :Effect "http://IBCNServices.github.io/Folio-Ontology/Folio.owl")
-AnnotationAssertion(rdfs:label :Effect "Effect"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :Effect "The effect describes one aspect of the observed phenomenon."@en)
-
-# Class: :FailureCause (FailureCause)
-
-AnnotationAssertion(rdfs:isDefinedBy :FailureCause "http://IBCNServices.github.io/Folio-Ontology/Folio.owl")
-AnnotationAssertion(rdfs:label :FailureCause "FailureCause"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :FailureCause "Failure causes are defects in design, process, quality, or part application, which are the underlying cause of a failure or which initiate a process which leads to failure. Also, the failure effect at the highest indenture level or total system. A failure mode may have more causes."@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :FailureCause "(abnormal) vibration input from another (possibly failed) system."@en)
-EquivalentClasses(:FailureCause ObjectSomeValuesFrom(:isEndEffect :FailureMode))
-SubClassOf(:FailureCause :Cause)
-SubClassOf(:FailureCause :FailureMode)
-
-# Class: :FailureEffect (FailureEffect)
-
-AnnotationAssertion(rdfs:isDefinedBy :FailureEffect "http://IBCNServices.github.io/Folio-Ontology/Folio.owl")
-AnnotationAssertion(rdfs:label :FailureEffect "FailureEffect"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :FailureEffect "Immediate consequences of a failure on operation, function or functionality, or status of some item."@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :FailureEffect "Increased range of input data."@en)
-EquivalentClasses(:FailureEffect ObjectSomeValuesFrom(:hasFailureMode :FailureMode))
-SubClassOf(:FailureEffect :Effect)
-SubClassOf(:FailureEffect :FailureMode)
-
-# Class: :FailureMode (FailureMode)
-
-AnnotationAssertion(rdfs:isDefinedBy :FailureMode "http://IBCNServices.github.io/Folio-Ontology/Folio.owl")
-AnnotationAssertion(rdfs:label :FailureMode "FailureMode"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :FailureMode "The specific manner or way by which a failure occurs in terms of failure of the item (being a part or (sub) system) function under investigation; it may generally describe the way the failure occurs. It shall at least clearly describe a (end) failure state of the item (or function in case of a Functional FMEA) under consideration. It is the result of the failure mechanism (cause of the failure mode).."@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :FailureMode " Too high values."@en)
-EquivalentClasses(:FailureMode ObjectSomeValuesFrom(:happenedAt <http://www.w3.org/ns/ssn/System>))
-EquivalentClasses(:FailureMode ObjectSomeValuesFrom(:hasCause :FailureCause))
-EquivalentClasses(:FailureMode ObjectSomeValuesFrom(:hasEffect :FailureEffect))
-
-# Class: :IntermediateEffect (IntermediateEffect)
-
-AnnotationAssertion(rdfs:isDefinedBy :IntermediateEffect "http://IBCNServices.github.io/Folio-Ontology/Folio.owl")
-AnnotationAssertion(rdfs:label :IntermediateEffect "IntermediateEffect"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :IntermediateEffect "The failure effect as it applies at the next higher indenture level."@en)
-EquivalentClasses(:IntermediateEffect ObjectSomeValuesFrom(:isIntermediateEffect :FailureMode))
-SubClassOf(:IntermediateEffect :FailureEffect)
-
-# Class: :LocalEffect (LocalEffect)
-
-AnnotationAssertion(rdfs:isDefinedBy :LocalEffect "http://IBCNServices.github.io/Folio-Ontology/Folio.owl")
-AnnotationAssertion(rdfs:label :LocalEffect "LocalEffect"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :LocalEffect "The visible failure effect as it applies to the item under analysis."@en)
-EquivalentClasses(:LocalEffect ObjectSomeValuesFrom(:isLocalEffect :FailureMode))
-SubClassOf(:LocalEffect :FailureEffect)
-SubClassOf(:LocalEffect <http://www.w3.org/ns/sosa/Observation>)
-
-# Class: :MergedAnomaly (:MergedAnomaly)
-
-SubClassOf(:MergedAnomaly :Anomaly)
-
-# Class: :NotReviewed (:NotReviewed)
-
-SubClassOf(:NotReviewed :Status)
-
-# Class: :Rejected (:Rejected)
-
-SubClassOf(:Rejected :Status)
-
-# Class: :RelabeledAnomaly (:RelabeledAnomaly)
-
-SubClassOf(:RelabeledAnomaly :Anomaly)
-
-# Class: :Status (:Status)
-
-SubClassOf(:Status DataSomeValuesFrom(:hasLabeller rdfs:Literal))
-SubClassOf(:Status DataSomeValuesFrom(<http://www.w3.org/ns/sosa/resultTime> xsd:dateTime))
-
-# Class: :UnknownPatternAnomaly (:UnknownPatternAnomaly)
-
-SubClassOf(:UnknownPatternAnomaly :Anomaly)
-
-# Class: :fromObservation (fromObservation)
-
-AnnotationAssertion(rdfs:isDefinedBy :fromObservation "http://IBCNServices.github.io/Folio-Ontology/Folio.owl")
-AnnotationAssertion(rdfs:label :fromObservation "fromObservation"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :fromObservation "First observation describing the underfined behaviour"@en)
-SubClassOf(:fromObservation <http://www.w3.org/ns/sosa/Observation>)
-
-# Class: :observedProperty (observedProperty)
-
-AnnotationAssertion(rdfs:isDefinedBy :observedProperty "http://IBCNServices.github.io/Folio-Ontology/Folio.owl")
-AnnotationAssertion(rdfs:label :observedProperty "observedProperty"@en)
-SubClassOf(:observedProperty <http://www.w3.org/ns/sosa/ObservableProperty>)
-
-# Class: :toObservation (toObservation)
-
-AnnotationAssertion(rdfs:isDefinedBy :toObservation "http://IBCNServices.github.io/Folio-Ontology/Folio.owl")
-AnnotationAssertion(rdfs:label :toObservation "toObservation"@en)
-SubClassOf(:toObservation <http://www.w3.org/ns/sosa/Observation>)
-
-
-)

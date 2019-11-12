@@ -1,0 +1,798 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://IBCNServices.github.io/dyversify/feedback#"
+     xml:base="http://IBCNServices.github.io/dyversify/feedback"
+     xmlns:feedback="http://IBCNServices.github.io/dyversify/feedback#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://IBCNServices.github.io/dyversify/feedback">
+        <owl:versionIRI rdf:resource="http://IBCNServices.github.io/dyversify/feedback/0.0.1"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://IBCNServices.github.io/dyversify/feedback#hasCategory -->
+
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/dyversify/feedback#hasCategory">
+        <rdfs:range rdf:resource="http://IBCNServices.github.io/dyversify/feedback#Category"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://IBCNServices.github.io/dyversify/feedback#hasDashboard -->
+
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/dyversify/feedback#hasDashboard">
+        <rdfs:range rdf:resource="http://IBCNServices.github.io/dyversify/feedback#Dashboard"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://IBCNServices.github.io/dyversify/feedback#hasEvent -->
+
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/dyversify/feedback#hasEvent"/>
+    
+
+
+    <!-- http://IBCNServices.github.io/dyversify/feedback#hasSession -->
+
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/dyversify/feedback#hasSession">
+        <rdfs:range rdf:resource="http://IBCNServices.github.io/dyversify/feedback#Session"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://IBCNServices.github.io/dyversify/feedback#hasType -->
+
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/dyversify/feedback#hasType">
+        <rdfs:range rdf:resource="http://IBCNServices.github.io/dyversify/feedback#EventType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://IBCNServices.github.io/dyversify/feedback#hasUser -->
+
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/dyversify/feedback#hasUser">
+        <rdfs:range rdf:resource="http://IBCNServices.github.io/dyversify/feedback#User"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://IBCNServices.github.io/dyversify/feedback#hasAction -->
+
+    <owl:DatatypeProperty rdf:about="http://IBCNServices.github.io/dyversify/feedback#hasAction"/>
+    
+
+
+    <!-- http://IBCNServices.github.io/dyversify/feedback#hasAuthorizationId -->
+
+    <owl:DatatypeProperty rdf:about="http://IBCNServices.github.io/dyversify/feedback#hasAuthorizationId"/>
+    
+
+
+    <!-- http://IBCNServices.github.io/dyversify/feedback#hasColumnUri -->
+
+    <owl:DatatypeProperty rdf:about="http://IBCNServices.github.io/dyversify/feedback#hasColumnUri"/>
+    
+
+
+    <!-- http://IBCNServices.github.io/dyversify/feedback#hasDOMObject -->
+
+    <owl:DatatypeProperty rdf:about="http://IBCNServices.github.io/dyversify/feedback#hasDOMObject"/>
+    
+
+
+    <!-- http://IBCNServices.github.io/dyversify/feedback#hasDashboardName -->
+
+    <owl:DatatypeProperty rdf:about="http://IBCNServices.github.io/dyversify/feedback#hasDashboardName"/>
+    
+
+
+    <!-- http://IBCNServices.github.io/dyversify/feedback#hasDashboardUri -->
+
+    <owl:DatatypeProperty rdf:about="http://IBCNServices.github.io/dyversify/feedback#hasDashboardUri"/>
+    
+
+
+    <!-- http://IBCNServices.github.io/dyversify/feedback#hasDatasetUri -->
+
+    <owl:DatatypeProperty rdf:about="http://IBCNServices.github.io/dyversify/feedback#hasDatasetUri"/>
+    
+
+
+    <!-- http://IBCNServices.github.io/dyversify/feedback#hasDestination -->
+
+    <owl:DatatypeProperty rdf:about="http://IBCNServices.github.io/dyversify/feedback#hasDestination"/>
+    
+
+
+    <!-- http://IBCNServices.github.io/dyversify/feedback#hasDevice -->
+
+    <owl:DatatypeProperty rdf:about="http://IBCNServices.github.io/dyversify/feedback#hasDevice"/>
+    
+
+
+    <!-- http://IBCNServices.github.io/dyversify/feedback#hasEmail -->
+
+    <owl:DatatypeProperty rdf:about="http://IBCNServices.github.io/dyversify/feedback#hasEmail"/>
+    
+
+
+    <!-- http://IBCNServices.github.io/dyversify/feedback#hasExportDestination -->
+
+    <owl:DatatypeProperty rdf:about="http://IBCNServices.github.io/dyversify/feedback#hasExportDestination"/>
+    
+
+
+    <!-- http://IBCNServices.github.io/dyversify/feedback#hasExportFormat -->
+
+    <owl:DatatypeProperty rdf:about="http://IBCNServices.github.io/dyversify/feedback#hasExportFormat"/>
+    
+
+
+    <!-- http://IBCNServices.github.io/dyversify/feedback#hasExpression -->
+
+    <owl:DatatypeProperty rdf:about="http://IBCNServices.github.io/dyversify/feedback#hasExpression"/>
+    
+
+
+    <!-- http://IBCNServices.github.io/dyversify/feedback#hasFilterChart -->
+
+    <owl:DatatypeProperty rdf:about="http://IBCNServices.github.io/dyversify/feedback#hasFilterChart"/>
+    
+
+
+    <!-- http://IBCNServices.github.io/dyversify/feedback#hasFilterClause -->
+
+    <owl:DatatypeProperty rdf:about="http://IBCNServices.github.io/dyversify/feedback#hasFilterClause"/>
+    
+
+
+    <!-- http://IBCNServices.github.io/dyversify/feedback#hasFilterOrigin -->
+
+    <owl:DatatypeProperty rdf:about="http://IBCNServices.github.io/dyversify/feedback#hasFilterOrigin"/>
+    
+
+
+    <!-- http://IBCNServices.github.io/dyversify/feedback#hasMetaData -->
+
+    <owl:DatatypeProperty rdf:about="http://IBCNServices.github.io/dyversify/feedback#hasMetaData"/>
+    
+
+
+    <!-- http://IBCNServices.github.io/dyversify/feedback#hasName -->
+
+    <owl:DatatypeProperty rdf:about="http://IBCNServices.github.io/dyversify/feedback#hasName"/>
+    
+
+
+    <!-- http://IBCNServices.github.io/dyversify/feedback#hasNavigationDestination -->
+
+    <owl:DatatypeProperty rdf:about="http://IBCNServices.github.io/dyversify/feedback#hasNavigationDestination"/>
+    
+
+
+    <!-- http://IBCNServices.github.io/dyversify/feedback#hasPayload -->
+
+    <owl:DatatypeProperty rdf:about="http://IBCNServices.github.io/dyversify/feedback#hasPayload"/>
+    
+
+
+    <!-- http://IBCNServices.github.io/dyversify/feedback#hasQuestion -->
+
+    <owl:DatatypeProperty rdf:about="http://IBCNServices.github.io/dyversify/feedback#hasQuestion"/>
+    
+
+
+    <!-- http://IBCNServices.github.io/dyversify/feedback#hasResponse -->
+
+    <owl:DatatypeProperty rdf:about="http://IBCNServices.github.io/dyversify/feedback#hasResponse"/>
+    
+
+
+    <!-- http://IBCNServices.github.io/dyversify/feedback#hasSessionUri -->
+
+    <owl:DatatypeProperty rdf:about="http://IBCNServices.github.io/dyversify/feedback#hasSessionUri"/>
+    
+
+
+    <!-- http://IBCNServices.github.io/dyversify/feedback#hasStartTime -->
+
+    <owl:DatatypeProperty rdf:about="http://IBCNServices.github.io/dyversify/feedback#hasStartTime"/>
+    
+
+
+    <!-- http://IBCNServices.github.io/dyversify/feedback#hasTimestamp -->
+
+    <owl:DatatypeProperty rdf:about="http://IBCNServices.github.io/dyversify/feedback#hasTimestamp"/>
+    
+
+
+    <!-- http://IBCNServices.github.io/dyversify/feedback#hasUserUri -->
+
+    <owl:DatatypeProperty rdf:about="http://IBCNServices.github.io/dyversify/feedback#hasUserUri"/>
+    
+
+
+    <!-- http://IBCNServices.github.io/dyversify/feedback#hasValues -->
+
+    <owl:DatatypeProperty rdf:about="http://IBCNServices.github.io/dyversify/feedback#hasValues"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://IBCNServices.github.io/dyversify/feedback#Category -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/dyversify/feedback#Category"/>
+    
+
+
+    <!-- http://IBCNServices.github.io/dyversify/feedback#Dashboard -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/dyversify/feedback#Dashboard">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://IBCNServices.github.io/dyversify/feedback#hasDashboardName"/>
+                        <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://IBCNServices.github.io/dyversify/feedback#hasDashboardUri"/>
+                        <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/dyversify/feedback#Event -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/dyversify/feedback#Event">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://IBCNServices.github.io/dyversify/feedback#hasCategory"/>
+                        <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/dyversify/feedback#Category"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://IBCNServices.github.io/dyversify/feedback#hasPayload"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/dyversify/feedback#EventType -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/dyversify/feedback#EventType"/>
+    
+
+
+    <!-- http://IBCNServices.github.io/dyversify/feedback#Explicit -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/dyversify/feedback#Explicit">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://IBCNServices.github.io/dyversify/feedback#hasType"/>
+                <owl:allValuesFrom rdf:resource="http://IBCNServices.github.io/dyversify/feedback#Modal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/dyversify/feedback#Category"/>
+        <owl:disjointWith rdf:resource="http://IBCNServices.github.io/dyversify/feedback#Implicit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/dyversify/feedback#Export -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/dyversify/feedback#Export">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://IBCNServices.github.io/dyversify/feedback#hasExportDestination"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://IBCNServices.github.io/dyversify/feedback#hasExportFormat"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/dyversify/feedback#EventType"/>
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/dyversify/feedback#Implicit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/dyversify/feedback#Feedback -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/dyversify/feedback#Feedback">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://IBCNServices.github.io/dyversify/feedback#hasDashboard"/>
+                        <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/dyversify/feedback#Dashboard"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://IBCNServices.github.io/dyversify/feedback#hasEvent"/>
+                        <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/dyversify/feedback#Event"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://IBCNServices.github.io/dyversify/feedback#hasSession"/>
+                        <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/dyversify/feedback#Session"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://IBCNServices.github.io/dyversify/feedback#hasUser"/>
+                        <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/dyversify/feedback#User"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://IBCNServices.github.io/dyversify/feedback#hasTimestamp"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/dyversify/feedback#Filter -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/dyversify/feedback#Filter">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Class>
+                                <owl:complementOf>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://IBCNServices.github.io/dyversify/feedback#hasValues"/>
+                                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                                    </owl:Restriction>
+                                </owl:complementOf>
+                            </owl:Class>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://IBCNServices.github.io/dyversify/feedback#hasFilterChart"/>
+                                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://IBCNServices.github.io/dyversify/feedback#hasFilterClause"/>
+                                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://IBCNServices.github.io/dyversify/feedback#hasFilterOrigin"/>
+                                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://IBCNServices.github.io/dyversify/feedback#hasValues"/>
+                                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://IBCNServices.github.io/dyversify/feedback#hasColumnUri"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://IBCNServices.github.io/dyversify/feedback#hasDatasetUri"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://IBCNServices.github.io/dyversify/feedback#hasExpression"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/dyversify/feedback#EventType"/>
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/dyversify/feedback#Implicit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/dyversify/feedback#Implicit -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/dyversify/feedback#Implicit">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://IBCNServices.github.io/dyversify/feedback#hasType"/>
+                        <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/dyversify/feedback#Export"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://IBCNServices.github.io/dyversify/feedback#hasType"/>
+                        <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/dyversify/feedback#Filter"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://IBCNServices.github.io/dyversify/feedback#hasType"/>
+                        <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/dyversify/feedback#Keyboard"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://IBCNServices.github.io/dyversify/feedback#hasType"/>
+                        <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/dyversify/feedback#Mouse"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://IBCNServices.github.io/dyversify/feedback#hasType"/>
+                        <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/dyversify/feedback#Navigate"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://IBCNServices.github.io/dyversify/feedback#hasType"/>
+                        <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/dyversify/feedback#Print"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://IBCNServices.github.io/dyversify/feedback#hasType"/>
+                        <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/dyversify/feedback#Touch"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/dyversify/feedback#Category"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/dyversify/feedback#Keyboard -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/dyversify/feedback#Keyboard">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://IBCNServices.github.io/dyversify/feedback#hasDOMObject"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://IBCNServices.github.io/dyversify/feedback#hasAction"/>
+                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">keypress</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/dyversify/feedback#EventType"/>
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/dyversify/feedback#Implicit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/dyversify/feedback#Modal -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/dyversify/feedback#Modal">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://IBCNServices.github.io/dyversify/feedback#hasQuestion"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://IBCNServices.github.io/dyversify/feedback#hasResponse"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/dyversify/feedback#EventType"/>
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/dyversify/feedback#Explicit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/dyversify/feedback#Mouse -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/dyversify/feedback#Mouse">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://IBCNServices.github.io/dyversify/feedback#hasAction"/>
+                                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">click</owl:hasValue>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://IBCNServices.github.io/dyversify/feedback#hasAction"/>
+                                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dblclick</owl:hasValue>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://IBCNServices.github.io/dyversify/feedback#hasAction"/>
+                                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hover</owl:hasValue>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://IBCNServices.github.io/dyversify/feedback#hasDOMObject"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/dyversify/feedback#EventType"/>
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/dyversify/feedback#Implicit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/dyversify/feedback#Navigate -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/dyversify/feedback#Navigate">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://IBCNServices.github.io/dyversify/feedback#hasNavigationDestination"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/dyversify/feedback#EventType"/>
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/dyversify/feedback#Implicit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/dyversify/feedback#Print -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/dyversify/feedback#Print">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:complementOf>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://IBCNServices.github.io/dyversify/feedback#hasExportFormat"/>
+                                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                            </owl:Restriction>
+                        </owl:complementOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://IBCNServices.github.io/dyversify/feedback#hasExportDestination"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/dyversify/feedback#EventType"/>
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/dyversify/feedback#Implicit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/dyversify/feedback#Session -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/dyversify/feedback#Session">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Class>
+                                <owl:complementOf>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://IBCNServices.github.io/dyversify/feedback#hasSessionUri"/>
+                                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                                    </owl:Restriction>
+                                </owl:complementOf>
+                            </owl:Class>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://IBCNServices.github.io/dyversify/feedback#hasDevice"/>
+                                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://IBCNServices.github.io/dyversify/feedback#hasSessionUri"/>
+                                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://IBCNServices.github.io/dyversify/feedback#hasStartTime"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/dyversify/feedback#Touch -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/dyversify/feedback#Touch">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://IBCNServices.github.io/dyversify/feedback#hasDOMObject"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://IBCNServices.github.io/dyversify/feedback#hasAction"/>
+                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">touchstart</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/dyversify/feedback#EventType"/>
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/dyversify/feedback#Implicit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/dyversify/feedback#User -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/dyversify/feedback#User">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Class>
+                                <owl:complementOf>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://IBCNServices.github.io/dyversify/feedback#hasName"/>
+                                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                                    </owl:Restriction>
+                                </owl:complementOf>
+                            </owl:Class>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://IBCNServices.github.io/dyversify/feedback#hasAuthorizationId"/>
+                                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://IBCNServices.github.io/dyversify/feedback#hasEmail"/>
+                                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://IBCNServices.github.io/dyversify/feedback#hasMetaData"/>
+                                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://IBCNServices.github.io/dyversify/feedback#hasName"/>
+                                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://IBCNServices.github.io/dyversify/feedback#hasUserUri"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://IBCNServices.github.io/dyversify/feedback#test_dashboard -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/dyversify/feedback#test_dashboard">
+        <hasDashboardName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">test</hasDashboardName>
+        <hasDashboardUri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">test</hasDashboardUri>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/dyversify/feedback#test_event -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/dyversify/feedback#test_event">
+        <hasCategory rdf:resource="http://IBCNServices.github.io/dyversify/feedback#test_type"/>
+        <hasPayload rdf:datatype="http://www.w3.org/2001/XMLSchema#string">payload</hasPayload>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/dyversify/feedback#test_feedback -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/dyversify/feedback#test_feedback">
+        <hasDashboard rdf:resource="http://IBCNServices.github.io/dyversify/feedback#test_dashboard"/>
+        <hasEvent rdf:resource="http://IBCNServices.github.io/dyversify/feedback#test_event"/>
+        <hasSession rdf:resource="http://IBCNServices.github.io/dyversify/feedback#test_session"/>
+        <hasUser rdf:resource="http://IBCNServices.github.io/dyversify/feedback#test_user"/>
+        <hasTimestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2004-04-12T13:20:00-05:00</hasTimestamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/dyversify/feedback#test_session -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/dyversify/feedback#test_session">
+        <hasStartTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2010-04-12T13:20:00-05:00</hasStartTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/dyversify/feedback#test_type -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/dyversify/feedback#test_type">
+        <hasNavigationDestination rdf:datatype="http://www.w3.org/2001/XMLSchema#string">test</hasNavigationDestination>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/dyversify/feedback#test_user -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/dyversify/feedback#test_user">
+        <hasUserUri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">user_uri</hasUserUri>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://IBCNServices.github.io/dyversify/feedback#Export"/>
+            <rdf:Description rdf:about="http://IBCNServices.github.io/dyversify/feedback#Filter"/>
+            <rdf:Description rdf:about="http://IBCNServices.github.io/dyversify/feedback#Keyboard"/>
+            <rdf:Description rdf:about="http://IBCNServices.github.io/dyversify/feedback#Modal"/>
+            <rdf:Description rdf:about="http://IBCNServices.github.io/dyversify/feedback#Mouse"/>
+            <rdf:Description rdf:about="http://IBCNServices.github.io/dyversify/feedback#Navigate"/>
+            <rdf:Description rdf:about="http://IBCNServices.github.io/dyversify/feedback#Print"/>
+            <rdf:Description rdf:about="http://IBCNServices.github.io/dyversify/feedback#Touch"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

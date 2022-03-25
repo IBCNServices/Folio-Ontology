@@ -1,0 +1,62 @@
+@prefix ex: <http://example.com/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ex:BoxHasLostConnection a <http://www.w3.org/2002/07/owl#Class>;
+  rdfs:subClassOf ex:FailureEffect, _:0 .
+
+_:0 a <http://www.w3.org/2002/07/owl#Restriction>;
+  <http://www.w3.org/2002/07/owl#onProperty> ex:happenedAt;
+  <http://www.w3.org/2002/07/owl#someValuesFrom> ex:EthernetModule .
+
+ex:BoxHasLostConnection rdfs:subClassOf _:4 .
+
+_:4 a <http://www.w3.org/2002/07/owl#Restriction>;
+  <http://www.w3.org/2002/07/owl#onProperty> ex:hasFailureMode;
+  <http://www.w3.org/2002/07/owl#someValuesFrom> ex:NotConnectedToTheWeb .
+
+ex:BoxHasLostConnection rdfs:subClassOf _:5 .
+
+_:5 a <http://www.w3.org/2002/07/owl#Restriction>;
+  <http://www.w3.org/2002/07/owl#onProperty> ex:isLocalEffect;
+  <http://www.w3.org/2002/07/owl#someValuesFrom> ex:FailureEffect .
+
+ex:BoxHasLostConnection rdfs:subClassOf _:6 .
+
+_:6 a <http://www.w3.org/2002/07/owl#Restriction>;
+  <http://www.w3.org/2002/07/owl#onProperty> ex:hasNextFailureEffect;
+  <http://www.w3.org/2002/07/owl#someValuesFrom> ex:ThePluggedInDevicesHardwareIsBroken .
+
+ex:BoxHasLostConnection rdfs:subClassOf _:7 .
+
+_:7 a <http://www.w3.org/2002/07/owl#Restriction>;
+  <http://www.w3.org/2002/07/owl#onProperty> ex:hasControlMethod;
+  <http://www.w3.org/2002/07/owl#someValuesFrom> ex:InformTheUserViaTheAppInformTheTechnician .
+
+ex:EthernetModule a <http://www.w3.org/2002/07/owl#Class>;
+  rdfs:comment "Ethernet module" .
+
+ex:InformTheUserViaTheAppInformTheTechnician a <http://www.w3.org/2002/07/owl#Class>;
+  rdfs:comment "Inform the user via the app/ Inform the technician";
+  rdfs:subClassOf ex:ControlMethod .
+
+ex:NotConnectedToTheWeb a <http://www.w3.org/2002/07/owl#Class>;
+  rdfs:comment "Not connected to the web";
+  rdfs:subClassOf ex:FailureMode, _:0, _:1 .
+
+_:1 a <http://www.w3.org/2002/07/owl#Restriction>;
+  <http://www.w3.org/2002/07/owl#onProperty> ex:hasRPN .
+
+ex:ThePluggedInDevicesHardwareIsBroken a <http://www.w3.org/2002/07/owl#Class>;
+  rdfs:comment "The plugged in device's hardware is broken";
+  rdfs:subClassOf ex:FailureCause, _:0, _:2 .
+
+_:2 a <http://www.w3.org/2002/07/owl#Restriction>;
+  <http://www.w3.org/2002/07/owl#onProperty> ex:isEndEffect;
+  <http://www.w3.org/2002/07/owl#someValuesFrom> ex:FailureCause .
+
+ex:ThePluggedInDevicesHardwareIsBroken rdfs:subClassOf _:3 .
+
+_:3 a <http://www.w3.org/2002/07/owl#Restriction>;
+  <http://www.w3.org/2002/07/owl#onProperty> ex:hasLowerFailureEffect;
+  <http://www.w3.org/2002/07/owl#someValuesFrom> ex:BoxHasLostConnection .

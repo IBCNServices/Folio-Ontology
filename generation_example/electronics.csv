@@ -1,0 +1,2 @@
+id,Module,Component,Function,Failure Mode,Failure Effect,I,Failure Cause,O,Control Method,D,RPN,Containment Action,Responsible Module,Preferred Action
+1,Electronics Board,Ethernet module,Connects the Healthbox with the world wide web,Not connected to the web,Box has lost connection,,The plugged in device's hardware is broken,,Inform the user via the app/ Inform the technician,,,Replace the hardware,N/a ,Get a connection

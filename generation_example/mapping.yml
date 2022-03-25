@@ -1,0 +1,198 @@
+prefixes:
+  ex: "http://example.com/"
+  dyversify: "http://example.com/idlab/functions/dyversify/"
+
+mappings:
+  component:
+    sources:
+      - ['electronics.csv~csv']
+    s:
+     - function: dyversify:generateIRI
+       parameters:
+         - [dyversify:prefix, "http://example.com/"]
+         - [dyversify:str, $(Component)]
+    po:
+      - [a, owl:Class]
+      - [rdfs:comment, $(Component)]
+  failure_mode:
+    sources:
+      - ['electronics.csv~csv']
+    s:
+     - function: dyversify:generateIRI
+       parameters:
+         - [dyversify:prefix, "http://example.com/"]
+         - [dyversify:str, $(Failure Mode)]
+    po:
+      - [a, owl:Class]
+      - [rdfs:comment, $(Failure Mode)]
+      - p: rdfs:subClassOf
+        o:
+         - ex:FailureMode~iri
+         - mapping: [component_restriction, rpn_restriction]
+           condition:
+            function: equal
+            parameters:
+              - [str1, $(id)]
+              - [str2, $(id)]
+  failure_cause:
+    sources:
+      - ['electronics.csv~csv']
+    s:
+     - function: dyversify:generateIRI
+       parameters:
+         - [dyversify:prefix, "http://example.com/"]
+         - [dyversify:str, $(Failure Cause)]
+    po:
+      - [a, owl:Class]
+      - [rdfs:comment, $(Failure Cause)]
+      - p: rdfs:subClassOf
+        o:
+         - ex:FailureCause~iri
+         - mapping: [component_restriction, end_effect_restriction, lower_effect_restriction]
+           condition:
+            function: equal
+            parameters:
+              - [str1, $(id)]
+              - [str2, $(id)]
+  failure_effect:
+    sources:
+      - ['electronics.csv~csv']
+    s:
+     - function: dyversify:generateIRI
+       parameters:
+         - [dyversify:prefix, "http://example.com/"]
+         - [dyversify:str, $(Failure Effect)]
+    po:
+      - [a, owl:Class]
+      - p: rdfs:subClassOf
+        o:
+         - ex:FailureEffect~iri
+         - mapping: [failure_mode_restriction, local_effect_restriction, component_restriction, next_effect_restriction, control_method_restriction]
+           condition:
+            function: equal
+            parameters:
+              - [str1, $(id)]
+              - [str2, $(id)]
+  control_method:
+    sources:
+      - ['electronics.csv~csv']
+    s:
+     - function: dyversify:generateIRI
+       parameters:
+         - [dyversify:prefix, "http://example.com/"]
+         - [dyversify:str, $(Control Method)]
+    po:
+      - [a, owl:Class]
+      - [rdfs:comment, $(Control Method)]
+      - [rdfs:subClassOf, ex:ControlMethod~iri]
+  rpn:
+    sources:
+      - ['electronics.csv~csv']
+    s:
+     - function: dyversify:generateIRI
+       parameters:
+         - [dyversify:prefix, "http://example.com/"]
+         - [dyversify:str, $(RPN)]
+    po:
+      - [a, owl:Class]
+      - [rdfs:comment, $(RPN)]
+      - [rdfs:subClassOf, ex:RPN~iri]
+  rpn_restriction:
+    sources:
+      - ['electronics.csv~csv']
+    po:
+      - [a, owl:Restriction]
+      - [owl:onProperty, ex:hasRPN~iri]
+      - p: owl:someValuesFrom
+        o:
+         - mapping: rpn
+           condition:
+            function: equal
+            parameters:
+              - [str1, $(id)]
+              - [str2, $(id)]
+  component_restriction:
+    sources:
+      - ['electronics.csv~csv']
+    po:
+      - [a, owl:Restriction]
+      - [owl:onProperty, ex:happenedAt~iri]
+      - p: owl:someValuesFrom
+        o:
+         - mapping: component
+           condition:
+            function: equal
+            parameters:
+              - [str1, $(id)]
+              - [str2, $(id)]
+  control_method_restriction:
+    sources:
+      - ['electronics.csv~csv']
+    po:
+      - [a, owl:Restriction]
+      - [owl:onProperty, ex:hasControlMethod~iri]
+      - p: owl:someValuesFrom
+        o:
+         - mapping: control_method
+           condition:
+            function: equal
+            parameters:
+              - [str1, $(id)]
+              - [str2, $(id)]
+  end_effect_restriction:
+    sources:
+      - ['electronics.csv~csv']
+    po:
+      - [a, owl:Restriction]
+      - [owl:onProperty, ex:isEndEffect~iri]
+      - [owl:someValuesFrom, ex:FailureCause~iri]
+  local_effect_restriction:
+    sources:
+      - ['electronics.csv~csv']
+    po:
+      - [a, owl:Restriction]
+      - [owl:onProperty, ex:isLocalEffect~iri]
+      - [owl:someValuesFrom, ex:FailureEffect~iri]
+  lower_effect_restriction:
+    sources:
+      - ['electronics.csv~csv']
+    po:
+      - [a, owl:Restriction]
+      - [owl:onProperty, ex:hasLowerFailureEffect~iri]
+      - p: owl:someValuesFrom
+        o:
+         - mapping: failure_effect
+           condition:
+            function: equal
+            parameters:
+              - [str1, $(id)]
+              - [str2, $(id)]
+  next_effect_restriction:
+    sources:
+      - ['electronics.csv~csv']
+    po:
+      - [a, owl:Restriction]
+      - [owl:onProperty, ex:hasNextFailureEffect~iri]
+      - p: owl:someValuesFrom
+        o:
+         - mapping: failure_cause
+           condition:
+            function: equal
+            parameters:
+              - [str1, $(id)]
+              - [str2, $(id)]
+  failure_mode_restriction:
+    sources:
+      - ['electronics.csv~csv']
+
+    po:
+      - [a, owl:Restriction]
+      - [owl:onProperty, ex:hasFailureMode~iri]
+      - p: owl:someValuesFrom
+        o:
+         - mapping: failure_mode
+           condition:
+            function: equal
+            parameters:
+              - [str1, $(id)]
+              - [str2, $(id)]

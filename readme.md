@@ -1,6 +1,5 @@
 ----
-⚠️ **Disclaimer:** This repository is no longer maintained </br>
-This repository is no longer actively maintained. </br>
+⚠️ **Disclaimer: This repository is no longer maintained** </br>
 For the latest updates and ongoing development, please visit the maintained version at:
 <url>https://github.com/predict-idlab/Folio-Ontology</url>
 
